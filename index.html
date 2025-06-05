@@ -10,55 +10,55 @@
     <style>
         body {
             font-family: 'Press Start 2P', cursive;
-            background-color: #1a1a2e; /* Dark retro blue/purple */
-            color: #e0e0e0; /* Light grey/off-white text */
-            image-rendering: pixelated; /* Helps with sharp pixel look */
-            font-size: 10px; /* Pixel fonts often look best at specific small sizes */
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            image-rendering: pixelated;
+            font-size: 20px; /* 2x original */
         }
         /* Pixel art flame */
         .pixel-flame {
             display: inline-block;
-            width: 16px; /* 4 pixels wide */
-            height: 24px; /* 6 pixels high */
+            width: 32px; /* 4 pixels wide */
+            height: 48px; /* 6 pixels high */
             position: relative;
-            margin: 0 8px;
+            margin: 0 16px;
             vertical-align: middle;
         }
         .pixel-flame span {
             position: absolute;
-            width: 4px;
-            height: 4px;
+            width: 8px;
+            height: 8px;
             background-color: #FF0000; /* Red base */
         }
-        .pixel-flame .f1 { top: 20px; left: 4px; background-color: #FF4500;} /* OrangeRed */
-        .pixel-flame .f2 { top: 20px; left: 8px; background-color: #FF4500;}
-        .pixel-flame .f3 { top: 16px; left: 2px; background-color: #FF4500;}
-        .pixel-flame .f4 { top: 16px; left: 6px; background-color: #FFA500;} /* Orange */
-        .pixel-flame .f5 { top: 16px; left: 10px; background-color: #FF4500;}
-        .pixel-flame .f6 { top: 12px; left: 4px; background-color: #FFA500;}
-        .pixel-flame .f7 { top: 12px; left: 8px; background-color: #FFD700;} /* Gold/Yellow */
-        .pixel-flame .f8 { top: 8px; left: 6px; background-color: #FFD700;}
-        .pixel-flame .f9 { top: 4px; left: 6px; background-color: #FFFFE0; width: 4px; height: 4px;} /* LightYellow tip */
+        .pixel-flame .f1 { top: 40px; left: 8px; background-color: #FF4500;} /* OrangeRed */
+        .pixel-flame .f2 { top: 40px; left: 16px; background-color: #FF4500;}
+        .pixel-flame .f3 { top: 32px; left: 4px; background-color: #FF4500;}
+        .pixel-flame .f4 { top: 32px; left: 12px; background-color: #FFA500;} /* Orange */
+        .pixel-flame .f5 { top: 32px; left: 20px; background-color: #FF4500;}
+        .pixel-flame .f6 { top: 24px; left: 8px; background-color: #FFA500;}
+        .pixel-flame .f7 { top: 24px; left: 16px; background-color: #FFD700;} /* Gold/Yellow */
+        .pixel-flame .f8 { top: 16px; left: 12px; background-color: #FFD700;}
+        .pixel-flame .f9 { top: 8px; left: 12px; background-color: #FFFFE0; width: 8px; height: 8px;} /* LightYellow tip */
 
         .btn {
-            @apply px-4 py-2 text-sm bg-yellow-400 text-black border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-yellow-500 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] disabled:opacity-60 disabled:bg-gray-400 disabled:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] disabled:cursor-not-allowed;
+            @apply px-8 py-4 text-lg;
             font-family: 'Press Start 2P', cursive;
-            border-radius: 0; /* Sharp corners */
+            border-radius: 0;
         }
         .btn-ai { /* Specific style for AI button */
-             @apply bg-purple-500 text-white hover:bg-purple-600;
+             @apply bg-purple-500 text-white hover:bg-purple-600 text-lg;
         }
         .btn-secondary {
-            @apply px-3 py-2 text-sm bg-slate-500 text-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-slate-600 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px];
+            @apply px-6 py-4 text-lg;
             font-family: 'Press Start 2P', cursive;
             border-radius: 0;
         }
         .card {
-            background-color: #2e2e3e; /* Slightly lighter retro purple/grey */
-            border: 4px solid #000000; /* Thick black border */
-            box-shadow: 6px 6px 0px 0px #4a4a5a; /* Offset shadow for 3D block effect */
-            border-radius: 0; /* Sharp corners */
-            @apply p-4 sm:p-6; /* Adjusted padding */
+            background-color: #2e2e3e;
+            border: 4px solid #000000;
+            box-shadow: 12px 12px 0px 0px #4a4a5a;
+            border-radius: 0;
+            @apply p-8 sm:p-12;
         }
         
         select, textarea, input[type="text"] { /* Basic styling for form elements */
@@ -67,8 +67,8 @@
             color: #00ff00; /* Green text like old terminals */
             border: 2px solid #00ff00;
             border-radius: 0;
-            padding: 18px 8px; /* Increased top/bottom padding */
-            font-size: 10px;
+            padding: 36px 16px; /* Increased top/bottom padding */
+            font-size: 20px;
             line-height: 1; /* To try and normalize text position with increased padding */
             @apply w-full;
         }
@@ -77,11 +77,11 @@
             color: #00ff00;
         }
         textarea {
-            min-height: 100px; /* Adjusted height */
+            min-height: 200px; /* Adjusted height */
         }
 
         .radio-option-item {
-            @apply flex items-center p-2 border-2 border-cyan-400 mb-1;
+            @apply flex items-center p-4 border-2 border-cyan-400 mb-2 text-lg;
             background-color: #333;
             border-radius: 0;
             cursor: pointer;
@@ -90,27 +90,27 @@
             background-color: #444;
         }
         input[type="radio"] { /* Standard visible radio */
-            @apply appearance-none w-4 h-4 border-2 border-yellow-400 rounded-none bg-black checked:bg-yellow-400 checked:border-black focus:ring-2 focus:ring-offset-0 focus:ring-yellow-500;
+            @apply appearance-none w-8 h-8 border-2 border-yellow-400 rounded-none bg-black checked:bg-yellow-400 checked:border-black focus:ring-2 focus:ring-offset-0 focus:ring-yellow-500;
             cursor: pointer;
-            margin-right: 8px; /* Space between radio and label */
+            margin-right: 16px; /* Space between radio and label */
         }
         .pack-radio-label {
-            @apply ml-1 text-yellow-400 text-xs; /* Label color and margin */
+            @apply ml-2 text-yellow-400 text-lg;
             cursor: pointer;
         }
         
-        h1 { @apply text-xl sm:text-2xl font-bold text-yellow-400 mb-1; }
-        h2 { @apply text-base sm:text-lg font-semibold text-cyan-400 mb-2; }
-        h3 { @apply text-sm font-semibold text-pink-400 mt-3 mb-1; } /* For AI section title */
-        p { @apply text-xs text-slate-300 leading-relaxed; }
+        h1 { @apply text-3xl sm:text-4xl font-bold text-yellow-400 mb-2; }
+        h2 { @apply text-2xl sm:text-3xl font-semibold text-cyan-400 mb-4; }
+        h3 { @apply text-xl font-semibold text-pink-400 mt-6 mb-2; } /* For AI section title */
+        p { @apply text-base text-slate-300 leading-relaxed; }
         
-        #decklistOutput::-webkit-scrollbar { width: 8px; }
+        #decklistOutput::-webkit-scrollbar { width: 16px; }
         #decklistOutput::-webkit-scrollbar-track { background: #222; }
         #decklistOutput::-webkit-scrollbar-thumb { background: #00ff00; }
         #decklistOutput::-webkit-scrollbar-thumb:hover { background: #33ff33; }
 
         .message-box {
-            @apply fixed top-4 right-4 p-3 border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] text-xs;
+            @apply fixed top-8 right-8 p-6 border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-lg;
             font-family: 'Press Start 2P', cursive;
             border-radius: 0;
         }
@@ -118,22 +118,22 @@
         .message-box-error { @apply bg-red-500 text-white; }
         .message-box-info { @apply bg-blue-500 text-white; }
 
-        footer p { @apply text-center mt-6 text-xs text-slate-400; }
+        footer p { @apply text-center mt-12 text-lg text-slate-400; }
         footer a { @apply text-cyan-400 hover:text-yellow-400; }
 
         /* AI Output Area */
         #aiInsightsArea {
-            @apply mt-4 p-3 border-2 border-pink-400 bg-black text-xs space-y-2;
+            @apply mt-8 p-6 border-2 border-pink-400 bg-black text-lg space-y-4;
             border-radius: 0;
         }
         #aiDeckName {
-            @apply block text-yellow-300 text-sm mb-1;
+            @apply block text-yellow-300 text-xl mb-2;
         }
         #aiStrategyTips ul {
-            @apply list-disc list-inside pl-1 space-y-1;
+            @apply list-disc list-inside pl-2 space-y-2;
         }
         #aiStrategyTips li {
-            @apply text-green-400;
+            @apply text-green-400 text-lg;
         }
 
     </style>
