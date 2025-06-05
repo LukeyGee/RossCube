@@ -282,9 +282,7 @@
         { name: "aquickalias Jumpstart", code: "jumpstartdecks", url: "https://cubecobra.com/cube/overview/jumpstartdecks" },
         { name: "Jumpstart Cube 900", code: "jump-start-cube", url: "https://cubecobra.com/cube/overview/jump-start-cube" },
         { name: "Hasted's Pauper Jumpstart Cube", code: "HastedPJC", url: "https://cubecobra.com/cube/overview/HastedPJC" },
-        { name: "Old School Jumpstart (1996 & earlier)", code: "1zgb3", url: "https://cubecobra.com/cube/overview/1zgb3" },
-        { name: "Big Beginner Jumpstart", code: "vuq", url: "https://cubecobra.com/cube/overview/vuq" },
-        { name: "Small Beginner Jumpstart", code: "1rxve", url: "https://cubecobra.com/cube/overview/1rxve" }
+        { name: "Big Beginner Jumpstart", code: "vuq", url: "https://cubecobra.com/cube/overview/vuq" }
     ];
     let currentCubeData = null;
     let availablePackThemes = []; 
@@ -407,8 +405,12 @@
         if (!currentCubeData) return;
         const themes = new Set();
         currentCubeData.forEach(card => {
+            const cardMaybe = card.Maybe || card.maybeboard
+            if (cardMaybe && cardMaybe == "true") {
+                return;
+            }
             const cardTags = card.Tags || card.tags; 
-            if (cardTags && cardTags.trim() !== "" && cardTags !== "Other" && cardTags !== "B - The Big Top") {
+            if (cardTags && cardTags.trim() !== "" && cardTags !== "Other" && cardTags !== "B - The Big Top" && cardTags !== "WU - Studies" && cardTags !== "WU - Studies (Lessons)") {
                 themes.add(cardTags.trim());
             }
         });
