@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jumpstart Deck Generator - Retro AI Edition</title>
+    <title>Jumpstart Deck Generator - Retro Edition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="./images/cube.png">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -45,9 +45,6 @@
             font-family: 'Press Start 2P', cursive;
             border-radius: 0;
         }
-        .btn-ai { /* Specific style for AI button */
-             @apply bg-purple-500 text-white hover:bg-purple-600 text-lg;
-        }
         .btn-secondary {
             @apply px-6 py-4 text-lg;
             font-family: 'Press Start 2P', cursive;
@@ -70,6 +67,7 @@
             padding: 36px 16px; /* Increased top/bottom padding */
             font-size: 20px;
             line-height: 1; /* To try and normalize text position with increased padding */
+            width: 100%;
             @apply w-full;
         }
         select option {
@@ -101,7 +99,6 @@
         
         h1 { @apply text-3xl sm:text-4xl font-bold text-yellow-400 mb-2; }
         h2 { @apply text-2xl sm:text-3xl font-semibold text-cyan-400 mb-4; }
-        h3 { @apply text-xl font-semibold text-pink-400 mt-6 mb-2; } /* For AI section title */
         p { @apply text-base text-slate-300 leading-relaxed; }
         
         #decklistOutput::-webkit-scrollbar { width: 16px; }
@@ -120,21 +117,6 @@
 
         footer p { @apply text-center mt-12 text-lg text-slate-400; }
         footer a { @apply text-cyan-400 hover:text-yellow-400; }
-
-        /* AI Output Area */
-        #aiInsightsArea {
-            @apply mt-8 p-6 border-2 border-pink-400 bg-black text-lg space-y-4;
-            border-radius: 0;
-        }
-        #aiDeckName {
-            @apply block text-yellow-300 text-xl mb-2;
-        }
-        #aiStrategyTips ul {
-            @apply list-disc list-inside pl-2 space-y-2;
-        }
-        #aiStrategyTips li {
-            @apply text-green-400 text-lg;
-        }
 
     </style>
 </head>
@@ -196,23 +178,10 @@
                 
                 <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 mt-3">
                     <button id="copyDecklistBtn" class="btn flex-grow">COPY LIST</button>
-                    <button id="getAiInsightsBtn" class="btn btn-ai flex-grow">✨ GET DECK NAME & STRATEGY ✨</button>
                 </div>
                  <div class="flex space-x-2 mt-2">
                     <button id="printToConsoleBtn" class="btn-secondary flex-grow">PRINT (DEV)</button>
                     <button id="resetAppBtnDeck" class="btn-secondary flex-grow">START OVER</button>
-                </div>
-
-                <!-- AI Insights Area -->
-                <div id="aiInsightsContainer" class="hidden mt-4">
-                     <h3 class="text-sm">✨ AI DECK INSIGHTS ✨</h3>
-                     <div id="aiInsightsArea">
-                        <strong id="aiDeckName">NAME: ...ANALYZING...</strong>
-                        <div id="aiStrategyTips">
-                            <p>STRATEGY:</p>
-                            <ul><li>...THINKING...</li></ul>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -224,16 +193,6 @@
                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
                     PROCESSING...
-                </div>
-            </div>
-             <!-- AI Loading Indicator (specific for AI calls) -->
-            <div id="aiLoadingIndicator" class="hidden text-center py-3">
-                <div class="inline-flex items-center text-pink-400 text-xs">
-                    <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    ✨ ACCESSING ORACLE... ✨
                 </div>
             </div>
         </div>
@@ -254,24 +213,16 @@
     const decklistOutput = document.getElementById('decklistOutput');
     const copyDecklistBtn = document.getElementById('copyDecklistBtn');
     const printToConsoleBtn = document.getElementById('printToConsoleBtn');
-    const getAiInsightsBtn = document.getElementById('getAiInsightsBtn'); // New AI Button
     
     const cubeSelectionStep = document.getElementById('cubeSelectionStep');
     const packSelectionStep = document.getElementById('packSelectionStep');
     const decklistStep = document.getElementById('decklistStep');
     const loadingIndicator = document.getElementById('loadingIndicator');
-    const aiLoadingIndicator = document.getElementById('aiLoadingIndicator'); // New AI loading indicator
     
     const chosenPack1Display = document.getElementById('chosenPack1');
     const chosenPack2Display = document.getElementById('chosenPack2');
     const chosenCubeCodeDisplay = document.getElementById('chosenCubeCode');
     const messageContainer = document.getElementById('messageContainer');
-
-    // AI Display Elements
-    const aiInsightsContainer = document.getElementById('aiInsightsContainer');
-    const aiDeckNameDisplay = document.getElementById('aiDeckName');
-    const aiStrategyTipsDisplay = document.getElementById('aiStrategyTips').querySelector('ul');
-
 
     // --- Application State ---
     let cubes = [
@@ -338,25 +289,15 @@
         return data;
     }
 
-    function setLoading(isLoading, isAiCall = false) {
+    function setLoading(isLoading) {
         if (isLoading) {
-            if (isAiCall) {
-                aiLoadingIndicator.classList.remove('hidden');
-                getAiInsightsBtn.disabled = true;
-            } else {
-                loadingIndicator.classList.remove('hidden');
-                confirmCubeBtn.disabled = true;
-                confirmPackBtn.disabled = true; 
-                copyDecklistBtn.disabled = true;
-            }
+            loadingIndicator.classList.remove('hidden');
+            confirmCubeBtn.disabled = true;
+            confirmPackBtn.disabled = true; 
+            copyDecklistBtn.disabled = true;
         } else {
-            if (isAiCall) {
-                aiLoadingIndicator.classList.add('hidden');
-                getAiInsightsBtn.disabled = false;
-            } else {
-                loadingIndicator.classList.add('hidden');
-                // Button enabling/disabling is handled by context
-            }
+            loadingIndicator.classList.add('hidden');
+            // Button enabling/disabling is handled by context
         }
     }
 
@@ -371,7 +312,6 @@
 
     async function fetchAndProcessCube(cubeCode) {
         setLoading(true);
-        aiInsightsContainer.classList.add('hidden'); // Hide AI insights if a new cube is loaded
         const cube = cubes.find(c => c.code === cubeCode);
         if (!cube) {
             showMessage('Selected cube not found.', 'error');
@@ -480,7 +420,6 @@
             return;
         }
         setLoading(true);
-        aiInsightsContainer.classList.add('hidden'); // Hide AI insights when a new deck is generated
         const deck = [];
         currentCubeData.forEach(card => {
             const cardTags = card.Tags || card.tags; 
@@ -499,103 +438,7 @@
         showMessage('DECKLIST READY!', 'success');
         setLoading(false);
         copyDecklistBtn.disabled = false;
-        getAiInsightsBtn.disabled = false; // Enable AI button
     }
-
-    // --- AI Feature ---
-    async function getAiDeckInsights() {
-        if (!packSelections.pack1 || !packSelections.pack2 || !decklistOutput.value) {
-            showMessage("GENERATE DECKLIST FIRST!", "error");
-            return;
-        }
-        setLoading(true, true); // Show AI specific loading
-        aiInsightsContainer.classList.remove('hidden');
-        aiDeckNameDisplay.textContent = "NAME: ...ANALYZING ORACLE...";
-        aiStrategyTipsDisplay.innerHTML = "<li>...CONSULTING SPIRITS...</li>";
-
-        const decklistSample = decklistOutput.value.split('\n').slice(0, 15).join(', ');
-
-        const prompt = `You are an expert Magic: The Gathering deck CUBE analyst.
-I have combined two Jumpstart packs to create a deck.
-Pack 1 Theme: ${packSelections.pack1}
-Pack 2 Theme: ${packSelections.pack2}
-Here is a sample of the combined decklist (first 15 cards): ${decklistSample}
-
-Please provide the following in JSON format according to the schema:
-1. A creative and thematic name for this combined deck (deckName).
-2. An array of three brief (1-2 sentences each) strategy tips for playing this deck, highlighting potential synergies or a general game plan (strategyTips). Make them sound like they are from an ancient, wise oracle.`;
-
-        const apiKey = ""; // Handled by Canvas environment
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-        
-        const payload = {
-            contents: [{ role: "user", parts: [{ text: prompt }] }],
-            generationConfig: {
-                responseMimeType: "application/json",
-                responseSchema: {
-                    type: "OBJECT",
-                    properties: {
-                        "deckName": { 
-                            "type": "STRING",
-                            "description": "A creative and thematic name for the combined deck, as if spoken by a wise oracle."
-                        },
-                        "strategyTips": {
-                            "type": "ARRAY",
-                            "description": "An array of three brief strategy tips for playing the deck, phrased as ancient wisdom.",
-                            "items": { "type": "STRING" }
-                        }
-                    },
-                    required: ["deckName", "strategyTips"]
-                }
-            }
-        };
-
-        try {
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
-
-            if (!response.ok) {
-                const errorBody = await response.text();
-                throw new Error(`API Error: ${response.status} - ${errorBody}`);
-            }
-
-            const result = await response.json();
-
-            if (result.candidates && result.candidates.length > 0 &&
-                result.candidates[0].content && result.candidates[0].content.parts &&
-                result.candidates[0].content.parts.length > 0) {
-                
-                const rawJsonText = result.candidates[0].content.parts[0].text;
-                const insights = JSON.parse(rawJsonText);
-
-                aiDeckNameDisplay.textContent = `NAME: ${insights.deckName}`;
-                aiStrategyTipsDisplay.innerHTML = ""; // Clear previous
-                if (insights.strategyTips && insights.strategyTips.length > 0) {
-                    insights.strategyTips.forEach(tip => {
-                        const li = document.createElement('li');
-                        li.textContent = tip;
-                        aiStrategyTipsDisplay.appendChild(li);
-                    });
-                } else {
-                    aiStrategyTipsDisplay.innerHTML = "<li>THE ORACLE OFFERS NO STRATEGY AT THIS TIME.</li>";
-                }
-                showMessage("ORACLE HAS SPOKEN!", "success");
-            } else {
-                throw new Error("UNEXPECTED RESPONSE FROM ORACLE.");
-            }
-        } catch (error) {
-            console.error("Error fetching AI insights:", error);
-            showMessage(`ORACLE ERROR: ${error.message}`, 'error', 7000);
-            aiDeckNameDisplay.textContent = "NAME: ORACLE IS SILENT";
-            aiStrategyTipsDisplay.innerHTML = "<li>THE PATH IS UNCLEAR...</li>";
-        } finally {
-            setLoading(false, true); // Hide AI specific loading
-        }
-    }
-
 
     // --- UI Transitions ---
     function resetToCubeSelection() {
@@ -603,7 +446,6 @@ Please provide the following in JSON format according to the schema:
         packSelectionStep.classList.add('hidden');
         decklistStep.classList.add('hidden');
         loadingIndicator.classList.add('hidden');
-        aiInsightsContainer.classList.add('hidden'); // Hide AI insights on reset
 
         cubeSelect.value = "";
         confirmCubeBtn.disabled = true;
@@ -617,7 +459,6 @@ Please provide the following in JSON format according to the schema:
         chosenPack1Display.textContent = '';
         chosenPack2Display.textContent = '';
         chosenCubeCodeDisplay.textContent = '';
-        getAiInsightsBtn.disabled = true; // Disable AI button on reset
         showMessage('APP RESET', 'info');
     }
 
@@ -639,7 +480,6 @@ Please provide the following in JSON format according to the schema:
         populateCubeSelect();
         document.getElementById('resetAppBtnPack').addEventListener('click', resetToCubeSelection);
         document.getElementById('resetAppBtnDeck').addEventListener('click', resetToCubeSelection);
-        getAiInsightsBtn.addEventListener('click', getAiDeckInsights); // Listener for AI button
     });
 
     cubeSelect.addEventListener('change', () => {
