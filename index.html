@@ -217,6 +217,23 @@
         h1, h2, .font-semibold {
     text-shadow: 0 0 2px #facc15, 0 0 4px #facc15;
 }
+
+.flame-flicker {
+    animation: flame-flicker 1s infinite steps(2, end);
+}
+@keyframes flame-flicker {
+    0%   { opacity: 1; }
+    10%  { opacity: 0.8; }
+    20%  { opacity: 1; }
+    30%  { opacity: 0.7; }
+    40%  { opacity: 1; }
+    50%  { opacity: 0.9; }
+    60%  { opacity: 1; }
+    70%  { opacity: 0.85; }
+    80%  { opacity: 1; }
+    90%  { opacity: 0.95; }
+    100% { opacity: 1; }
+}
     </style>
 </head>
 <body class="min-h-screen grid place-items-center p-2 sm:p-4 selection:bg-yellow-400 selection:text-black">
@@ -229,11 +246,27 @@
             <header class="text-center mb-4">
                 <h1 class="flex items-center justify-center">
                     <div class="pixel-flame" aria-hidden="true">
-                        <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span><span class="f9"></span>
+                        <span class="f1 flame-flicker" style="animation-delay: 0.00s"></span>
+                        <span class="f2 flame-flicker" style="animation-delay: 0.10s"></span>
+                        <span class="f3 flame-flicker" style="animation-delay: 0.20s"></span>
+                        <span class="f4 flame-flicker" style="animation-delay: 0.15s"></span>
+                        <span class="f5 flame-flicker" style="animation-delay: 0.05s"></span>
+                        <span class="f6 flame-flicker" style="animation-delay: 0.18s"></span>
+                        <span class="f7 flame-flicker" style="animation-delay: 0.12s"></span>
+                        <span class="f8 flame-flicker" style="animation-delay: 0.22s"></span>
+                        <span class="f9 flame-flicker" style="animation-delay: 0.08s"></span>
                     </div>
                     JUMPSTART DECK GENERATOR
                     <div class="pixel-flame" aria-hidden="true">
-                        <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span><span class="f9"></span>
+                        <span class="f1 flame-flicker" style="animation-delay: 0.00s"></span>
+                        <span class="f2 flame-flicker" style="animation-delay: 0.10s"></span>
+                        <span class="f3 flame-flicker" style="animation-delay: 0.20s"></span>
+                        <span class="f4 flame-flicker" style="animation-delay: 0.15s"></span>
+                        <span class="f5 flame-flicker" style="animation-delay: 0.05s"></span>
+                        <span class="f6 flame-flicker" style="animation-delay: 0.18s"></span>
+                        <span class="f7 flame-flicker" style="animation-delay: 0.12s"></span>
+                        <span class="f8 flame-flicker" style="animation-delay: 0.22s"></span>
+                        <span class="f9 flame-flicker" style="animation-delay: 0.08s"></span>
                     </div>
                 </h1>
                 <p class="text-xs text-slate-300 mt-1">SELECT A CUBE AND TWO PACKS!</p>
