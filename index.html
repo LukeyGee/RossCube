@@ -234,6 +234,15 @@
     90%  { opacity: 0.95; }
     100% { opacity: 1; }
 }
+
+/* Add this to your <style> section for selected pack highlighting */
+input[type="radio"]:checked + label.pack-radio-label {
+    background-color: #facc15;   /* yellow-400 */
+    color: #1a1a2e;              /* dark text for contrast */
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    transition: background-color 0.1s steps(1, end), color 0.1s steps(1, end);
+}
     </style>
 </head>
 <body class="min-h-screen grid place-items-center p-2 sm:p-4 selection:bg-yellow-400 selection:text-black">
