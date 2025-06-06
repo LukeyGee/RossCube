@@ -80,7 +80,7 @@
             border-radius: 0;
             padding: 36px 16px; /* Increased top/bottom padding */
             font-size: 20px;
-            line-height: 1; /* To try and normalize text position with increased padding */
+            line-height: 1.625; /* To try and normalize text position with increased padding */
             width: 100%;
         }
         select#cubeSelect {
@@ -264,6 +264,20 @@ input[type="radio"]:checked + label.pack-radio-label {
 #cubeSelectionStep .space-y-2 {
     text-align: center;
 }
+
+#visualDecklist h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-family: 'Press Start 2P', cursive;
+}
+.decklist-card-thumb {
+    box-shadow: 2px 2px 0 #000;
+    transition: transform 0.1s;
+}
+.decklist-card-thumb:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
     </style>
 </head>
 <body class="min-h-screen grid place-items-center p-2 sm:p-4 selection:bg-yellow-400 selection:text-black">
@@ -338,13 +352,17 @@ input[type="radio"]:checked + label.pack-radio-label {
                 </p>
                 <textarea id="decklistOutput" readonly placeholder="GENERATING DECKLIST..."></textarea>
                 
+                <!-- BUTTONS MOVED UP HERE -->
                 <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 mt-3">
                     <button id="copyDecklistBtn" class="btn flex-grow">COPY LIST</button>
                 </div>
-                 <div class="flex space-x-2 mt-2">
+                <div class="flex space-x-2 mt-2">
                     <button id="printToConsoleBtn" class="btn-secondary flex-grow">PRINT (DEV)</button>
                     <button id="resetAppBtnDeck" class="btn-secondary flex-grow">START OVER</button>
                 </div>
+                
+                <!-- Visual decklist now comes after the buttons -->
+                <div id="visualDecklist" class="mt-6"></div>
             </section>
 
             <!-- Loading Indicator -->
@@ -593,11 +611,30 @@ input[type="radio"]:checked + label.pack-radio-label {
             if (cardTags === packSelections.pack1 || cardTags === packSelections.pack2) {
                 const cardName = card.Name || card.name;
                 if (cardName && cardName.trim() !== "") {
-                    deck.push(cardName.trim());
+                    deck.push(card);
                 }
             }
         });
-        decklistOutput.value = deck.sort().join('\n');
+
+        // Group by main type, merging Sorcery+Instant and Artifact+Enchantment
+        const typeGroups = {
+            Creature: [],
+            "Instant / Sorcery": [],
+            "Artifact / Enchantment": [],
+            Planeswalker: [],
+            Other: []
+        };
+        deck.forEach(card => {
+            const typeLine = (card.Type || card.type || card.type_line || "").toLowerCase();
+            if (typeLine.includes("creature")) typeGroups.Creature.push(card);
+            else if (typeLine.includes("instant") || typeLine.includes("sorcery")) typeGroups["Instant / Sorcery"].push(card);
+            else if (typeLine.includes("artifact") || typeLine.includes("enchantment")) typeGroups["Artifact / Enchantment"].push(card);
+            else if (typeLine.includes("planeswalker")) typeGroups.Planeswalker.push(card);
+            else typeGroups.Other.push(card);
+        });
+
+        // Show text decklist as before
+        decklistOutput.value = deck.map(card => (card.Name || card.name)).sort().join('\n');
         chosenPack1Display.textContent = packSelections.pack1;
         chosenPack2Display.textContent = packSelections.pack2;
         chosenCubeCodeDisplay.textContent = cubeSelect.value;
@@ -605,6 +642,199 @@ input[type="radio"]:checked + label.pack-radio-label {
         showMessage('DECKLIST READY!', 'success');
         setLoading(false);
         copyDecklistBtn.disabled = false;
+
+        // Render visual decklist
+        renderVisualDecklist(typeGroups);
+    }
+
+    function renderVisualDecklist(typeGroups) {
+        const container = document.getElementById('visualDecklist');
+        container.innerHTML = '';
+        Object.entries(typeGroups).forEach(([type, cards]) => {
+            // Skip empty groups and "Other" if it only contains lands
+            if (cards.length === 0) return;
+            if (type === "Other") {
+                // Filter out lands from "Other"
+                const nonLandCards = cards.filter(card => {
+                    const typeLine = (card.Type || card.type || card.type_line || "").toLowerCase();
+                    return !typeLine.includes("land");
+                });
+                if (nonLandCards.length === 0) return; // Don't show "Other" if only lands
+                cards = nonLandCards;
+            }
+
+            // Count duplicates by card name
+            const cardCounts = {};
+            cards.forEach(card => {
+                const cardName = card.Name || card.name;
+                cardCounts[cardName] = (cardCounts[cardName] || 0) + 1;
+            });
+
+            // Only unique cards for display
+            const uniqueCards = Object.keys(cardCounts).map(cardName =>
+                cards.find(card => (card.Name || card.name) === cardName)
+            );
+
+            const stackDiv = document.createElement('div');
+            stackDiv.className = 'mb-6';
+            const title = document.createElement('h3');
+            title.textContent = type;
+            title.style.color = '#facc15';
+            stackDiv.appendChild(title);
+
+            // Creature: two rows, others: one row
+            let cardsPerRow = 8;
+            if (type === "Creature") {
+                cardsPerRow = Math.ceil(uniqueCards.length / 2);
+            }
+
+            for (let row = 0; row < (type === "Creature" ? 2 : 1); row++) {
+                const cardStack = document.createElement('div');
+                cardStack.style.display = 'flex';
+                cardStack.style.flexDirection = 'row';
+                cardStack.style.position = 'relative';
+                cardStack.style.height = '156px';
+                cardStack.style.gap = '0';
+
+                const startIdx = row * cardsPerRow;
+                const endIdx = Math.min(startIdx + cardsPerRow, uniqueCards.length);
+
+                for (let idx = startIdx; idx < endIdx; idx++) {
+                    const card = uniqueCards[idx];
+                    const cardName = card.Name || card.name;
+                    const count = cardCounts[cardName];
+
+                    const cardWrapper = document.createElement('div');
+                    cardWrapper.style.position = 'relative';
+                    cardWrapper.style.display = 'inline-block';
+                    cardWrapper.style.marginLeft = idx % cardsPerRow === 0 ? '0' : '-32px'; // overlap by 32px
+
+                    const cardImg = document.createElement('img');
+                    cardImg.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`;
+                    cardImg.alt = cardName;
+                    cardImg.title = cardName;
+                    cardImg.style.width = '110px';
+                    cardImg.style.height = '156px';
+                    cardImg.style.objectFit = 'cover';
+                    cardImg.style.border = '2px solid #222';
+                    cardImg.style.borderRadius = '4px';
+                    cardImg.style.background = '#111';
+                    cardImg.style.cursor = 'pointer';
+                    cardImg.className = 'decklist-card-thumb';
+
+                    // Hover effect for large preview
+                    cardImg.addEventListener('mouseenter', (e) => showCardHover(cardName, e));
+                    cardImg.addEventListener('mouseleave', hideCardHover);
+
+                    cardWrapper.appendChild(cardImg);
+
+                    // Add count badge if more than 1
+                    if (count > 1) {
+                        const badge = document.createElement('span');
+                        badge.textContent = `x${count}`;
+                        badge.style.position = 'absolute';
+                        badge.style.bottom = '4px';
+                        badge.style.right = '6px';
+                        badge.style.background = '#1a1a2e';
+                        badge.style.color = '#facc15';
+                        badge.style.fontFamily = "'Press Start 2P', cursive";
+                        badge.style.fontSize = '0.85rem';
+                        badge.style.padding = '2px 6px';
+                        badge.style.borderRadius = '6px';
+                        badge.style.border = '1px solid #222';
+                        badge.style.pointerEvents = 'none';
+                        cardWrapper.appendChild(badge);
+                    }
+
+                    cardStack.appendChild(cardWrapper);
+                }
+                stackDiv.appendChild(cardStack);
+            }
+            container.appendChild(stackDiv);
+        });
+    }
+
+    // Hover preview helpers
+    function showCardHover(cardName, event) {
+        let hoverImg = document.getElementById('card-hover-img');
+        if (!hoverImg) {
+            hoverImg = document.createElement('img');
+            hoverImg.id = 'card-hover-img';
+            hoverImg.style.position = 'fixed';
+            hoverImg.style.zIndex = 1000;
+            hoverImg.style.pointerEvents = 'none';
+            hoverImg.style.border = '3px solid #facc15';
+            hoverImg.style.background = '#111';
+            hoverImg.style.imageRendering = 'auto';
+            document.body.appendChild(hoverImg);
+        }
+        hoverImg.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`;
+        hoverImg.style.display = 'block';
+        hoverImg.style.width = '488px';
+        hoverImg.style.height = '680px';
+
+        // Calculate position so it doesn't go off screen
+        const padding = 16;
+        const imgWidth = 488;
+        const imgHeight = 680;
+        let left = event.clientX + 24;
+        let top = event.clientY - 40;
+
+        // Adjust if off right edge
+        if (left + imgWidth + padding > window.innerWidth) {
+            left = window.innerWidth - imgWidth - padding;
+        }
+        // Adjust if off bottom edge
+        if (top + imgHeight + padding > window.innerHeight) {
+            top = window.innerHeight - imgHeight - padding;
+        }
+        // Adjust if off top edge
+        if (top < padding) {
+            top = padding;
+        }
+        // Adjust if off left edge
+        if (left < padding) {
+            left = padding;
+        }
+
+        hoverImg.style.left = left + 'px';
+        hoverImg.style.top = top + 'px';
+
+        document.addEventListener('mousemove', moveCardHover);
+    }
+
+    function moveCardHover(e) {
+        const hoverImg = document.getElementById('card-hover-img');
+        if (hoverImg) {
+            const padding = 16;
+            const imgWidth = 488;
+            const imgHeight = 680;
+            let left = e.clientX + 24;
+            let top = e.clientY - 40;
+
+            if (left + imgWidth + padding > window.innerWidth) {
+                left = window.innerWidth - imgWidth - padding;
+            }
+            if (top + imgHeight + padding > window.innerHeight) {
+                top = window.innerHeight - imgHeight - padding;
+            }
+            if (top < padding) {
+                top = padding;
+            }
+            if (left < padding) {
+                left = padding;
+            }
+
+            hoverImg.style.left = left + 'px';
+            hoverImg.style.top = top + 'px';
+        }
+    }
+    function hideCardHover() {
+        const hoverImg = document.getElementById('card-hover-img');
+        if (hoverImg) {
+            hoverImg.style.display = 'none';
+            document.removeEventListener('mousemove', moveCardHover);
+        }
     }
 
     // --- UI Transitions ---
