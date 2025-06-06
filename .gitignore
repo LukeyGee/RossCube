@@ -61,6 +61,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos
-
-#Ignore CSV Update Script
-cubes/cube_update.ps1
