@@ -394,14 +394,14 @@ input[type="radio"]:checked + label.pack-radio-label {
 
     // --- Application State ---
     let cubes = [
-        { name: "MADChilupa Big Vintage", code: "trs", url: "https://cubecobra.com/cube/overview/trs" },
-        { name: "KaramjaRum Super Jump", code: "krstart1", url: "https://cubecobra.com/cube/overview/krstart1" },
-        { name: "ImNotFine Jumpstart Cube", code: "infjumpstartcube", url: "https://cubecobra.com/cube/overview/infjumpstartcube" },
-        { name: "Aerac Jumpstart Cube", code: "ajsc", url: "https://cubecobra.com/cube/overview/ajsc" },
-        { name: "aquickalias Jumpstart", code: "jumpstartdecks", url: "https://cubecobra.com/cube/overview/jumpstartdecks" },
-        { name: "Jumpstart Cube 900", code: "jump-start-cube", url: "https://cubecobra.com/cube/overview/jump-start-cube" },
-        { name: "Hasted's Pauper Jumpstart Cube", code: "HastedPJC", url: "https://cubecobra.com/cube/overview/HastedPJC" },
-        { name: "Big Beginner Jumpstart", code: "vuq", url: "https://cubecobra.com/cube/overview/vuq" }
+        { name: "MADChilupa Big Vintage", code: "trs", csvPath: "./cubes/trs.csv" },
+        { name: "KaramjaRum Super Jump", code: "krstart1", csvPath: "./cubes/krstart1.csv" },
+        { name: "ImNotFine Jumpstart Cube", code: "infjumpstartcube", csvPath: "./cubes/infjumpstartcube.csv" },
+        { name: "Aerac Jumpstart Cube", code: "ajsc", csvPath: "./cubes/ajsc.csv" },
+        { name: "aquickalias Jumpstart", code: "jumpstartdecks", csvPath: "./cubes/jumpstartdecks.csv" },
+        { name: "Jumpstart Cube 900", code: "jump-start-cube", csvPath: "./cubes/jump-start-cube.csv" },
+        { name: "Hasted's Pauper Jumpstart Cube", code: "HastedPJC", csvPath: "./cubes/HastedPJC.csv" },
+        { name: "Big Beginner Jumpstart", code: "vuq", csvPath: "./cubes/vuq.csv" }
     ];
     let currentCubeData = null;
     let availablePackThemes = []; 
@@ -487,10 +487,9 @@ input[type="radio"]:checked + label.pack-radio-label {
             return;
         }
         selectedCubeName.textContent = cube.name;
-        const csvUrl = `https://cubecobra.com/cube/download/csv/${cubeCode}`;
-        const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(csvUrl)}`;
+        const csvUrl = cube.csvPath; // Use local path
         try {
-            const response = await fetch(proxyUrl); 
+            const response = await fetch(csvUrl);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const csvText = await response.text();
             if (!csvText) throw new Error('CSV data is empty.');
