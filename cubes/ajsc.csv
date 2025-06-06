@@ -1,316 +1,295 @@
 name,CMC,Type,Color,Set,Collector Number,Rarity,Color Category,status,Finish,maybeboard,image URL,image Back URL,tags,Notes,MTGO ID
-"Persistent Specimen",1,"Creature - Skeleton",B,"vow","125",common,Black,Owned,Non-foil,false,,,"B - Reanimate","",94578
-"Valgavoth's Faithful",1,"Creature - Human Cleric",B,"dsk","121",uncommon,Black,Owned,,false,,,"B - Reanimate","",130373
-"Crow of Dark Tidings",3,"Creature - Zombie Bird",B,"cmr","115",common,Black,Owned,Non-foil,false,,,"B - Reanimate","",85012
-"Crypt Lurker",4,"Creature - Horror",B,"m21","93",common,Black,Owned,Non-foil,false,,,"B - Reanimate","",81413
-"Ravenous Chupacabra",4,"Creature - Beast Horror",B,"rix","82",uncommon,Black,Owned,Non-foil,false,,,"B - Reanimate","",66617
-"Diregraf Horde",5,"Creature - Zombie",B,"mid","96",common,Black,Owned,Non-foil,false,,,"B - Reanimate","",93146
-"Archfiend of Spite",7,"Creature - Demon",B,"c19","14",rare,Black,Owned,,false,,,"B - Reanimate","",77082
-"Gloomfang Mauler",7,"Creature - Nightmare",B,"mom","108",common,Black,Owned,Non-foil,false,,,"B - Reanimate","",110052
-"Drag to the Underworld",4,"Instant",B,"thb","89",uncommon,Black,Owned,Non-foil,false,,,"B - Reanimate","",79302
-"Funeral Rites",3,"Sorcery",B,"thb","97",common,Black,Owned,Non-foil,false,,,"B - Reanimate","",79318
-"Victimize",3,"Sorcery",B,"cmm","195",uncommon,Black,Owned,Non-foil,false,,,"B - Reanimate","",115489
-"Dread Return",4,"Sorcery",B,"dmr","80",uncommon,Black,Owned,Non-foil,false,,,"B - Reanimate","",107649
-"Thriving Moor",0,"Land",B,"jmp","37",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",81821
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
-"Blood Burglar",2,"Creature - Vampire Rogue",B,"m20","88",common,Black,Owned,Non-foil,false,,,"B - Vampires","",73075
-"Gifted Aetherborn",2,"Creature - Aetherborn Vampire",B,"aer","61",uncommon,Black,Owned,Non-foil,false,,,"B - Vampires","",62681
-"Silversmote Ghoul",3,"Creature - Zombie Vampire",B,"m21","122",uncommon,Black,Owned,Non-foil,false,,,"B - Vampires","",81471
-"Vampire Nighthawk",3,"Creature - Vampire Shaman",B,"e02","23",uncommon,Black,Owned,,false,,,"B - Vampires","",
-"Markov Baron",3,"Creature - Vampire Noble",B,"mat","14",uncommon,Black,Owned,Non-foil,false,,,"B - Vampires","",109150
-"Stromkirk Bloodthief",3,"Creature - Vampire Rogue",B,"mid","123",uncommon,Black,Owned,,false,,,"B - Vampires","",93210
-"Bloodvial Purveyor",4,"Creature - Vampire",B,"vow","98",rare,Black,Owned,Non-foil,false,,,"B - Vampires","",94514
-"Henrika Domnathi",4,"Legendary Creature - Vampire",B,"vow","119",mythic,Black,Owned,,false,,,"B - Vampires","",94562
-"Vampire Scrivener",5,"Creature - Vampire Warlock",B,"snc","98",uncommon,Black,Owned,,false,,,"B - Vampires","",98415
-"Unexpected Fangs",2,"Instant",B,"iko","102",common,Black,Owned,,false,,,"B - Vampires","",80213
-"Drag to the Underworld",4,"Instant",B,"thb","89",uncommon,Black,Owned,Non-foil,false,,,"B - Vampires","",79302
-"Pointed Discussion",3,"Sorcery",B,"vow","126",common,Black,Owned,Non-foil,false,,,"B - Vampires","",94580
-"Thriving Moor",0,"Land",B,"jmp","37",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",81821
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
-"Cauldron Familiar",1,"Creature - Cat",B,"eld","81",uncommon,Black,Owned,Non-foil,false,,,"B - Witchcraft","",78274
-"Cauldron Familiar",1,"Creature - Cat",B,"eld","81",uncommon,Black,Owned,Non-foil,false,,,"B - Witchcraft","",78274
-"Sweettooth Witch",3,"Creature - Human Warlock",B,"woe","111",common,Black,Owned,Foil,false,,,"B - Witchcraft","",116538
-"Fell Stinger",3,"Creature - Zombie Scorpion",B,"vow","406",uncommon,Black,Owned,Non-foil,false,,,"B - Witchcraft","",
-"Experimental Confectioner",3,"Creature - Human Peasant",B,"woe","314",uncommon,Black,Owned,,false,,,"B - Witchcraft","",116094
-"Gumdrop Poisoner",3,"Creature - Human Warlock",B,"woe","93",rare,Black,Owned,,false,,,"B - Witchcraft","",116500
-"High Fae Negotiator",5,"Creature - Faerie Warlock",B,"woe","94",uncommon,Black,Owned,Non-foil,false,,,"B - Witchcraft","",116504
-"Witch of the Moors",5,"Creature - Human Warlock",B,"jmp","18",rare,Black,Owned,Non-foil,false,,,"B - Witchcraft","",81783
-"Shelob's Ambush",1,"Instant",B,"ltr","108",common,Black,Owned,Non-foil,false,,,"B - Witchcraft","",112126
-"Candy Grapple",2,"Instant",B,"woe","83",common,Black,Owned,,false,,,"B - Witchcraft","",116476
-"Witch's Oven",1,"Artifact",,"eld","237",uncommon,Colorless,Owned,Non-foil,false,,,"B - Witchcraft","",78620
-"Witch's Oven",1,"Artifact",,"eld","237",uncommon,Colorless,Owned,,false,,,"B - Witchcraft","",78620
-"Witch's Cottage",0,"Land - Swamp",B,"eld","249",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",78644
-"Thriving Moor",0,"Land",B,"jmp","37",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",81821
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",
-"Foulmire Knight",1,"Creature - Zombie Knight",B,"eld","286",uncommon,Black,Owned,Non-foil,false,,,"B - Zombies","",
-"Sanitarium Skeleton",1,"Creature - Skeleton",B,"soi","133",common,Black,Owned,Non-foil,false,,,"B - Zombies","",60318
-"Carrion Feeder",1,"Creature - Zombie",B,"mh1","81",uncommon,Black,Owned,,false,,,"B - Zombies","",72534
-"Jadar, Ghoulcaller of Nephalia",2,"Legendary Creature - Human Wizard",B,"mid","315",rare,Black,Owned,Non-foil,false,,,"B - Zombies","",94132
-"Eternal Taskmaster",2,"Creature - Zombie",B,"war","90",uncommon,Black,Owned,Non-foil,false,,,"B - Zombies","",71786
-"Liliana's Devotee",3,"Creature - Human Warlock",B,"m21","109",uncommon,Black,Owned,Non-foil,false,,,"B - Zombies","",81445
-"Braids, Arisen Nightmare",3,"Legendary Creature - Nightmare",B,"dmu","84",rare,Black,Owned,Non-foil,false,,,"B - Zombies","",102644
-"Morkrut Behemoth",5,"Creature - Zombie Giant",B,"mid","114",common,Black,Owned,Non-foil,false,,,"B - Zombies","",93190
-"Gristle Grinner",5,"Creature - Zombie",B,"csp","59",uncommon,Black,Owned,Non-foil,false,,,"B - Zombies","",24545
-"Village Rites",1,"Instant",B,"m21","126",common,Black,Owned,Non-foil,false,,,"B - Zombies","",81479
-"Bloodchief's Thirst",1,"Sorcery",B,"znr","94",uncommon,Black,Owned,Non-foil,false,,,"B - Zombies","",83151
-"Dreadhorde Invasion",2,"Enchantment",B,"war","86",rare,Black,Owned,,false,,,"B - Zombies","",71778
-"Thriving Moor",0,"Land",B,"jmp","37",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",81821
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
-"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
-"Edgewall Innkeeper",1,"Creature - Human Peasant",G,"eld","151",uncommon,Green,Owned,Non-foil,false,,,"G - Adventures","",78436
-"Almighty Brushwagg",1,"Creature - Brushwagg",G,"iko","143",common,Green,Owned,Non-foil,false,,,"G - Adventures","",80295
-"Bramble Familiar",2,"Creature - Elemental Raccoon",G,"pwoe","164s",rare,Green,Owned,Non-foil,false,,,"G - Adventures","",
-"Lovestruck Beast",3,"Creature - Beast Noble",G,"eld","299",rare,Green,Owned,Non-foil,false,,,"G - Adventures","",
-"Howling Galefang",4,"Creature - Beast",G,"woe","175",uncommon,Green,Owned,Non-foil,false,,,"G - Adventures","",116690
-"Ferocious Werefox",4,"Creature - Elf Fox Warrior",G,"woe","170",common,Green,Owned,Non-foil,false,,,"G - Adventures","",116676
-"Beanstalk Wurm",5,"Creature - Plant Wurm",G,"woe","161",common,Green,Owned,Non-foil,false,,,"G - Adventures","",116654
-"Stormkeld Vanguard",6,"Creature - Giant Warrior",G,"woe","187",uncommon,Green,Owned,Non-foil,false,,,"G - Adventures","",116714
-"Beanstalk Giant",7,"Creature - Giant",G,"eld","295",uncommon,Green,Owned,Non-foil,false,,,"G - Adventures","",
-"Ram Through",2,"Instant",G,"iko","170",common,Green,Owned,Non-foil,false,,,"G - Adventures","",80349
-"Curse of the Werefox",3,"Sorcery",G,"woe","167",common,Green,Owned,Non-foil,false,,,"G - Adventures","",116670
-"Lucky Clover",2,"Artifact",,"eld","226",uncommon,Colorless,Owned,Non-foil,false,,,"G - Adventures","",78598
-"Forest",0,"Basic Land - Forest",G,"eld","268",common,Lands,Owned,Non-foil,false,,,"G - Adventures","",78682
-"Forest",0,"Basic Land - Forest",G,"eld","268",common,Lands,Owned,Non-foil,false,,,"G - Adventures","",78682
-"Forest",0,"Basic Land - Forest",G,"eld","268",common,Lands,Owned,Non-foil,false,,,"G - Adventures","",78682
-"Forest",0,"Basic Land - Forest",G,"eld","268",common,Lands,Owned,Non-foil,false,,,"G - Adventures","",78682
-"Forest",0,"Basic Land - Forest",G,"eld","268",common,Lands,Owned,Non-foil,false,,,"G - Adventures","",78682
-"Forest",0,"Basic Land - Forest",G,"eld","268",common,Lands,Owned,Non-foil,false,,,"G - Adventures","",78682
-"Edgewall Inn",0,"Land",,"woe","255",uncommon,Lands,Owned,Foil,false,,,"G - Adventures","",116898
-"Thriving Grove",0,"Land",,"jmp","34",common,Lands,Owned,,false,,,"G - Adventures","",81815
-"Almighty Brushwagg",1,"Creature - Brushwagg",G,"iko","143",common,Green,Owned,,false,,,"G - Chonkers","",80295
-"Ilysian Caryatid",2,"Creature - Plant",G,"thb","174",common,Green,Owned,,false,,,"G - Chonkers","",79472
-"Ilysian Caryatid",2,"Creature - Plant",G,"thb","174",common,Green,Owned,,false,,,"G - Chonkers","",79472
-"Omnath, Locus of Mana",3,"Legendary Creature - Elemental",G,"cmm","310",mythic,Green,Owned,,false,,,"G - Chonkers","",114849
-"Jewel Thief",3,"Creature - Cat Rogue",G,"snc","151",common,Green,Owned,,false,,,"G - Chonkers","",98521
-"Challenger Troll",5,"Creature - Troll",G,"war","157",uncommon,Green,Owned,,false,,,"G - Chonkers","",71920
-"Soul of the Harvest",6,"Creature - Elemental",G,"avr","195",rare,Green,Owned,,false,,,"G - Chonkers","",44107
-"Colossal Dreadmaw",6,"Creature - Dinosaur",G,"xln","180",common,Green,Owned,,false,,,"G - Chonkers","",65378
-"Rampaging Brontodon",7,"Creature - Dinosaur",G,"cmm","315",uncommon,Green,Owned,,false,,,"G - Chonkers","",114859
-"Ram Through",2,"Instant",G,"iko","170",common,Green,Owned,,false,,,"G - Chonkers","",80349
-"Savage Punch",2,"Sorcery",G,"ktk","147",common,Green,Owned,,false,,,"G - Chonkers","",54046
-"Rancor",1,"Enchantment - Aura",G,"ema","180",uncommon,Green,Owned,,false,,,"G - Chonkers","",60589
-"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
-"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
-"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
-"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
-"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
-"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
-"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
-"Thriving Grove",0,"Land",,"jmp","34",common,Lands,Owned,,false,,,"G - Chonkers","",81815
-"Servant of the Scale",1,"Creature - Human Soldier",G,"dtk","203",common,Green,Owned,Non-foil,false,,,"G - Counters","",56010
-"Rubblebelt Maverick",1,"Creature - Human Detective",G,"mkm","174",common,Green,Owned,Non-foil,false,,,"G - Counters","",121824
-"Wildwood Scourge",1,"Creature - Hydra",G,"cmm","332",uncommon,Green,Owned,,false,,,"G - Counters","",114893
-"Ilysian Caryatid",2,"Creature - Plant",G,"thb","174",common,Green,Owned,Non-foil,false,,,"G - Counters","",79472
-"Benevolent Hydra",2,"Creature - Hydra",G,"j22","38",rare,Green,Owned,Non-foil,false,,,"G - Counters","",
-"Primordial Hydra",2,"Creature - Hydra",G,"j22","712",mythic,Green,Owned,Non-foil,false,,,"G - Counters","",
-"Pridemalkin",3,"Creature - Cat",G,"m21","196",common,Green,Owned,Non-foil,false,,,"G - Counters","",81619
-"Renata, Called to the Hunt",4,"Legendary Enchantment Creature - Demigod",G,"mul","28",uncommon,Green,Owned,,false,,,"G - Counters","",109278
-"Vastwood Fortification",1,"Instant",G,"znr","216",uncommon,Green,Owned,,false,,,"G - Counters","",83425
-"Titanic Brawl",2,"Instant",G,"j22","735",common,Green,Owned,Non-foil,false,,,"G - Counters","",
-"Titanic Brawl",2,"Instant",G,"j22","735",common,Green,Owned,,false,,,"G - Counters","",
-"Ordeal of Nylea",2,"Enchantment - Aura",G,"j22","699",uncommon,Green,Owned,Non-foil,false,,,"G - Counters","",
-"Hydra's Growth",3,"Enchantment - Aura",G,"j22","89",uncommon,Green,Owned,Non-foil,false,,,"G - Counters","",
-"Forest",0,"Basic Land - Forest",G,"j22","110",common,Lands,Owned,Non-foil,false,,,"G - Counters","",
-"Forest",0,"Basic Land - Forest",G,"j22","110",common,Lands,Owned,Non-foil,false,,,"G - Counters","",
-"Forest",0,"Basic Land - Forest",G,"j22","110",common,Lands,Owned,Non-foil,false,,,"G - Counters","",
-"Forest",0,"Basic Land - Forest",G,"j22","110",common,Lands,Owned,Non-foil,false,,,"G - Counters","",
-"Forest",0,"Basic Land - Forest",G,"j22","110",common,Lands,Owned,Non-foil,false,,,"G - Counters","",
-"Forest",0,"Basic Land - Forest",G,"j22","110",common,Lands,Owned,Non-foil,false,,,"G - Counters","",
-"Thriving Grove",0,"Land",G,"jmp","34",common,Lands,Owned,Non-foil,false,,,"G - Counters","",81815
-"Evolution Sage",3,"Creature - Elf Druid",G,"war","159",uncommon,Green,Owned,,false,,,"G - Landfall","",71924
-"Territorial Scythecat",3,"Creature - Cat",G,"znr","310",common,Green,Owned,,false,,,"G - Landfall","",
-"Embodiment of Insight",5,"Creature - Elemental",G,"znc","64",uncommon,Green,Owned,,false,,,"G - Landfall","",
-"Nissa, Who Shakes the World",5,"Legendary Planeswalker - Nissa",G,"war","169",rare,Green,Owned,,false,,,"G - Landfall","",71944
-"Ram Through",2,"Instant",G,"iko","170",common,Green,Owned,,false,,,"G - Landfall","",80349
-"Adventurous Impulse",1,"Sorcery",G,"dom","153",common,Green,Owned,,false,,,"G - Landfall","",67771
-"Explore",2,"Sorcery",G,"cmr","426",common,Green,Owned,,false,,,"G - Landfall","",85664
-"Emergent Sequence",2,"Sorcery",G,"stx","129",uncommon,Green,Owned,,false,,,"G - Landfall","",88735
-"Sylvan Awakening",3,"Sorcery",G,"dom","183",rare,Green,Owned,,false,,,"G - Landfall","",67831
-"Roaring Earth",2,"Enchantment",G,"neo","204",uncommon,Green,Owned,,false,,,"G - Landfall","",97350
-"Boseiju Reaches Skyward",4,"Enchantment - Saga",G,"neo","177",uncommon,Green,Owned,,false,,,"G - Landfall","",97290
-"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
-"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
-"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
-"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
-"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
-"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
-"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
-"Ghost Town",0,"Land",,"tmp","318",uncommon,Lands,Owned,,false,,,"G - Landfall","",10039
-"Evolving Wilds",0,"Land",,"blc","302",common,Lands,Owned,,false,,,"G - Landfall","",128751
-"Voldaren Epicure",1,"Creature - Vampire",R,"vow","308",common,Red,Owned,Non-foil,false,,,"R - Burn","",
-"Voldaren Epicure",1,"Creature - Vampire",R,"vow","308",common,Red,Owned,Non-foil,false,,,"R - Burn","",
-"Lightning Visionary",2,"Creature - Minotaur Shaman",R,"jmp","22",common,Red,Owned,Non-foil,false,,,"R - Burn","",81791
-"Lightning Visionary",2,"Creature - Minotaur Shaman",R,"jmp","22",common,Red,Owned,Non-foil,false,,,"R - Burn","",81791
-"Bonecrusher Giant",3,"Creature - Giant",R,"eld","291",rare,Red,Owned,Foil,false,,,"R - Burn","",
-"Play with Fire",1,"Instant",R,"mid","154",uncommon,Red,Owned,Non-foil,false,,,"R - Burn","",93280
-"Lightning Bolt",1,"Instant",R,"jmp","342",uncommon,Red,Owned,Non-foil,false,,,"R - Burn","",
-"Lightning Bolt",1,"Instant",R,"jmp","342",uncommon,Red,Owned,,false,,,"R - Burn","",
-"Improvised Club",2,"Instant",R,"ltr","137",common,Red,Owned,Non-foil,false,,,"R - Burn","",112184
-"Chain Lightning",1,"Sorcery",R,"jmp","302",uncommon,Red,Owned,Non-foil,false,,,"R - Burn","",
-"Experimental Synthesizer",1,"Artifact",R,"neo","138",common,Red,Owned,Non-foil,false,,,"R - Burn","",97204
-"Kumano Faces Kakkazan",1,"Enchantment - Saga",R,"neo","152",uncommon,Red,Owned,Non-foil,false,,,"R - Burn","",97234
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
-"Thriving Bluff",0,"Land",R,"jmp","33",common,Lands,Owned,Non-foil,false,,,"R - Burn","",81813
-"Goblin Guide",1,"Creature - Goblin Scout",R,"plg21","4",rare,Red,Owned,,false,,,"R - Goblins","",
-"Mogg War Marshal",2,"Creature - Goblin Warrior",R,"tsr","176",common,Red,Owned,Non-foil,false,,,"R - Goblins","",86723
-"Moria Marauder",2,"Creature - Goblin Warrior",R,"ltr","138",rare,Red,Owned,Non-foil,false,,,"R - Goblins","",112186
-"Goblin Instigator",2,"Creature - Goblin Rogue",R,"m19","142",common,Red,Owned,Non-foil,false,,,"R - Goblins","",68445
-"Fissure Wizard",2,"Creature - Goblin Wizard",R,"znr","140",common,Red,Owned,Non-foil,false,,,"R - Goblins","",83253
-"Goblin Fireleaper",2,"Creature - Goblin Warrior",R,"ltr","133",uncommon,Red,Owned,Non-foil,false,,,"R - Goblins","",112176
-"Rummaging Goblin",3,"Creature - Goblin Rogue",R,"cmr","198",common,Red,Owned,Non-foil,false,,,"R - Goblins","",85178
-"Krenko, Tin Street Kingpin",3,"Legendary Creature - Goblin",R,"war","137",rare,Red,Owned,Non-foil,false,,,"R - Goblins","",71880
-"Goblin Traprunner",4,"Creature - Goblin",R,"mh2","130",uncommon,Red,Owned,Non-foil,false,,,"R - Goblins","",90637
-"Volley Veteran",4,"Creature - Goblin Warrior",R,"m19","168",uncommon,Red,Owned,Non-foil,false,,,"R - Goblins","",68497
-"Impact Tremors",2,"Enchantment",R,"wot","44",uncommon,Red,Owned,Non-foil,false,,,"R - Goblins","",115912
-"Makeshift Munitions",2,"Enchantment",R,"jmp","348",uncommon,Red,Owned,Non-foil,false,,,"R - Goblins","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",
-"Thriving Bluff",0,"Land",R,"jmp","33",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",81813
-"The Autonomous Furnace",0,"Land - Sphere",,"one","247",common,Lands,Owned,Foil,false,,,"R - Goblins","",106709
-"Rigging Runner",1,"Creature - Goblin Pirate",R,"j22","81",uncommon,Red,Owned,Non-foil,false,,,"R - Smashing","",
-"War-Name Aspirant",2,"Creature - Human Warrior",R,"j22","620",uncommon,Red,Owned,Non-foil,false,,,"R - Smashing","",
-"Axgard Cavalry",2,"Creature - Dwarf Berserker",R,"khm","121",common,Red,Owned,Non-foil,false,,,"R - Smashing","",87575
-"Bloodrage Brawler",2,"Creature - Minotaur Warrior",R,"akh","121",uncommon,Red,Owned,Non-foil,false,,,"R - Smashing","",63844
-"Taurean Mauler",3,"Creature - Shapeshifter",R,"mor","109",rare,Red,Owned,Non-foil,false,,,"R - Smashing","",29202
-"Flametongue Kavu",4,"Creature - Kavu",R,"dmr","432",uncommon,Red,Owned,Non-foil,false,,,"R - Smashing","",108093
-"Sanctuary Smasher",6,"Creature - Rhino Beast",R,"iko","135",uncommon,Red,Owned,Non-foil,false,,,"R - Smashing","",80279
-"Monstrous Rage",1,"Instant",R,"woe","142",uncommon,Red,Owned,,false,,,"R - Smashing","",116610
-"Stolen Vitality",2,"Instant",R,"mid","161",common,Red,Owned,,false,,,"R - Smashing","",93300
-"Furious Rise",3,"Enchantment",R,"thb","136",uncommon,Red,Owned,Non-foil,false,,,"R - Smashing","",79396
-"Brazen Cannonade",4,"Enchantment",R,"j22","31",rare,Red,Owned,Non-foil,false,,,"R - Smashing","",
-"Bedlam",4,"Enchantment",R,"plst","USG-175",rare,Red,Owned,,false,,,"R - Smashing","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
-"Thriving Bluff",0,"Land",R,"jmp","33",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",81813
-"Young Pyromancer",2,"Creature - Human Shaman",R,"jmp","372",uncommon,Red,Owned,,false,,,"R - Spellslinger","",
-"Kessig Flamebreather",2,"Creature - Human Shaman",R,"vow","164",common,Red,Owned,,false,,,"R - Spellslinger","",94670
-"Heartfire Immolator",2,"Creature - Human Wizard",R,"m21","150",uncommon,Red,Owned,,false,,,"R - Spellslinger","",81527
-"Storm-Kiln Artist",4,"Creature - Dwarf Shaman",R,"stx","115",uncommon,Red,Owned,,false,,,"R - Spellslinger","",88707
-"Stonesplitter Bolt",1,"Instant",R,"woe","151",uncommon,Red,Owned,,false,,,"R - Spellslinger","",116630
-"Lightning Bolt",1,"Instant",R,"2x2","117",uncommon,Red,Owned,,false,,,"R - Spellslinger","",101718
-"Abrade",2,"Instant",R,"2xm","114",common,Red,Owned,,false,,,"R - Spellslinger","",82262
-"Volcanic Geyser",2,"Instant",R,"m21","171",uncommon,Red,Owned,,false,,,"R - Spellslinger","",81569
-"Electrodominance",2,"Instant",R,"rna","99",rare,Red,Owned,,false,,,"R - Spellslinger","",71198
-"Electric Revelation",3,"Instant",R,"mid","135",common,Red,Owned,,false,,,"R - Spellslinger","",93236
-"Into the Fire",3,"Sorcery",R,"mom","144",rare,Red,Owned,,false,,,"R - Spellslinger","",110140
-"Double Vision",5,"Enchantment",R,"m21","142",rare,Red,Owned,,false,,,"R - Spellslinger","",81511
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
-"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
-"Thriving Bluff",0,"Land",R,"jmp","33",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",81813
+"Anointed Chorister",1,"Creature - Human Cleric",W,"m21","4",common,White,Owned,Non-foil,false,,,"W - Devotion","",81235
+"Anointed Chorister",1,"Creature - Human Cleric",W,"m21","4",common,White,Owned,Non-foil,false,,,"W - Lifegain","",81235
+"Speaker of the Heavens",1,"Creature - Human Cleric",W,"m21","38",rare,White,Owned,Non-foil,false,,,"W - Lifegain","",81303
+"Thraben Inspector",1,"Creature - Human Soldier",W,"soi","44",common,White,Owned,Non-foil,false,,,"W - Blink","",60240
+"Charming Prince",2,"Creature - Human Noble",W,"eld","8",rare,White,Owned,,false,,,"W - Blink","",78104
+"Charming Prince",2,"Creature - Human Noble",W,"eld","8",rare,White,Owned,Non-foil,false,,,"W - Devotion","",78104
+"Daxos, Blessed by the Sun",2,"Legendary Enchantment Creature - Demigod",W,"plst","THB-258",uncommon,White,Owned,Non-foil,false,,,"W - Devotion","",
+"Daxos, Blessed by the Sun",2,"Legendary Enchantment Creature - Demigod",W,"plst","THB-258",uncommon,White,Owned,Non-foil,false,,,"W - Devotion","",
+"Daxos, Blessed by the Sun",2,"Legendary Enchantment Creature - Demigod",W,"mul","2",uncommon,White,Owned,Non-foil,false,,,"W - Lifegain","",109226
+"Distinguished Conjurer",2,"Creature - Human Wizard",W,"j22","4",uncommon,White,Owned,Non-foil,false,,,"W - Blink","",
+"Ninth Bridge Patrol",2,"Creature - Dwarf Soldier",W,"kld","22",common,White,Owned,Non-foil,false,,,"W - Blink","",61601
+"Angel of Vitality",3,"Creature - Angel",W,"m20","4",uncommon,White,Owned,Non-foil,false,,,"W - Lifegain","",72907
+"Fiend Hunter",3,"Creature - Human Cleric",W,"a25","14",uncommon,White,Owned,,false,,,"W - Blink","",66942
+"Inspiring Overseer",3,"Creature - Angel Cleric",W,"snc","18",common,White,Owned,Non-foil,false,,,"W - Blink","",98255
+"Inspiring Overseer",3,"Creature - Angel Cleric",W,"snc","18",common,White,Owned,Non-foil,false,,,"W - Lifegain","",98255
+"Mentor of the Meek",3,"Creature - Human Soldier",W,"isd","21",rare,White,Owned,Non-foil,false,,,"W - Devotion","",42694
+"Prava of the Steel Legion",3,"Legendary Creature - Cat Soldier",W,"cmr","38",uncommon,White,Owned,,false,,,"W - Go Wide","",84858
+"Seller of Songbirds",3,"Creature - Human",W,"rtr","22",common,White,Owned,Non-foil,false,,,"W - Blink","",46289
+"Skyclave Apparition",3,"Creature - Kor Spirit",W,"znr","39",rare,White,Owned,,false,,,"W - Blink","",83023
+"Emiel the Blessed",4,"Legendary Creature - Unicorn",W,"jmp","3",mythic,Multicolored,Owned,Non-foil,false,,,"W - Blink","",81753
+"Platoon Dispenser",5,"Artifact Creature - Construct",W,"bro","36",mythic,White,Owned,Non-foil,false,,,"W - Go Wide","",104690
+"Reverent Hoplite",5,"Creature - Human Soldier",W,"thb","33",uncommon,White,Owned,Non-foil,false,,,"W - Devotion","",79190
+"Reverent Hoplite",5,"Creature - Human Soldier",W,"thb","33",uncommon,White,Owned,Non-foil,false,,,"W - Devotion","",79190
+"Serra Angel",5,"Creature - Angel",W,"dmr","25",uncommon,White,Owned,Non-foil,false,,,"W - Lifegain","",107539
+"Serra Redeemer",5,"Creature - Angel Soldier",W,"dmu","282",rare,White,Owned,,false,,,"W - Devotion","",102380
+"Nykthos Paragon",6,"Enchantment Creature - Human Soldier",W,"mh2","22",rare,White,Owned,Non-foil,false,,,"W - Lifegain","",90413
+"Ephemerate",1,"Instant",W,"sta","5",common,White,Owned,Non-foil,false,,,"W - Blink","",89067
+"Ephemerate",1,"Instant",W,"sta","5",rare,White,Owned,Non-foil,false,,,"W - Devotion","",89067
+"Light of Hope",1,"Instant",W,"iko","20",common,White,Owned,Non-foil,false,,,"W - Lifegain","",80049
+"Outflank",1,"Instant",W,"eld","23",common,White,Owned,,false,,,"W - Go Wide","",78140
+"Kabira Takedown",2,"Instant",W,"znr","19",uncommon,White,Owned,,false,,,"W - Go Wide","",82975
+"Raise the Alarm",2,"Instant",W,"m20","34",common,White,Owned,,false,,,"W - Go Wide","",72967
+"Raise the Alarm",2,"Instant",W,"m20","34",common,White,Owned,,false,,,"W - Go Wide","",72967
+"Take Up the Shield",2,"Instant",W,"dmu","35",common,White,Owned,Non-foil,false,,,"W - Lifegain","",102546
+"Sunset Revelry",2,"Sorcery",W,"mid","38",uncommon,White,Owned,,false,,,"W - Go Wide","",93006
+"Sworn Companions",3,"Sorcery",W,"grn","27",common,White,Owned,,false,,,"W - Go Wide","",69427
+"Release the Dogs",4,"Sorcery",W,"jmp","4",uncommon,White,Owned,,false,,,"W - Go Wide","",81755
+"Altar of the Pantheon",3,"Artifact",W,"thb","231",common,Colorless,Owned,Non-foil,false,,,"W - Devotion","",79586
+"Legion's Landing",1,"Legendary Enchantment",W,"plst","XLN-22",rare,White,Owned,,false,,,"W - Go Wide","",
+"Dawn of Hope",2,"Enchantment",W,"wot","2",rare,White,Owned,Foil,false,,,"W - Lifegain","",115828
+"Intangible Virtue",2,"Enchantment",W,"wot","6",uncommon,White,Owned,,false,,,"W - Go Wide","",115836
+"Rune of Sustenance",2,"Enchantment - Aura Rune",W,"khm","25",uncommon,White,Owned,Non-foil,false,,,"W - Lifegain","",87373
+"Banishing Light",3,"Enchantment",W,"jou","5",uncommon,White,Owned,Non-foil,false,,,"W - Devotion","",52214
+"Seal from Existence",3,"Enchantment",W,"mom","35",uncommon,White,Owned,Non-foil,false,,,"W - Devotion","",109876
+"Faith's Fetters",4,"Enchantment - Aura",W,"rav","16",common,White,Owned,Non-foil,false,,,"W - Lifegain","",23020
+"Divine Visitation",5,"Enchantment",W,"grn","10",mythic,White,Owned,,false,,,"W - Go Wide","",69393
+"Invasion of Belenon",3,"Battle - Siege",W,"mom","20",uncommon,White,Owned,,false,,,"W - Go Wide","",109838
 "Delver of Secrets",1,"Creature - Human Wizard",U,"mid","47",uncommon,Blue,Owned,,false,,,"U - Delver","",93028
 "Delver of Secrets",1,"Creature - Human Wizard",U,"mid","47",uncommon,Blue,Owned,,false,,,"U - Delver","",93028
-"Talrand, Sky Summoner",4,"Legendary Creature - Merfolk Wizard",U,"cmm","124",rare,Blue,Owned,,false,,,"U - Delver","",115347
-"Docent of Perfection",5,"Creature - Insect Horror",U,"emn","56",rare,Blue,Owned,,false,,,"U - Delver","",61132
-"Tolarian Terror",7,"Creature - Serpent",U,"dmu","72",common,Blue,Owned,,false,,,"U - Delver","",102620
-"Fading Hope",1,"Instant",U,"mid","51",uncommon,Blue,Owned,,false,,,"U - Delver","",93038
-"Opt",1,"Instant",U,"m21","59",common,Blue,Owned,,false,,,"U - Delver","",81345
-"Brainstorm",1,"Instant",U,"40k","192",common,Blue,Owned,,false,,,"U - Delver","",108238
-"Jwari Disruption",2,"Instant",U,"znr","64",uncommon,Blue,Owned,,false,,,"U - Delver","",83079
-"Wizard's Retort",3,"Instant",U,"dom","75",uncommon,Blue,Owned,,false,,,"U - Delver","",67615
-"Wizard's Retort",3,"Instant",U,"dom","75",uncommon,Blue,Owned,,false,,,"U - Delver","",67615
-"Serum Visions",1,"Sorcery",U,"mm3","49",uncommon,Blue,Owned,,false,,,"U - Delver","",63505
-"Deep Analysis",4,"Sorcery",U,"dmr","46",common,Blue,Owned,,false,,,"U - Delver","",107581
-"Island",0,"Basic Land - Island",U,"j22","103",common,Lands,Owned,Non-foil,false,,,"U - Delver","",
-"Island",0,"Basic Land - Island",U,"j22","103",common,Lands,Owned,Non-foil,false,,,"U - Delver","",
-"Island",0,"Basic Land - Island",U,"j22","103",common,Lands,Owned,Non-foil,false,,,"U - Delver","",
-"Island",0,"Basic Land - Island",U,"j22","103",common,Lands,Owned,Non-foil,false,,,"U - Delver","",
-"Island",0,"Basic Land - Island",U,"j22","103",common,Lands,Owned,Non-foil,false,,,"U - Delver","",
-"Island",0,"Basic Land - Island",U,"j22","103",common,Lands,Owned,Non-foil,false,,,"U - Delver","",
-"Thriving Isle",0,"Land",U,"jmp","36",common,Lands,Owned,Non-foil,false,,,"U - Delver","",81819
-"Parcel Myr",2,"Artifact Creature - Clue Myr",U,"mh2","54",common,Blue,Owned,,false,,,"U - Investigate","",90477
-"Shambling Suit",3,"Artifact Creature - Construct",,"j22","796",uncommon,Colorless,Owned,Non-foil,false,,,"U - Investigate","",
-"Forensic Gadgeteer",3,"Creature - Vedalken Artificer Detective",U,"mkm","57",rare,Blue,Owned,Non-foil,false,,,"U - Investigate","",121600
-"Filigree Attendant",4,"Artifact Creature - Homunculus",U,"mh2","41",uncommon,Blue,Owned,Non-foil,false,,,"U - Investigate","",90451
-"Gearseeker Serpent",7,"Creature - Serpent",U,"kld","48",common,Blue,Owned,Non-foil,false,,,"U - Investigate","",61895
-"Disruption Protocol",2,"Instant",U,"neo","51",common,Blue,Owned,,false,,,"U - Investigate","",97018
-"Metallic Rebuke",3,"Instant",U,"aer","39",common,Blue,Owned,,false,,,"U - Investigate","",62629
-"Hard Evidence",1,"Sorcery",U,"mh2","46",common,Blue,Owned,,false,,,"U - Investigate","",90461
-"Press for Answers",2,"Sorcery",U,"soi","80",common,Blue,Owned,Non-foil,false,,,"U - Investigate","",60166
-"Smuggler's Copter",2,"Artifact - Vehicle",,"kld","235",rare,Colorless,Owned,,false,,,"U - Investigate","",61797
-"Magnifying Glass",3,"Artifact",,"j22","95",uncommon,Colorless,Owned,Non-foil,false,,,"U - Investigate","",
-"Mechanized Production",4,"Enchantment - Aura",U,"aer","38",mythic,Blue,Owned,Non-foil,false,,,"U - Investigate","",62559
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
-"Thriving Isle",0,"Land",U,"jmp","36",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",81819
+"Merfolk Secretkeeper",1,"Creature - Merfolk Wizard",U,"eld","53",common,Blue,Owned,,false,,,"U - Mill","",78214
+"Merfolk Secretkeeper",1,"Creature - Merfolk Wizard",U,"eld","53",common,Blue,Owned,,false,,,"U - Mill","",78214
 "Overwhelmed Apprentice",1,"Creature - Human Wizard",U,"j22","333",uncommon,Blue,Owned,,false,,,"U - Mill","",
 "Ruin Crab",1,"Creature - Crab",U,"znr","75",uncommon,Blue,Owned,,false,,,"U - Mill","",83103
 "Ruin Crab",1,"Creature - Crab",U,"znr","75",uncommon,Blue,Owned,,false,,,"U - Mill","",83103
-"Merfolk Secretkeeper",1,"Creature - Merfolk Wizard",U,"eld","53",common,Blue,Owned,,false,,,"U - Mill","",78214
-"Merfolk Secretkeeper",1,"Creature - Merfolk Wizard",U,"eld","53",common,Blue,Owned,,false,,,"U - Mill","",78214
-"Screaming Swarm",6,"Creature - Bird Horror",U,"vow","75",uncommon,Blue,Owned,,false,,,"U - Mill","",94464
-"Jace Beleren",3,"Legendary Planeswalker - Jace",U,"lrw","71",rare,Blue,Owned,,false,,,"U - Mill","",28469
-"Stern Dismissal",1,"Instant",U,"thb","68",common,Blue,Owned,,false,,,"U - Mill","",79260
-"Thought Collapse",3,"Instant",U,"rna","57",common,Blue,Owned,,false,,,"U - Mill","",71114
-"Jace's Triumph",3,"Sorcery",U,"war","55",uncommon,Blue,Owned,,false,,,"U - Mill","",71716
-"Fraying Sanity",3,"Enchantment - Aura Curse",U,"wot","19",rare,Blue,Owned,,false,,,"U - Mill","",115862
-"Teferi's Tutelage",3,"Enchantment",U,"m21","78",uncommon,Blue,Owned,,false,,,"U - Mill","",81383
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
-"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
-"Thriving Isle",0,"Land",U,"jmp","36",common,Lands,Owned,Non-foil,false,,,"U - Mill","",81819
 "Spectral Sailor",1,"Creature - Spirit Pirate",U,"m20","76",uncommon,Blue,Owned,,false,,,"U - Spirits","",73051
-"Mischievous Catgeist",2,"Creature - Cat Spirit",U,"vow","69",uncommon,Blue,Owned,,false,,,"U - Spirits","",94450
-"Rattlechains",2,"Creature - Spirit",U,"soi","81",rare,Blue,Owned,,false,,,"U - Spirits","",59790
 "Departed Deckhand",2,"Creature - Spirit Pirate",U,"m19","49",uncommon,Blue,Owned,,false,,,"U - Spirits","",68259
-"Patrician Geist",3,"Creature - Spirit Knight",U,"mid","69",rare,Blue,Owned,,false,,,"U - Spirits","",93082
+"Mischievous Catgeist",2,"Creature - Cat Spirit",U,"vow","69",uncommon,Blue,Owned,,false,,,"U - Spirits","",94450
+"Parcel Myr",2,"Artifact Creature - Clue Myr",U,"mh2","54",common,Blue,Owned,,false,,,"U - Investigate","",90477
+"Rattlechains",2,"Creature - Spirit",U,"soi","81",rare,Blue,Owned,,false,,,"U - Spirits","",59790
 "Dreamshackle Geist",3,"Creature - Spirit",U,"vow","58",rare,Blue,Owned,,false,,,"U - Spirits","",94420
+"Forensic Gadgeteer",3,"Creature - Vedalken Artificer Detective",U,"mkm","57",rare,Blue,Owned,Non-foil,false,,,"U - Investigate","",121600
 "Ghost-Lit Drifter",3,"Creature - Spirit",U,"mh2","45",uncommon,Blue,Owned,,false,,,"U - Spirits","",90459
 "Overwhelmed Archivist",3,"Creature - Human Wizard",U,"mid","68",uncommon,Blue,Owned,,false,,,"U - Spirits","",93078
+"Patrician Geist",3,"Creature - Spirit Knight",U,"mid","69",rare,Blue,Owned,,false,,,"U - Spirits","",93082
+"Filigree Attendant",4,"Artifact Creature - Homunculus",U,"mh2","41",uncommon,Blue,Owned,Non-foil,false,,,"U - Investigate","",90451
+"Talrand, Sky Summoner",4,"Legendary Creature - Merfolk Wizard",U,"cmm","124",rare,Blue,Owned,,false,,,"U - Delver","",115347
+"Docent of Perfection",5,"Creature - Insect Horror",U,"emn","56",rare,Blue,Owned,,false,,,"U - Delver","",61132
+"Screaming Swarm",6,"Creature - Bird Horror",U,"vow","75",uncommon,Blue,Owned,,false,,,"U - Mill","",94464
+"Gearseeker Serpent",7,"Creature - Serpent",U,"kld","48",common,Blue,Owned,Non-foil,false,,,"U - Investigate","",61895
+"Tolarian Terror",7,"Creature - Serpent",U,"dmu","72",common,Blue,Owned,,false,,,"U - Delver","",102620
+"Jace Beleren",3,"Legendary Planeswalker - Jace",U,"lrw","71",rare,Blue,Owned,,false,,,"U - Mill","",28469
+"Brainstorm",1,"Instant",U,"40k","192",common,Blue,Owned,,false,,,"U - Delver","",108238
+"Fading Hope",1,"Instant",U,"mid","51",uncommon,Blue,Owned,,false,,,"U - Delver","",93038
+"Opt",1,"Instant",U,"m21","59",common,Blue,Owned,,false,,,"U - Delver","",81345
+"Stern Dismissal",1,"Instant",U,"thb","68",common,Blue,Owned,,false,,,"U - Mill","",79260
+"Disruption Protocol",2,"Instant",U,"neo","51",common,Blue,Owned,,false,,,"U - Investigate","",97018
+"Jwari Disruption",2,"Instant",U,"znr","64",uncommon,Blue,Owned,,false,,,"U - Delver","",83079
+"Metallic Rebuke",3,"Instant",U,"aer","39",common,Blue,Owned,,false,,,"U - Investigate","",62629
+"Thought Collapse",3,"Instant",U,"rna","57",common,Blue,Owned,,false,,,"U - Mill","",71114
+"Wizard's Retort",3,"Instant",U,"dom","75",uncommon,Blue,Owned,,false,,,"U - Delver","",67615
+"Wizard's Retort",3,"Instant",U,"dom","75",uncommon,Blue,Owned,,false,,,"U - Delver","",67615
+"Hard Evidence",1,"Sorcery",U,"mh2","46",common,Blue,Owned,,false,,,"U - Investigate","",90461
+"Serum Visions",1,"Sorcery",U,"mm3","49",uncommon,Blue,Owned,,false,,,"U - Delver","",63505
+"Press for Answers",2,"Sorcery",U,"soi","80",common,Blue,Owned,Non-foil,false,,,"U - Investigate","",60166
+"Jace's Triumph",3,"Sorcery",U,"war","55",uncommon,Blue,Owned,,false,,,"U - Mill","",71716
+"Deep Analysis",4,"Sorcery",U,"dmr","46",common,Blue,Owned,,false,,,"U - Delver","",107581
 "Curious Obsession",1,"Enchantment - Aura",U,"rix","35",uncommon,Blue,Owned,,false,,,"U - Spirits","",66523
-"Frogify",2,"Enchantment - Aura",U,"eld","47",uncommon,Blue,Owned,,false,,,"U - Spirits","",78200
 "Favorable Winds",2,"Enchantment",U,"xln","56",uncommon,Blue,Owned,,false,,,"U - Spirits","",65124
+"Frogify",2,"Enchantment - Aura",U,"eld","47",uncommon,Blue,Owned,,false,,,"U - Spirits","",78200
 "Kasmina's Transmutation",2,"Enchantment - Aura",U,"war","57",common,Blue,Owned,,false,,,"U - Spirits","",71720
+"Fraying Sanity",3,"Enchantment - Aura Curse",U,"wot","19",rare,Blue,Owned,,false,,,"U - Mill","",115862
+"Teferi's Tutelage",3,"Enchantment",U,"m21","78",uncommon,Blue,Owned,,false,,,"U - Mill","",81383
+"Mechanized Production",4,"Enchantment - Aura",U,"aer","38",mythic,Blue,Owned,Non-foil,false,,,"U - Investigate","",62559
+"Carrion Feeder",1,"Creature - Zombie",B,"mh1","81",uncommon,Black,Owned,,false,,,"B - Zombies","",72534
+"Cauldron Familiar",1,"Creature - Cat",B,"eld","81",uncommon,Black,Owned,Non-foil,false,,,"B - Witchcraft","",78274
+"Cauldron Familiar",1,"Creature - Cat",B,"eld","81",uncommon,Black,Owned,Non-foil,false,,,"B - Witchcraft","",78274
+"Foulmire Knight",1,"Creature - Zombie Knight",B,"eld","286",uncommon,Black,Owned,Non-foil,false,,,"B - Zombies","",
+"Persistent Specimen",1,"Creature - Skeleton",B,"vow","125",common,Black,Owned,Non-foil,false,,,"B - Reanimate","",94578
+"Sanitarium Skeleton",1,"Creature - Skeleton",B,"soi","133",common,Black,Owned,Non-foil,false,,,"B - Zombies","",60318
+"Valgavoth's Faithful",1,"Creature - Human Cleric",B,"dsk","121",uncommon,Black,Owned,,false,,,"B - Reanimate","",130373
+"Blood Burglar",2,"Creature - Vampire Rogue",B,"m20","88",common,Black,Owned,Non-foil,false,,,"B - Vampires","",73075
+"Eternal Taskmaster",2,"Creature - Zombie",B,"war","90",uncommon,Black,Owned,Non-foil,false,,,"B - Zombies","",71786
+"Gifted Aetherborn",2,"Creature - Aetherborn Vampire",B,"aer","61",uncommon,Black,Owned,Non-foil,false,,,"B - Vampires","",62681
+"Jadar, Ghoulcaller of Nephalia",2,"Legendary Creature - Human Wizard",B,"mid","315",rare,Black,Owned,Non-foil,false,,,"B - Zombies","",94132
+"Braids, Arisen Nightmare",3,"Legendary Creature - Nightmare",B,"dmu","84",rare,Black,Owned,Non-foil,false,,,"B - Zombies","",102644
+"Crow of Dark Tidings",3,"Creature - Zombie Bird",B,"cmr","115",common,Black,Owned,Non-foil,false,,,"B - Reanimate","",85012
+"Experimental Confectioner",3,"Creature - Human Peasant",B,"woe","314",uncommon,Black,Owned,,false,,,"B - Witchcraft","",116094
+"Fell Stinger",3,"Creature - Zombie Scorpion",B,"vow","406",uncommon,Black,Owned,Non-foil,false,,,"B - Witchcraft","",
+"Gumdrop Poisoner",3,"Creature - Human Warlock",B,"woe","93",rare,Black,Owned,,false,,,"B - Witchcraft","",116500
+"Liliana's Devotee",3,"Creature - Human Warlock",B,"m21","109",uncommon,Black,Owned,Non-foil,false,,,"B - Zombies","",81445
+"Markov Baron",3,"Creature - Vampire Noble",B,"mat","14",uncommon,Black,Owned,Non-foil,false,,,"B - Vampires","",109150
+"Silversmote Ghoul",3,"Creature - Zombie Vampire",B,"m21","122",uncommon,Black,Owned,Non-foil,false,,,"B - Vampires","",81471
+"Stromkirk Bloodthief",3,"Creature - Vampire Rogue",B,"mid","123",uncommon,Black,Owned,,false,,,"B - Vampires","",93210
+"Sweettooth Witch",3,"Creature - Human Warlock",B,"woe","111",common,Black,Owned,Foil,false,,,"B - Witchcraft","",116538
+"Vampire Nighthawk",3,"Creature - Vampire Shaman",B,"e02","23",uncommon,Black,Owned,,false,,,"B - Vampires","",
+"Bloodvial Purveyor",4,"Creature - Vampire",B,"vow","98",rare,Black,Owned,Non-foil,false,,,"B - Vampires","",94514
+"Crypt Lurker",4,"Creature - Horror",B,"m21","93",common,Black,Owned,Non-foil,false,,,"B - Reanimate","",81413
+"Henrika Domnathi",4,"Legendary Creature - Vampire",B,"vow","119",mythic,Black,Owned,,false,,,"B - Vampires","",94562
+"Ravenous Chupacabra",4,"Creature - Beast Horror",B,"rix","82",uncommon,Black,Owned,Non-foil,false,,,"B - Reanimate","",66617
+"Diregraf Horde",5,"Creature - Zombie",B,"mid","96",common,Black,Owned,Non-foil,false,,,"B - Reanimate","",93146
+"Gristle Grinner",5,"Creature - Zombie",B,"csp","59",uncommon,Black,Owned,Non-foil,false,,,"B - Zombies","",24545
+"High Fae Negotiator",5,"Creature - Faerie Warlock",B,"woe","94",uncommon,Black,Owned,Non-foil,false,,,"B - Witchcraft","",116504
+"Morkrut Behemoth",5,"Creature - Zombie Giant",B,"mid","114",common,Black,Owned,Non-foil,false,,,"B - Zombies","",93190
+"Vampire Scrivener",5,"Creature - Vampire Warlock",B,"snc","98",uncommon,Black,Owned,,false,,,"B - Vampires","",98415
+"Witch of the Moors",5,"Creature - Human Warlock",B,"jmp","18",rare,Black,Owned,Non-foil,false,,,"B - Witchcraft","",81783
+"Archfiend of Spite",7,"Creature - Demon",B,"c19","14",rare,Black,Owned,,false,,,"B - Reanimate","",77082
+"Gloomfang Mauler",7,"Creature - Nightmare",B,"mom","108",common,Black,Owned,Non-foil,false,,,"B - Reanimate","",110052
+"Shelob's Ambush",1,"Instant",B,"ltr","108",common,Black,Owned,Non-foil,false,,,"B - Witchcraft","",112126
+"Village Rites",1,"Instant",B,"m21","126",common,Black,Owned,Non-foil,false,,,"B - Zombies","",81479
+"Candy Grapple",2,"Instant",B,"woe","83",common,Black,Owned,,false,,,"B - Witchcraft","",116476
+"Unexpected Fangs",2,"Instant",B,"iko","102",common,Black,Owned,,false,,,"B - Vampires","",80213
+"Drag to the Underworld",4,"Instant",B,"thb","89",uncommon,Black,Owned,Non-foil,false,,,"B - Reanimate","",79302
+"Drag to the Underworld",4,"Instant",B,"thb","89",uncommon,Black,Owned,Non-foil,false,,,"B - Vampires","",79302
+"Bloodchief's Thirst",1,"Sorcery",B,"znr","94",uncommon,Black,Owned,Non-foil,false,,,"B - Zombies","",83151
+"Funeral Rites",3,"Sorcery",B,"thb","97",common,Black,Owned,Non-foil,false,,,"B - Reanimate","",79318
+"Pointed Discussion",3,"Sorcery",B,"vow","126",common,Black,Owned,Non-foil,false,,,"B - Vampires","",94580
+"Victimize",3,"Sorcery",B,"cmm","195",uncommon,Black,Owned,Non-foil,false,,,"B - Reanimate","",115489
+"Dread Return",4,"Sorcery",B,"dmr","80",uncommon,Black,Owned,Non-foil,false,,,"B - Reanimate","",107649
+"Dreadhorde Invasion",2,"Enchantment",B,"war","86",rare,Black,Owned,,false,,,"B - Zombies","",71778
+"Goblin Guide",1,"Creature - Goblin Scout",R,"plg21","4",rare,Red,Owned,,false,,,"R - Goblins","",
+"Rigging Runner",1,"Creature - Goblin Pirate",R,"j22","81",uncommon,Red,Owned,Non-foil,false,,,"R - Smashing","",
+"Voldaren Epicure",1,"Creature - Vampire",R,"vow","308",common,Red,Owned,Non-foil,false,,,"R - Burn","",
+"Voldaren Epicure",1,"Creature - Vampire",R,"vow","308",common,Red,Owned,Non-foil,false,,,"R - Burn","",
+"Axgard Cavalry",2,"Creature - Dwarf Berserker",R,"khm","121",common,Red,Owned,Non-foil,false,,,"R - Smashing","",87575
+"Bloodrage Brawler",2,"Creature - Minotaur Warrior",R,"akh","121",uncommon,Red,Owned,Non-foil,false,,,"R - Smashing","",63844
+"Fissure Wizard",2,"Creature - Goblin Wizard",R,"znr","140",common,Red,Owned,Non-foil,false,,,"R - Goblins","",83253
+"Goblin Fireleaper",2,"Creature - Goblin Warrior",R,"ltr","133",uncommon,Red,Owned,Non-foil,false,,,"R - Goblins","",112176
+"Goblin Instigator",2,"Creature - Goblin Rogue",R,"m19","142",common,Red,Owned,Non-foil,false,,,"R - Goblins","",68445
+"Heartfire Immolator",2,"Creature - Human Wizard",R,"m21","150",uncommon,Red,Owned,,false,,,"R - Spellslinger","",81527
+"Kessig Flamebreather",2,"Creature - Human Shaman",R,"vow","164",common,Red,Owned,,false,,,"R - Spellslinger","",94670
+"Lightning Visionary",2,"Creature - Minotaur Shaman",R,"jmp","22",common,Red,Owned,Non-foil,false,,,"R - Burn","",81791
+"Lightning Visionary",2,"Creature - Minotaur Shaman",R,"jmp","22",common,Red,Owned,Non-foil,false,,,"R - Burn","",81791
+"Mogg War Marshal",2,"Creature - Goblin Warrior",R,"tsr","176",common,Red,Owned,Non-foil,false,,,"R - Goblins","",86723
+"Moria Marauder",2,"Creature - Goblin Warrior",R,"ltr","138",rare,Red,Owned,Non-foil,false,,,"R - Goblins","",112186
+"War-Name Aspirant",2,"Creature - Human Warrior",R,"j22","620",uncommon,Red,Owned,Non-foil,false,,,"R - Smashing","",
+"Young Pyromancer",2,"Creature - Human Shaman",R,"jmp","372",uncommon,Red,Owned,,false,,,"R - Spellslinger","",
+"Bonecrusher Giant",3,"Creature - Giant",R,"eld","291",rare,Red,Owned,Foil,false,,,"R - Burn","",
+"Krenko, Tin Street Kingpin",3,"Legendary Creature - Goblin",R,"war","137",rare,Red,Owned,Non-foil,false,,,"R - Goblins","",71880
+"Rummaging Goblin",3,"Creature - Goblin Rogue",R,"cmr","198",common,Red,Owned,Non-foil,false,,,"R - Goblins","",85178
+"Taurean Mauler",3,"Creature - Shapeshifter",R,"mor","109",rare,Red,Owned,Non-foil,false,,,"R - Smashing","",29202
+"Flametongue Kavu",4,"Creature - Kavu",R,"dmr","432",uncommon,Red,Owned,Non-foil,false,,,"R - Smashing","",108093
+"Goblin Traprunner",4,"Creature - Goblin",R,"mh2","130",uncommon,Red,Owned,Non-foil,false,,,"R - Goblins","",90637
+"Storm-Kiln Artist",4,"Creature - Dwarf Shaman",R,"stx","115",uncommon,Red,Owned,,false,,,"R - Spellslinger","",88707
+"Volley Veteran",4,"Creature - Goblin Warrior",R,"m19","168",uncommon,Red,Owned,Non-foil,false,,,"R - Goblins","",68497
+"Sanctuary Smasher",6,"Creature - Rhino Beast",R,"iko","135",uncommon,Red,Owned,Non-foil,false,,,"R - Smashing","",80279
+"Lightning Bolt",1,"Instant",R,"jmp","342",uncommon,Red,Owned,Non-foil,false,,,"R - Burn","",
+"Lightning Bolt",1,"Instant",R,"jmp","342",uncommon,Red,Owned,,false,,,"R - Burn","",
+"Lightning Bolt",1,"Instant",R,"2x2","117",uncommon,Red,Owned,,false,,,"R - Spellslinger","",101718
+"Monstrous Rage",1,"Instant",R,"woe","142",uncommon,Red,Owned,,false,,,"R - Smashing","",116610
+"Play with Fire",1,"Instant",R,"mid","154",uncommon,Red,Owned,Non-foil,false,,,"R - Burn","",93280
+"Stonesplitter Bolt",1,"Instant",R,"woe","151",uncommon,Red,Owned,,false,,,"R - Spellslinger","",116630
+"Abrade",2,"Instant",R,"2xm","114",common,Red,Owned,,false,,,"R - Spellslinger","",82262
+"Electrodominance",2,"Instant",R,"rna","99",rare,Red,Owned,,false,,,"R - Spellslinger","",71198
+"Improvised Club",2,"Instant",R,"ltr","137",common,Red,Owned,Non-foil,false,,,"R - Burn","",112184
+"Stolen Vitality",2,"Instant",R,"mid","161",common,Red,Owned,,false,,,"R - Smashing","",93300
+"Volcanic Geyser",2,"Instant",R,"m21","171",uncommon,Red,Owned,,false,,,"R - Spellslinger","",81569
+"Electric Revelation",3,"Instant",R,"mid","135",common,Red,Owned,,false,,,"R - Spellslinger","",93236
+"Chain Lightning",1,"Sorcery",R,"jmp","302",uncommon,Red,Owned,Non-foil,false,,,"R - Burn","",
+"Into the Fire",3,"Sorcery",R,"mom","144",rare,Red,Owned,,false,,,"R - Spellslinger","",110140
+"Experimental Synthesizer",1,"Artifact",R,"neo","138",common,Red,Owned,Non-foil,false,,,"R - Burn","",97204
+"Kumano Faces Kakkazan",1,"Enchantment - Saga",R,"neo","152",uncommon,Red,Owned,Non-foil,false,,,"R - Burn","",97234
+"Impact Tremors",2,"Enchantment",R,"wot","44",uncommon,Red,Owned,Non-foil,false,,,"R - Goblins","",115912
+"Makeshift Munitions",2,"Enchantment",R,"jmp","348",uncommon,Red,Owned,Non-foil,false,,,"R - Goblins","",
+"Furious Rise",3,"Enchantment",R,"thb","136",uncommon,Red,Owned,Non-foil,false,,,"R - Smashing","",79396
+"Bedlam",4,"Enchantment",R,"plst","USG-175",rare,Red,Owned,,false,,,"R - Smashing","",
+"Brazen Cannonade",4,"Enchantment",R,"j22","31",rare,Red,Owned,Non-foil,false,,,"R - Smashing","",
+"Double Vision",5,"Enchantment",R,"m21","142",rare,Red,Owned,,false,,,"R - Spellslinger","",81511
+"Almighty Brushwagg",1,"Creature - Brushwagg",G,"iko","143",common,Green,Owned,Non-foil,false,,,"G - Adventures","",80295
+"Almighty Brushwagg",1,"Creature - Brushwagg",G,"iko","143",common,Green,Owned,,false,,,"G - Chonkers","",80295
+"Edgewall Innkeeper",1,"Creature - Human Peasant",G,"eld","151",uncommon,Green,Owned,Non-foil,false,,,"G - Adventures","",78436
+"Rubblebelt Maverick",1,"Creature - Human Detective",G,"mkm","174",common,Green,Owned,Non-foil,false,,,"G - Counters","",121824
+"Servant of the Scale",1,"Creature - Human Soldier",G,"dtk","203",common,Green,Owned,Non-foil,false,,,"G - Counters","",56010
+"Wildwood Scourge",1,"Creature - Hydra",G,"cmm","332",uncommon,Green,Owned,,false,,,"G - Counters","",114893
+"Benevolent Hydra",2,"Creature - Hydra",G,"j22","38",rare,Green,Owned,Non-foil,false,,,"G - Counters","",
+"Bramble Familiar",2,"Creature - Elemental Raccoon",G,"pwoe","164s",rare,Green,Owned,Non-foil,false,,,"G - Adventures","",
+"Ilysian Caryatid",2,"Creature - Plant",G,"thb","174",common,Green,Owned,Non-foil,false,,,"G - Counters","",79472
+"Ilysian Caryatid",2,"Creature - Plant",G,"thb","174",common,Green,Owned,,false,,,"G - Chonkers","",79472
+"Ilysian Caryatid",2,"Creature - Plant",G,"thb","174",common,Green,Owned,,false,,,"G - Chonkers","",79472
+"Primordial Hydra",2,"Creature - Hydra",G,"j22","712",mythic,Green,Owned,Non-foil,false,,,"G - Counters","",
+"Evolution Sage",3,"Creature - Elf Druid",G,"war","159",uncommon,Green,Owned,,false,,,"G - Landfall","",71924
+"Jewel Thief",3,"Creature - Cat Rogue",G,"snc","151",common,Green,Owned,,false,,,"G - Chonkers","",98521
+"Lovestruck Beast",3,"Creature - Beast Noble",G,"eld","299",rare,Green,Owned,Non-foil,false,,,"G - Adventures","",
+"Omnath, Locus of Mana",3,"Legendary Creature - Elemental",G,"cmm","310",mythic,Green,Owned,,false,,,"G - Chonkers","",114849
+"Pridemalkin",3,"Creature - Cat",G,"m21","196",common,Green,Owned,Non-foil,false,,,"G - Counters","",81619
+"Territorial Scythecat",3,"Creature - Cat",G,"znr","310",common,Green,Owned,,false,,,"G - Landfall","",
+"Ferocious Werefox",4,"Creature - Elf Fox Warrior",G,"woe","170",common,Green,Owned,Non-foil,false,,,"G - Adventures","",116676
+"Howling Galefang",4,"Creature - Beast",G,"woe","175",uncommon,Green,Owned,Non-foil,false,,,"G - Adventures","",116690
+"Renata, Called to the Hunt",4,"Legendary Enchantment Creature - Demigod",G,"mul","28",uncommon,Green,Owned,,false,,,"G - Counters","",109278
+"Beanstalk Wurm",5,"Creature - Plant Wurm",G,"woe","161",common,Green,Owned,Non-foil,false,,,"G - Adventures","",116654
+"Challenger Troll",5,"Creature - Troll",G,"war","157",uncommon,Green,Owned,,false,,,"G - Chonkers","",71920
+"Embodiment of Insight",5,"Creature - Elemental",G,"znc","64",uncommon,Green,Owned,,false,,,"G - Landfall","",
+"Colossal Dreadmaw",6,"Creature - Dinosaur",G,"xln","180",common,Green,Owned,,false,,,"G - Chonkers","",65378
+"Soul of the Harvest",6,"Creature - Elemental",G,"avr","195",rare,Green,Owned,,false,,,"G - Chonkers","",44107
+"Stormkeld Vanguard",6,"Creature - Giant Warrior",G,"woe","187",uncommon,Green,Owned,Non-foil,false,,,"G - Adventures","",116714
+"Beanstalk Giant",7,"Creature - Giant",G,"eld","295",uncommon,Green,Owned,Non-foil,false,,,"G - Adventures","",
+"Rampaging Brontodon",7,"Creature - Dinosaur",G,"cmm","315",uncommon,Green,Owned,,false,,,"G - Chonkers","",114859
+"Nissa, Who Shakes the World",5,"Legendary Planeswalker - Nissa",G,"war","169",rare,Green,Owned,,false,,,"G - Landfall","",71944
+"Vastwood Fortification",1,"Instant",G,"znr","216",uncommon,Green,Owned,,false,,,"G - Counters","",83425
+"Ram Through",2,"Instant",G,"iko","170",common,Green,Owned,Non-foil,false,,,"G - Adventures","",80349
+"Ram Through",2,"Instant",G,"iko","170",common,Green,Owned,,false,,,"G - Chonkers","",80349
+"Ram Through",2,"Instant",G,"iko","170",common,Green,Owned,,false,,,"G - Landfall","",80349
+"Titanic Brawl",2,"Instant",G,"j22","735",common,Green,Owned,Non-foil,false,,,"G - Counters","",
+"Titanic Brawl",2,"Instant",G,"j22","735",common,Green,Owned,,false,,,"G - Counters","",
+"Adventurous Impulse",1,"Sorcery",G,"dom","153",common,Green,Owned,,false,,,"G - Landfall","",67771
+"Emergent Sequence",2,"Sorcery",G,"stx","129",uncommon,Green,Owned,,false,,,"G - Landfall","",88735
+"Explore",2,"Sorcery",G,"cmr","426",common,Green,Owned,,false,,,"G - Landfall","",85664
+"Savage Punch",2,"Sorcery",G,"ktk","147",common,Green,Owned,,false,,,"G - Chonkers","",54046
+"Curse of the Werefox",3,"Sorcery",G,"woe","167",common,Green,Owned,Non-foil,false,,,"G - Adventures","",116670
+"Sylvan Awakening",3,"Sorcery",G,"dom","183",rare,Green,Owned,,false,,,"G - Landfall","",67831
+"Rancor",1,"Enchantment - Aura",G,"ema","180",uncommon,Green,Owned,,false,,,"G - Chonkers","",60589
+"Ordeal of Nylea",2,"Enchantment - Aura",G,"j22","699",uncommon,Green,Owned,Non-foil,false,,,"G - Counters","",
+"Roaring Earth",2,"Enchantment",G,"neo","204",uncommon,Green,Owned,,false,,,"G - Landfall","",97350
+"Hydra's Growth",3,"Enchantment - Aura",G,"j22","89",uncommon,Green,Owned,Non-foil,false,,,"G - Counters","",
+"Boseiju Reaches Skyward",4,"Enchantment - Saga",G,"neo","177",uncommon,Green,Owned,,false,,,"G - Landfall","",97290
+"Shambling Suit",3,"Artifact Creature - Construct",,"j22","796",uncommon,Colorless,Owned,Non-foil,false,,,"U - Investigate","",
+"Pierce Strider",4,"Artifact Creature - Phyrexian Construct",,"mbs","123",uncommon,Colorless,Owned,Non-foil,false,,,"W - Blink","",39303
+"Witch's Oven",1,"Artifact",,"eld","237",uncommon,Colorless,Owned,Non-foil,false,,,"B - Witchcraft","",78620
+"Witch's Oven",1,"Artifact",,"eld","237",uncommon,Colorless,Owned,,false,,,"B - Witchcraft","",78620
+"Lucky Clover",2,"Artifact",,"eld","226",uncommon,Colorless,Owned,Non-foil,false,,,"G - Adventures","",78598
+"Smuggler's Copter",2,"Artifact - Vehicle",,"kld","235",rare,Colorless,Owned,,false,,,"U - Investigate","",61797
+"Magnifying Glass",3,"Artifact",,"j22","95",uncommon,Colorless,Owned,Non-foil,false,,,"U - Investigate","",
+"Panharmonicon",4,"Artifact",,"kld","226",rare,Colorless,Owned,Non-foil,false,,,"W - Blink","",61801
+"Edgewall Inn",0,"Land",,"woe","255",uncommon,Lands,Owned,Foil,false,,,"G - Adventures","",116898
+"Evolving Wilds",0,"Land",,"blc","302",common,Lands,Owned,,false,,,"G - Landfall","",128751
+"Forest",0,"Basic Land - Forest",G,"eld","268",common,Lands,Owned,Non-foil,false,,,"G - Adventures","",78682
+"Forest",0,"Basic Land - Forest",G,"eld","268",common,Lands,Owned,Non-foil,false,,,"G - Adventures","",78682
+"Forest",0,"Basic Land - Forest",G,"eld","268",common,Lands,Owned,Non-foil,false,,,"G - Adventures","",78682
+"Forest",0,"Basic Land - Forest",G,"eld","268",common,Lands,Owned,Non-foil,false,,,"G - Adventures","",78682
+"Forest",0,"Basic Land - Forest",G,"eld","268",common,Lands,Owned,Non-foil,false,,,"G - Adventures","",78682
+"Forest",0,"Basic Land - Forest",G,"eld","268",common,Lands,Owned,Non-foil,false,,,"G - Adventures","",78682
+"Forest",0,"Basic Land - Forest",G,"j22","110",common,Lands,Owned,Non-foil,false,,,"G - Counters","",
+"Forest",0,"Basic Land - Forest",G,"j22","110",common,Lands,Owned,Non-foil,false,,,"G - Counters","",
+"Forest",0,"Basic Land - Forest",G,"j22","110",common,Lands,Owned,Non-foil,false,,,"G - Counters","",
+"Forest",0,"Basic Land - Forest",G,"j22","110",common,Lands,Owned,Non-foil,false,,,"G - Counters","",
+"Forest",0,"Basic Land - Forest",G,"j22","110",common,Lands,Owned,Non-foil,false,,,"G - Counters","",
+"Forest",0,"Basic Land - Forest",G,"j22","110",common,Lands,Owned,Non-foil,false,,,"G - Counters","",
+"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
+"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
+"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
+"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
+"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
+"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
+"Forest",0,"Basic Land - Forest",G,"j22","112",common,Lands,Owned,Non-foil,false,,,"G - Landfall","",
+"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
+"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
+"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
+"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
+"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
+"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
+"Forest",0,"Basic Land - Forest",,"j22","112",common,Lands,Owned,,false,,,"G - Chonkers","",
+"Ghost Town",0,"Land",,"tmp","318",uncommon,Lands,Owned,,false,,,"G - Landfall","",10039
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
+"Island",0,"Basic Land - Island",U,"j22","102",common,Lands,Owned,Non-foil,false,,,"U - Mill","",
+"Island",0,"Basic Land - Island",U,"j22","103",common,Lands,Owned,Non-foil,false,,,"U - Delver","",
+"Island",0,"Basic Land - Island",U,"j22","103",common,Lands,Owned,Non-foil,false,,,"U - Delver","",
+"Island",0,"Basic Land - Island",U,"j22","103",common,Lands,Owned,Non-foil,false,,,"U - Delver","",
+"Island",0,"Basic Land - Island",U,"j22","103",common,Lands,Owned,Non-foil,false,,,"U - Delver","",
+"Island",0,"Basic Land - Island",U,"j22","103",common,Lands,Owned,Non-foil,false,,,"U - Delver","",
+"Island",0,"Basic Land - Island",U,"j22","103",common,Lands,Owned,Non-foil,false,,,"U - Delver","",
 "Island",0,"Basic Land - Island",,"j22","103",common,Lands,Owned,,false,,,"U - Spirits","",
 "Island",0,"Basic Land - Island",,"j22","103",common,Lands,Owned,,false,,,"U - Spirits","",
 "Island",0,"Basic Land - Island",,"ltr","265",common,Lands,Owned,,false,,,"U - Spirits","",112440
@@ -318,84 +297,105 @@ name,CMC,Type,Color,Set,Collector Number,Rarity,Color Category,status,Finish,may
 "Island",0,"Basic Land - Island",,"j22","103",common,Lands,Owned,,false,,,"U - Spirits","",
 "Island",0,"Basic Land - Island",,"j22","103",common,Lands,Owned,,false,,,"U - Spirits","",
 "Island",0,"Basic Land - Island",,"j22","103",common,Lands,Owned,,false,,,"U - Spirits","",
-"Thriving Isle",0,"Land",,"j22","825",common,Lands,Owned,,false,,,"U - Spirits","",
-"Thraben Inspector",1,"Creature - Human Soldier",W,"soi","44",common,White,Owned,Non-foil,false,,,"W - Blink","",60240
-"Ninth Bridge Patrol",2,"Creature - Dwarf Soldier",W,"kld","22",common,White,Owned,Non-foil,false,,,"W - Blink","",61601
-"Distinguished Conjurer",2,"Creature - Human Wizard",W,"j22","4",uncommon,White,Owned,Non-foil,false,,,"W - Blink","",
-"Charming Prince",2,"Creature - Human Noble",W,"eld","8",rare,White,Owned,,false,,,"W - Blink","",78104
-"Seller of Songbirds",3,"Creature - Human",W,"rtr","22",common,White,Owned,Non-foil,false,,,"W - Blink","",46289
-"Inspiring Overseer",3,"Creature - Angel Cleric",W,"snc","18",common,White,Owned,Non-foil,false,,,"W - Blink","",98255
-"Skyclave Apparition",3,"Creature - Kor Spirit",W,"znr","39",rare,White,Owned,,false,,,"W - Blink","",83023
-"Fiend Hunter",3,"Creature - Human Cleric",W,"a25","14",uncommon,White,Owned,,false,,,"W - Blink","",66942
-"Pierce Strider",4,"Artifact Creature - Phyrexian Construct",,"mbs","123",uncommon,Colorless,Owned,Non-foil,false,,,"W - Blink","",39303
-"Emiel the Blessed",4,"Legendary Creature - Unicorn",W,"jmp","3",mythic,Multicolored,Owned,Non-foil,false,,,"W - Blink","",81753
-"Ephemerate",1,"Instant",W,"sta","5",common,White,Owned,Non-foil,false,,,"W - Blink","",89067
-"Panharmonicon",4,"Artifact",,"kld","226",rare,Colorless,Owned,Non-foil,false,,,"W - Blink","",61801
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Burn","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",
+"Mountain",0,"Basic Land - Mountain",R,"j22","108",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
+"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
+"Plains",0,"Basic Land - Plains",,"mom","277",common,Lands,Owned,,false,,,"W - Go Wide","",109784
+"Plains",0,"Basic Land - Plains",,"mom","277",common,Lands,Owned,,false,,,"W - Go Wide","",109784
+"Plains",0,"Basic Land - Plains",,"mom","277",common,Lands,Owned,,false,,,"W - Go Wide","",109784
+"Plains",0,"Basic Land - Plains",,"mom","277",common,Lands,Owned,,false,,,"W - Go Wide","",109784
+"Plains",0,"Basic Land - Plains",,"mom","277",common,Lands,Owned,,false,,,"W - Go Wide","",109784
+"Plains",0,"Basic Land - Plains",,"mom","277",common,Lands,Owned,,false,,,"W - Go Wide","",109784
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",
+"Swamp",0,"Basic Land - Swamp",B,"j22","104",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",
+"The Autonomous Furnace",0,"Land - Sphere",,"one","247",common,Lands,Owned,Foil,false,,,"R - Goblins","",106709
+"Thriving Bluff",0,"Land",R,"jmp","33",common,Lands,Owned,Non-foil,false,,,"R - Burn","",81813
+"Thriving Bluff",0,"Land",R,"jmp","33",common,Lands,Owned,Non-foil,false,,,"R - Spellslinger","",81813
+"Thriving Bluff",0,"Land",R,"jmp","33",common,Lands,Owned,Non-foil,false,,,"R - Smashing","",81813
+"Thriving Bluff",0,"Land",R,"jmp","33",common,Lands,Owned,Non-foil,false,,,"R - Goblins","",81813
+"Thriving Grove",0,"Land",G,"jmp","34",common,Lands,Owned,Non-foil,false,,,"G - Counters","",81815
+"Thriving Grove",0,"Land",,"jmp","34",common,Lands,Owned,,false,,,"G - Chonkers","",81815
+"Thriving Grove",0,"Land",,"jmp","34",common,Lands,Owned,,false,,,"G - Adventures","",81815
 "Thriving Heath",0,"Land",W,"jmp","35",common,Lands,Owned,Non-foil,false,,,"W - Blink","",81817
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Blink","",
-"Anointed Chorister",1,"Creature - Human Cleric",W,"m21","4",common,White,Owned,Non-foil,false,,,"W - Devotion","",81235
-"Charming Prince",2,"Creature - Human Noble",W,"eld","8",rare,White,Owned,Non-foil,false,,,"W - Devotion","",78104
-"Daxos, Blessed by the Sun",2,"Legendary Enchantment Creature - Demigod",W,"plst","THB-258",uncommon,White,Owned,Non-foil,false,,,"W - Devotion","",
-"Daxos, Blessed by the Sun",2,"Legendary Enchantment Creature - Demigod",W,"plst","THB-258",uncommon,White,Owned,Non-foil,false,,,"W - Devotion","",
-"Mentor of the Meek",3,"Creature - Human Soldier",W,"isd","21",rare,White,Owned,Non-foil,false,,,"W - Devotion","",42694
-"Reverent Hoplite",5,"Creature - Human Soldier",W,"thb","33",uncommon,White,Owned,Non-foil,false,,,"W - Devotion","",79190
-"Reverent Hoplite",5,"Creature - Human Soldier",W,"thb","33",uncommon,White,Owned,Non-foil,false,,,"W - Devotion","",79190
-"Serra Redeemer",5,"Creature - Angel Soldier",W,"dmu","282",rare,White,Owned,,false,,,"W - Devotion","",102380
-"Ephemerate",1,"Instant",W,"sta","5",rare,White,Owned,Non-foil,false,,,"W - Devotion","",89067
-"Altar of the Pantheon",3,"Artifact",W,"thb","231",common,Colorless,Owned,Non-foil,false,,,"W - Devotion","",79586
-"Seal from Existence",3,"Enchantment",W,"mom","35",uncommon,White,Owned,Non-foil,false,,,"W - Devotion","",109876
-"Banishing Light",3,"Enchantment",W,"jou","5",uncommon,White,Owned,Non-foil,false,,,"W - Devotion","",52214
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",
-"Thriving Heath",0,"Land",W,"jmp","35",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",81817
-"Prava of the Steel Legion",3,"Legendary Creature - Cat Soldier",W,"cmr","38",uncommon,White,Owned,,false,,,"W - Go Wide","",84858
-"Platoon Dispenser",5,"Artifact Creature - Construct",W,"bro","36",mythic,White,Owned,Non-foil,false,,,"W - Go Wide","",104690
-"Outflank",1,"Instant",W,"eld","23",common,White,Owned,,false,,,"W - Go Wide","",78140
-"Raise the Alarm",2,"Instant",W,"m20","34",common,White,Owned,,false,,,"W - Go Wide","",72967
-"Raise the Alarm",2,"Instant",W,"m20","34",common,White,Owned,,false,,,"W - Go Wide","",72967
-"Kabira Takedown",2,"Instant",W,"znr","19",uncommon,White,Owned,,false,,,"W - Go Wide","",82975
-"Sunset Revelry",2,"Sorcery",W,"mid","38",uncommon,White,Owned,,false,,,"W - Go Wide","",93006
-"Sworn Companions",3,"Sorcery",W,"grn","27",common,White,Owned,,false,,,"W - Go Wide","",69427
-"Release the Dogs",4,"Sorcery",W,"jmp","4",uncommon,White,Owned,,false,,,"W - Go Wide","",81755
-"Legion's Landing",1,"Legendary Enchantment",W,"plst","XLN-22",rare,White,Owned,,false,,,"W - Go Wide","",
-"Intangible Virtue",2,"Enchantment",W,"wot","6",uncommon,White,Owned,,false,,,"W - Go Wide","",115836
-"Divine Visitation",5,"Enchantment",W,"grn","10",mythic,White,Owned,,false,,,"W - Go Wide","",69393
-"Invasion of Belenon",3,"Battle - Siege",W,"mom","20",uncommon,White,Owned,,false,,,"W - Go Wide","",109838
-"Plains",0,"Basic Land - Plains",,"mom","277",common,Lands,Owned,,false,,,"W - Go Wide","",109784
-"Plains",0,"Basic Land - Plains",,"mom","277",common,Lands,Owned,,false,,,"W - Go Wide","",109784
-"Plains",0,"Basic Land - Plains",,"mom","277",common,Lands,Owned,,false,,,"W - Go Wide","",109784
-"Plains",0,"Basic Land - Plains",,"mom","277",common,Lands,Owned,,false,,,"W - Go Wide","",109784
-"Plains",0,"Basic Land - Plains",,"mom","277",common,Lands,Owned,,false,,,"W - Go Wide","",109784
-"Plains",0,"Basic Land - Plains",,"mom","277",common,Lands,Owned,,false,,,"W - Go Wide","",109784
-"Thriving Heath",0,"Land",,"j22","824",common,Lands,Owned,,false,,,"W - Go Wide","",
-"Anointed Chorister",1,"Creature - Human Cleric",W,"m21","4",common,White,Owned,Non-foil,false,,,"W - Lifegain","",81235
-"Speaker of the Heavens",1,"Creature - Human Cleric",W,"m21","38",rare,White,Owned,Non-foil,false,,,"W - Lifegain","",81303
-"Daxos, Blessed by the Sun",2,"Legendary Enchantment Creature - Demigod",W,"mul","2",uncommon,White,Owned,Non-foil,false,,,"W - Lifegain","",109226
-"Angel of Vitality",3,"Creature - Angel",W,"m20","4",uncommon,White,Owned,Non-foil,false,,,"W - Lifegain","",72907
-"Inspiring Overseer",3,"Creature - Angel Cleric",W,"snc","18",common,White,Owned,Non-foil,false,,,"W - Lifegain","",98255
-"Serra Angel",5,"Creature - Angel",W,"dmr","25",uncommon,White,Owned,Non-foil,false,,,"W - Lifegain","",107539
-"Nykthos Paragon",6,"Enchantment Creature - Human Soldier",W,"mh2","22",rare,White,Owned,Non-foil,false,,,"W - Lifegain","",90413
-"Light of Hope",1,"Instant",W,"iko","20",common,White,Owned,Non-foil,false,,,"W - Lifegain","",80049
-"Take Up the Shield",2,"Instant",W,"dmu","35",common,White,Owned,Non-foil,false,,,"W - Lifegain","",102546
-"Dawn of Hope",2,"Enchantment",W,"wot","2",rare,White,Owned,Foil,false,,,"W - Lifegain","",115828
-"Rune of Sustenance",2,"Enchantment - Aura Rune",W,"khm","25",uncommon,White,Owned,Non-foil,false,,,"W - Lifegain","",87373
-"Faith's Fetters",4,"Enchantment - Aura",W,"rav","16",common,White,Owned,Non-foil,false,,,"W - Lifegain","",23020
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
-"Plains",0,"Basic Land - Plains",W,"j22","98",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",
 "Thriving Heath",0,"Land",W,"jmp","35",common,Lands,Owned,Non-foil,false,,,"W - Lifegain","",81817
+"Thriving Heath",0,"Land",W,"jmp","35",common,Lands,Owned,Non-foil,false,,,"W - Devotion","",81817
+"Thriving Heath",0,"Land",,"j22","824",common,Lands,Owned,,false,,,"W - Go Wide","",
+"Thriving Isle",0,"Land",U,"jmp","36",common,Lands,Owned,Non-foil,false,,,"U - Investigate","",81819
+"Thriving Isle",0,"Land",U,"jmp","36",common,Lands,Owned,Non-foil,false,,,"U - Mill","",81819
+"Thriving Isle",0,"Land",U,"jmp","36",common,Lands,Owned,Non-foil,false,,,"U - Delver","",81819
+"Thriving Isle",0,"Land",,"j22","825",common,Lands,Owned,,false,,,"U - Spirits","",
+"Thriving Moor",0,"Land",B,"jmp","37",common,Lands,Owned,Non-foil,false,,,"B - Reanimate","",81821
+"Thriving Moor",0,"Land",B,"jmp","37",common,Lands,Owned,Non-foil,false,,,"B - Vampires","",81821
+"Thriving Moor",0,"Land",B,"jmp","37",common,Lands,Owned,Non-foil,false,,,"B - Zombies","",81821
+"Thriving Moor",0,"Land",B,"jmp","37",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",81821
+"Witch's Cottage",0,"Land - Swamp",B,"eld","249",common,Lands,Owned,Non-foil,false,,,"B - Witchcraft","",78644
