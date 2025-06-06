@@ -77,6 +77,15 @@
             line-height: 1; /* To try and normalize text position with increased padding */
             width: 100%;
         }
+        select#cubeSelect {
+    min-height: 56px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 1.125rem;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;           /* Center text for most browsers */
+    text-align-last: center;      /* Center selected option in dropdown (Chrome/Edge/Opera) */
+}
         select option {
             background-color: #111;
             color: #00ff00;
@@ -242,6 +251,11 @@ input[type="radio"]:checked + label.pack-radio-label {
     padding: 0.25rem 0.75rem;
     border-radius: 4px;
     transition: background-color 0.1s steps(1, end), color 0.1s steps(1, end);
+}
+
+#cubeSelectionStep h2,
+#cubeSelectionStep .space-y-2 {
+    text-align: center;
 }
     </style>
 </head>
