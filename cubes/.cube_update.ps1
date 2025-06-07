@@ -1,5 +1,5 @@
 # Cube Code Array
-$cubes = @("trs", "krstart1", "infjumpstartcube", "ajsc", "jumpstartdecks", "jump-start-cube", "HastedPJC", "vuq")
+$cubes = @("trs", "krstart1", "infjumpstartcube", "ajsc", "jumpstartdecks", "jump-start-cube", "HastedPJC", "vuq", "osjs")
 
 Set-Location -Path ".\cubes"
 $oneweekago = (Get-Date -AsUTC).AddDays(-7)
