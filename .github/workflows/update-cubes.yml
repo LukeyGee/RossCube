@@ -18,7 +18,7 @@ jobs:
       - name: Run cube_update.ps1
         shell: pwsh
         run: |
-          ./cubes/cube_update.ps1
+          ./cubes/.cube_update.ps1
 
       - name: Commit and push if CSVs changed
         run: |
