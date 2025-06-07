@@ -1,2 +1,2 @@
 exclude:
-  - ./cubes/cube_update.ps1
+  - "cubes/cube_update.ps1"
