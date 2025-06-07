@@ -615,6 +615,10 @@ input[type="radio"]:checked + label.pack-radio-label {
         const deck = [];
         currentCubeData.forEach(card => {
             const cardTags = card.Tags || card.tags; 
+            const cardMaybe = card.Maybe || card.maybeboard
+            if (cardMaybe && cardMaybe == "true") {
+                return;
+            }
             if (cardTags === packSelections.pack1 || cardTags === packSelections.pack2) {
                 const cardName = card.Name || card.name;
                 if (cardName && cardName.trim() !== "") {
