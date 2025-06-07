@@ -1,1 +1,2 @@
-exclude: ['./cubes/cube_update.ps1']
+exclude:
+  - ./cubes/cube_update.ps1
