@@ -348,7 +348,9 @@ input[type="radio"]:checked + label.pack-radio-label {
                 <p class="text-xs">
                     PACKS: <span id="chosenPack1" class="font-semibold text-yellow-400"></span> & 
                     <span id="chosenPack2" class="font-semibold text-yellow-400"></span>
-                    FROM <span id="chosenCubeCode" class="font-semibold text-green-400"></span>.
+                </p>
+                <p class="text-xs">
+                    FROM CUBE: <span id="chosenCubeCode" class="font-semibold text-green-400"></span>
                 </p>
                 <textarea id="decklistOutput" readonly placeholder="GENERATING DECKLIST..."></textarea>
                 
@@ -504,6 +506,7 @@ input[type="radio"]:checked + label.pack-radio-label {
             setLoading(false);
             return;
         }
+        cubeSelect.name = cube.name;
         selectedCubeName.textContent = cube.name;
         const csvUrl = cube.csvPath; // Use local path
         try {
@@ -637,7 +640,7 @@ input[type="radio"]:checked + label.pack-radio-label {
         decklistOutput.value = deck.map(card => (card.Name || card.name)).sort().join('\n');
         chosenPack1Display.textContent = packSelections.pack1;
         chosenPack2Display.textContent = packSelections.pack2;
-        chosenCubeCodeDisplay.textContent = cubeSelect.value;
+        chosenCubeCodeDisplay.textContent = cubeSelect.name;
         transitionToDecklistDisplay();
         showMessage('DECKLIST READY!', 'success');
         setLoading(false);
