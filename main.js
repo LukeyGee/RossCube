@@ -293,87 +293,101 @@
 
                 // Commander cube: Koffers and Fixing Lands steps
                 if (isCommanderCube) {
-                    renderCommanderZone(commanders);
+                    // Group by main type, merging Sorcery+Instant and Artifact+Enchantment
+                    const typeGroups = {
+                        Creature: [],
+                        "Instant / Sorcery": [],
+                        "Artifact / Enchantment": [],
+                        Planeswalker: [],
+                        Other: []
+                    };
+                    deck.forEach(card => {
+                        const typeLine = (card.Type || card.type || card.type_line || "").toLowerCase();
+                        if (typeLine.includes("creature")) typeGroups.Creature.push(card);
+                        else if (typeLine.includes("instant") || typeLine.includes("sorcery")) typeGroups["Instant / Sorcery"].push(card);
+                        else if (typeLine.includes("artifact") || typeLine.includes("enchantment")) typeGroups["Artifact / Enchantment"].push(card);
+                        else if (typeLine.includes("planeswalker")) typeGroups.Planeswalker.push(card);
+                        else typeGroups.Other.push(card);
+                    });
+                    renderVisualDecklist(typeGroups, commanders);
 
                     // Koffers pool: filter by tag or column (adjust as needed)
                     const koffersPool = currentCubeData.filter(card =>
                         (card.tags && card.tags.includes("z_Kvatch Koffers")) ||
                         (card.Tags && card.Tags.includes("z_Kvatch Koffers"))
                     );
-                if (!koffersPool.length) {
+                    if (!koffersPool.length) {
                     showMessage('No Koffers cards found!', 'error');
                     setLoading(false);
                     return;
-                }
-                renderKoffersStep(koffersPool, koffersCard => {
+                    }
+                    renderKoffersStep(koffersPool, koffersCard => {
                     // Fixing lands pool: filter by tag or column (adjust as needed)
-                    const fixingPool = currentCubeData.filter(card =>
-                        (card.tags && card.tags.includes("z_Fixing Roster_z")) ||
-                        (card.Tags && card.Tags.includes("z_Fixing Roster_z"))
-                    );
-                    renderFixingLandsStep(fixingPool, deck, async (fixingLands, landsToRemove) => {
-    // Add Koffers card and Command Tower
-    deck.push(koffersCard);
-    deck.push({ Name: "Command Tower", name: "Command Tower" });
+                        const fixingPool = currentCubeData.filter(card =>
+                            (card.tags && card.tags.includes("z_Fixing Roster_z")) ||
+                            (card.Tags && card.Tags.includes("z_Fixing Roster_z"))
+                        );
+                        renderFixingLandsStep(fixingPool, deck, async (fixingLands, landsToRemove) => {
+                        // Add Koffers card and Command Tower
+                        deck.push(koffersCard);
+                        deck.push({ Name: "Command Tower", name: "Command Tower" });
 
-    // Remove a basic land for each fixing land added
-    fixingLands.forEach((landName, i) => {
-        const idx = deck.findIndex(card =>
-            (card.Name || card.name) === landsToRemove[i]
-        );
-        if (idx !== -1) deck.splice(idx, 1);
-        // Add the fixing land
-        deck.push({ Name: landName, name: landName });
-    });
+                        // Remove a basic land for each fixing land added
+                        fixingLands.forEach((landName, i) => {
+                            const idx = deck.findIndex(card =>
+                                (card.Name || card.name) === landsToRemove[i]
+                            );
+                            if (idx !== -1) deck.splice(idx, 1);
+                            // Add the fixing land
+                            deck.push({ Name: landName, name: landName });
+                        });
 
-    // Group by main type, merging Sorcery+Instant and Artifact+Enchantment
-    const typeGroups = {
-        Creature: [],
-        "Instant / Sorcery": [],
-        "Artifact / Enchantment": [],
-        Planeswalker: [],
-        Other: []
-    };
-    deck.forEach(card => {
-        const typeLine = (card.Type || card.type || card.type_line || "").toLowerCase();
-        if (typeLine.includes("creature")) typeGroups.Creature.push(card);
-        else if (typeLine.includes("instant") || typeLine.includes("sorcery")) typeGroups["Instant / Sorcery"].push(card);
-        else if (typeLine.includes("artifact") || typeLine.includes("enchantment")) typeGroups["Artifact / Enchantment"].push(card);
-        else if (typeLine.includes("planeswalker")) typeGroups.Planeswalker.push(card);
-        else typeGroups.Other.push(card);
-    });
+                        // Regroup after koffer and fixing lands
+                        typeGroups.Creature.length = 0;
+                        typeGroups["Instant / Sorcery"].length = 0;
+                        typeGroups["Artifact / Enchantment"].length = 0;
+                        typeGroups.Planeswalker.length = 0;
+                        typeGroups.Other.length = 0;
+                        deck.forEach(card => {
+                            const typeLine = (card.Type || card.type || card.type_line || "").toLowerCase();
+                            if (typeLine.includes("creature")) typeGroups.Creature.push(card);
+                            else if (typeLine.includes("instant") || typeLine.includes("sorcery")) typeGroups["Instant / Sorcery"].push(card);
+                            else if (typeLine.includes("artifact") || typeLine.includes("enchantment")) typeGroups["Artifact / Enchantment"].push(card);
+                            else if (typeLine.includes("planeswalker")) typeGroups.Planeswalker.push(card);
+                            else typeGroups.Other.push(card);
+                        });
 
-    // Show decklist and visual decklist
-    if (isCommanderCube && commanders.length > 0) {
-        const mainDeckLines = deck
-            .map(card => `1 ${card.Name || card.name}`)
-            .sort();
-        const commanderLines = commanders
-            .map(card => `1 ${card.Name || card.name}`)
-            .sort();
-        decklistOutput.value = mainDeckLines.join('\n') + '\n\n' + commanderLines.join('\n');
-    } else {
-        decklistOutput.value = deck
-            .map(card => `1 ${card.Name || card.name}`)
-            .sort()
-            .join('\n');
-    }
-    chosenPack1Display.textContent = packSelections.pack1;
-    chosenPack2Display.textContent = packSelections.pack2;
-    chosenCubeCodeDisplay.textContent = cubeSelect.name;
-    cubeSelectionStep.classList.add('hidden');
-    packSelectionStep.classList.add('hidden');
-    decklistStep.classList.remove('hidden');
+                        // Show decklist and visual decklist
+                        if (isCommanderCube && commanders.length > 0) {
+                            const mainDeckLines = deck
+                                .map(card => `1 ${card.Name || card.name}`)
+                                .sort();
+                            const commanderLines = commanders
+                                .map(card => `1 ${card.Name || card.name}`)
+                                .sort();
+                            decklistOutput.value = mainDeckLines.join('\n') + '\n\n' + commanderLines.join('\n');
+                        } else {
+                            decklistOutput.value = deck
+                                .map(card => `1 ${card.Name || card.name}`)
+                                .sort()
+                                .join('\n');
+                        }
+                        chosenPack1Display.textContent = packSelections.pack1;
+                        chosenPack2Display.textContent = packSelections.pack2;
+                        chosenCubeCodeDisplay.textContent = cubeSelect.name;
+                        cubeSelectionStep.classList.add('hidden');
+                        packSelectionStep.classList.add('hidden');
+                        decklistStep.classList.remove('hidden');
 
-    showMessage('DECKLIST READY!', 'success');
-    setLoading(false);
-    copyDecklistBtn.disabled = false;
-    renderVisualDecklist(typeGroups, commanders);
-});
+                        showMessage('DECKLIST READY!', 'success');
+                        setLoading(false);
+                        copyDecklistBtn.disabled = false;
+                        renderVisualDecklist(typeGroups, commanders);
                 });
-                setLoading(false);
-                return;
-            }
+            });
+            setLoading(false);
+            return;
+        }
 
             // --- Normal cube logic below ---
             // Group by main type, merging Sorcery+Instant and Artifact+Enchantment
@@ -494,11 +508,6 @@ function resetToCubeSelection() {
     chosenCubeCodeDisplay.textContent = "";
     document.getElementById('selectedCubeName').textContent = "";
     packSelectionTitle.textContent = "STEP 2: CHOOSE PACK 1";
-    typeGroups.Creature = [];
-    typeGroups["Instant / Sorcery"] = [];
-    typeGroups["Artifact / Enchantment"] = [];
-    typeGroups.Planeswalker = [];
-    typeGroups.Other = [];
     // Remove any dynamic UI (commander zone, koffers, fixing lands, etc.)
     const commanderZone = document.getElementById('commanderZone');
     if (commanderZone) commanderZone.remove();
