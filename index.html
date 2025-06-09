@@ -253,6 +253,21 @@
     100% { opacity: 1; }
 }
 
+@keyframes jiggle {
+  0% { transform: rotate(0deg) scale(1); }
+  15% { transform: rotate(-10deg) scale(1.05); }
+  30% { transform: rotate(10deg) scale(1.05); }
+  45% { transform: rotate(-8deg) scale(1.03); }
+  60% { transform: rotate(8deg) scale(1.03); }
+  75% { transform: rotate(-5deg) scale(1.01); }
+  90% { transform: rotate(5deg) scale(1.01); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.jiggle {
+  animation: jiggle 0.5s ease;
+}
+
 /* Add this to your <style> section for selected pack highlighting */
 input[type="radio"]:checked + label.pack-radio-label {
     background-color: #facc15;   /* yellow-400 */

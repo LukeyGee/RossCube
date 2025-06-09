@@ -912,9 +912,16 @@ async function renderFixingLandsStep(fixingPool, deck, onSelect) {
                 label.style.fontSize = '1rem';
                 btn.appendChild(label);
 
-                btn.onclick = () => {
-                    document.body.removeChild(modal);
-                    resolve(name);
+                btn.onclick = (e) => {
+                    // Add jiggle class to the image only
+                    img.classList.add('jiggle');
+                    img.addEventListener('animationend', function handler() {
+                        img.classList.remove('jiggle');
+                        img.removeEventListener('animationend', handler);
+                        // After animation, remove modal and resolve
+                        document.body.removeChild(modal);
+                        resolve(name);
+                    });
                 };
                 row.appendChild(btn);
             });
