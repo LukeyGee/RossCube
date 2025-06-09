@@ -326,9 +326,6 @@
         deck.push({ Name: landName, name: landName });
     });
 
-    // Enforce 42-card deck (excluding commanders)
-    //while (deck.length > 42) deck.pop();
-
     // Group by main type, merging Sorcery+Instant and Artifact+Enchantment
     const typeGroups = {
         Creature: [],
