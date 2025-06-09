@@ -872,7 +872,8 @@ async function renderFixingLandsStep(fixingPool, deck, onSelect) {
             box.style.textAlign = 'center';
 
             const msg = document.createElement('div');
-            msg.innerHTML = `<span style="color:#facc15">Choose a basic land to remove:</span><br><span style="color:#94a3b8;font-size:0.9rem;">(${current}/${total})</span>`;
+            let totalplaceholder = total + 1
+            msg.innerHTML = `<span style="color:#facc15">Choose a basic land to remove:</span><br><span style="color:#94a3b8;font-size:0.9rem;">Remove ${totalplaceholder - current} more land(s)</span>`;
             msg.style.marginBottom = '16px';
             box.appendChild(msg);
 
