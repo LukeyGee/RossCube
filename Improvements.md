@@ -347,3 +347,246 @@ function saveDeckToHistory(deck, packs, cube) {
 ---
 
 *This document serves as a roadmap for enhancing RossCube while preserving its core functionality and retro aesthetic.*
+
+## 🃏 Jumpstart Format Specific Improvements
+
+### 1. Pack Power Level Analysis
+**Problem**: Packs may have imbalanced power levels, leading to unfair matchups  
+**Solution**: Implement automated pack power assessment
+
+```javascript
+// Calculate pack power metrics
+function analyzePack(pack) {
+    const metrics = {
+        avgCMC: calculateAverageCMC(pack),
+        bombCount: countBombs(pack), // Rares/mythics with high impact
+        removalCount: countRemoval(pack),
+        cardAdvantageEngines: countCardAdvantage(pack),
+        winConditions: countWinConditions(pack)
+    };
+    
+    // Calculate overall power rating (1-10 scale)
+    metrics.powerLevel = calculatePowerLevel(metrics);
+    return metrics;
+}
+
+function flagPowerOutliers(allPacks) {
+    const avgPower = allPacks.reduce((sum, pack) => sum + pack.powerLevel, 0) / allPacks.length;
+    return allPacks.filter(pack => Math.abs(pack.powerLevel - avgPower) > 1.5);
+}
+```
+
+### 2. Pack Synergy Detection
+**Problem**: Players can't see which pack combinations work well together  
+**Solution**: Cross-reference pack themes and highlight synergies
+
+```javascript
+// Detect synergies between pack pairs
+function detectPackSynergies(pack1, pack2) {
+    const synergies = {
+        keywordOverlap: findKeywordSynergies(pack1, pack2),
+        tribalSynergies: findTribalOverlaps(pack1, pack2),
+        strategyAlignment: assessStrategyAlignment(pack1, pack2),
+        colorSynergy: calculateColorSynergy(pack1, pack2)
+    };
+    
+    return {
+        rating: calculateSynergyRating(synergies),
+        highlights: generateSynergyHighlights(synergies)
+    };
+}
+
+// Show synergy when selecting second pack
+function updatePackSynergies(selectedPack1) {
+    availablePacks.forEach(pack2 => {
+        const synergy = detectPackSynergies(selectedPack1, pack2);
+        updatePackUI(pack2.name, synergy);
+    });
+}
+```
+
+### 3. Jumpstart Mana Curve Optimization
+**Problem**: 20-card packs need different curve considerations than 60-card decks  
+**Solution**: Implement jumpstart-specific curve validation
+
+```javascript
+// Optimal jumpstart curves for 20-card packs
+const JUMPSTART_CURVE_TARGETS = {
+    1: { min: 2, max: 4, ideal: 3 },
+    2: { min: 3, max: 5, ideal: 4 },
+    3: { min: 3, max: 5, ideal: 4 },
+    4: { min: 2, max: 4, ideal: 3 },
+    5: { min: 1, max: 3, ideal: 2 },
+    6: { min: 0, max: 2, ideal: 1 },
+    "7+": { min: 0, max: 2, ideal: 1 }
+};
+
+function validateJumpstartCurve(pack) {
+    const curve = calculateManaCurve(pack);
+    const issues = [];
+    
+    for (const [cmc, targets] of Object.entries(JUMPSTART_CURVE_TARGETS)) {
+        const count = curve[cmc] || 0;
+        if (count < targets.min) {
+            issues.push(`Too few ${cmc}-drops (${count}, need ${targets.min})`);
+        }
+        if (count > targets.max) {
+            issues.push(`Too many ${cmc}-drops (${count}, max ${targets.max})`);
+        }
+    }
+    
+    return { isValid: issues.length === 0, issues };
+}
+```
+
+### 4. Theme Validation System
+**Problem**: Packs may not deliver on their promised strategy  
+**Solution**: Validate theme coherence and payoff density
+
+```javascript
+// Define theme requirements
+const THEME_REQUIREMENTS = {
+    'Lifegain': {
+        lifegainSources: { min: 8, description: 'Cards that gain life' },
+        lifegainPayoffs: { min: 3, description: 'Cards that benefit from lifegain' }
+    },
+    'Tribal-Wizards': {
+        wizardCount: { min: 10, description: 'Wizard creatures' },
+        tribalPayoffs: { min: 4, description: 'Cards that care about Wizards' }
+    },
+    'Artifacts': {
+        artifactCount: { min: 12, description: 'Artifact cards' },
+        artifactPayoffs: { min: 3, description: 'Cards that benefit from artifacts' }
+    }
+};
+
+function validateTheme(pack, themeName) {
+    const requirements = THEME_REQUIREMENTS[themeName];
+    if (!requirements) return { valid: true, warnings: [] };
+    
+    const warnings = [];
+    for (const [req, config] of Object.entries(requirements)) {
+        const count = countThemeCards(pack, req);
+        if (count < config.min) {
+            warnings.push(`Insufficient ${config.description}: ${count}/${config.min}`);
+        }
+    }
+    
+    return { valid: warnings.length === 0, warnings };
+}
+```
+
+### 5. Archetype Balance Tracking
+**Problem**: Meta-game may become stale with too many similar strategies  
+**Solution**: Track archetype distribution across all packs
+
+```javascript
+// Categorize and track pack archetypes
+const ARCHETYPES = {
+    AGGRO: ['Fast creatures', 'Direct damage', 'Low curve'],
+    MIDRANGE: ['Value creatures', 'Flexible spells', 'Balanced curve'],
+    CONTROL: ['Card draw', 'Removal', 'Win conditions'],
+    COMBO: ['Key pieces', 'Enablers', 'Protection'],
+    SYNERGY: ['Build-around', 'Payoffs', 'Support cards']
+};
+
+function analyzeArchetypeBalance(allPacks) {
+    const distribution = {};
+    allPacks.forEach(pack => {
+        const archetype = categorizePackArchetype(pack);
+        distribution[archetype] = (distribution[archetype] || 0) + 1;
+    });
+    
+    // Identify gaps and over-representations
+    const total = allPacks.length;
+    const analysis = Object.entries(distribution).map(([type, count]) => ({
+        archetype: type,
+        count: count,
+        percentage: (count / total) * 100,
+        status: getBalanceStatus(count, total)
+    }));
+    
+    return analysis;
+}
+
+function suggestNewPackThemes(analysis) {
+    const underrepresented = analysis.filter(a => a.status === 'UNDER');
+    return underrepresented.map(arch => 
+        generateThemeSuggestions(arch.archetype)
+    );
+}
+```
+
+### 6. Pack Interaction Matrix
+**Problem**: Some pack combinations create degenerate or non-functional games  
+**Solution**: Track and flag problematic pack pairs
+
+```javascript
+// Identify problematic pack combinations
+function createInteractionMatrix(allPacks) {
+    const matrix = {};
+    
+    for (let i = 0; i < allPacks.length; i++) {
+        for (let j = i + 1; j < allPacks.length; j++) {
+            const pack1 = allPacks[i];
+            const pack2 = allPacks[j];
+            const interaction = analyzePackInteraction(pack1, pack2);
+            
+            matrix[`${pack1.name}_${pack2.name}`] = {
+                synergyRating: interaction.synergy,
+                powerBalance: interaction.balance,
+                gameplayHealth: interaction.health,
+                flags: interaction.warnings
+            };
+        }
+    }
+    
+    return matrix;
+}
+
+// Flag problematic combinations
+function flagProblematicPairs(matrix) {
+    return Object.entries(matrix)
+        .filter(([_, data]) => data.gameplayHealth < 3)
+        .map(([pair, data]) => ({ pair, issues: data.flags }));
+}
+```
+
+## 🎯 Jumpstart Implementation Priority
+
+### High Priority (Core Jumpstart Experience)
+- ✅ Pack power level analysis and balancing
+- ✅ Mana curve optimization for 20-card format
+- ✅ Theme validation system
+
+### Medium Priority (Enhanced Experience)  
+- 🔄 Pack synergy detection and recommendations
+- 🔄 Archetype balance tracking
+- 🔄 Pack interaction matrix
+
+### Low Priority (Advanced Analytics)
+- ⏳ Historical performance tracking
+- ⏳ Machine learning for pack suggestions
+- ⏳ Community feedback integration
+
+## 📈 Expected Jumpstart Benefits
+
+### Gameplay Quality
+- **Balanced** pack power levels ensure fair games
+- **Validated** themes deliver on their promises  
+- **Optimized** mana curves reduce non-games
+- **Identified** synergies enhance deck building decisions
+
+### Meta Health
+- **Diverse** archetype representation prevents staleness
+- **Flagged** problematic combinations improve play experience
+- **Suggested** new themes fill strategic gaps
+
+### User Experience
+- **Clear** pack power indicators help selection
+- **Highlighted** synergies guide combination choices
+- **Validated** themes build confidence in pack contents
+
+---
+
+*Enhanced jumpstart-specific features ensure every pack combination creates engaging, balanced gameplay experiences.*
