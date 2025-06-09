@@ -3621,21 +3621,21 @@ name,CMC,Type,Color,Set,Collector Number,Rarity,Color Category,status,Finish,may
 "Luxury Suite",0,"Land",BR,"clb","602",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
 "Raucous Theater",0,"Land - Swamp Mountain",BR,"mkm","329",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",121442
 "Sulfurous Springs",0,"Land",BR,"dmu","381",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
-"Commercial District",0,"Land - Mountain Forest",,"mkm","324",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121432
+"Commercial District",0,"Land - Mountain Forest",RG,"mkm","324",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121432
 "Cragcrown Pathway",0,"Land",RG,"znr","287",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
 "Fire-Lit Thicket",0,"Land",RG,"2xm","317",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",82668
 "Karplusan Forest",0,"Land",RG,"dmu","379",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
 "Rockfall Vale",0,"Land",RG,"dbl","266",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",96826
-"Spire Garden",0,"Land",,"clb","606",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Spire Garden",0,"Land",RG,"clb","606",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
 "Stomping Ground",0,"Land - Mountain Forest",RG,"rna","259",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",71558
-"Taiga",0,"Land - Mountain Forest",,"3ed","287",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Taiga",0,"Land - Mountain Forest",RG,"3ed","287",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
 "Wooded Foothills",0,"Land",RG,"ktk","249",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",54200
-"Bountiful Promenade",0,"Land",,"clb","601",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Bountiful Promenade",0,"Land",WG,"clb","601",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
 "Branchloft Pathway",0,"Land",WG,"znr","284",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
 "Brushland",0,"Land",WG,"bro","298",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",
-"Lush Portico",0,"Land - Forest Plains",,"mkm","327",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121438
+"Lush Portico",0,"Land - Forest Plains",WG,"mkm","327",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121438
 "Overgrown Farmland",0,"Land",WG,"dbl","265",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",96824
-"Savannah",0,"Land - Forest Plains",,"3ed","285",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Savannah",0,"Land - Forest Plains",WG,"3ed","285",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
 "Temple Garden",0,"Land - Forest Plains",WG,"unf","281",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",115520
 "Windswept Heath",0,"Land",WG,"zne","5",mythic,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",83577
 "Wooded Bastion",0,"Land",GW,"2xm","332",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",82698
