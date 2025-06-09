@@ -327,7 +327,7 @@
     });
 
     // Enforce 42-card deck (excluding commanders)
-    while (deck.length > 42) deck.pop();
+    //while (deck.length > 42) deck.pop();
 
     // Group by main type, merging Sorcery+Instant and Artifact+Enchantment
     const typeGroups = {
@@ -496,7 +496,12 @@ function resetToCubeSelection() {
     chosenPack2Display.textContent = "";
     chosenCubeCodeDisplay.textContent = "";
     document.getElementById('selectedCubeName').textContent = "";
-    packSelectionTitle.textContent = "STEP 2: CHOOSE PACK 1"
+    packSelectionTitle.textContent = "STEP 2: CHOOSE PACK 1";
+    typeGroups.Creature = [];
+    typeGroups["Instant / Sorcery"] = [];
+    typeGroups["Artifact / Enchantment"] = [];
+    typeGroups.Planeswalker = [];
+    typeGroups.Other = [];
     // Remove any dynamic UI (commander zone, koffers, fixing lands, etc.)
     const commanderZone = document.getElementById('commanderZone');
     if (commanderZone) commanderZone.remove();
