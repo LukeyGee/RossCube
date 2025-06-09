@@ -157,6 +157,7 @@
                     !cardTags.includes("zz_Commander") && // Exclude any tag with zz_Commander
                     cardTags !== "Other" &&
                     cardTags !== "z_Fixing Roster_z" && // Exclude fixing roster
+                    cardTags !== "z_Kvatch Koffers" && // Exclude koffers
                     cardTags !== "B - The Big Top" &&
                     cardTags !== "WUR - Mutate" &&
                     cardTags !== "WU - Studies" &&
