@@ -862,6 +862,88 @@ class PackSynergyAnalyzer {
         this.packThemeCache.clear();
         console.log('Pack synergy caches cleared');
     }
+
+    // Analyze individual card power level and role
+    analyzeCardRole(card) {
+        const roles = [];
+        const text = card.oracle_text.toLowerCase();
+        const cmc = card.cmc;
+        
+        // Threat assessment
+        if (text.includes('win the game') || text.includes('you win')) {
+            roles.push({ type: 'win_condition', priority: 10 });
+        }
+        
+        // Engine pieces
+        if (text.includes('draw') && text.includes('card')) {
+            roles.push({ type: 'card_advantage', priority: 7 });
+        }
+        
+        // Mana efficiency analysis
+        const efficiency = this.calculateManaEfficiency(card);
+        
+        return {
+            roles,
+            efficiency,
+            threatLevel: this.assessThreatLevel(card),
+            versatility: this.assessVersatility(card)
+        };
+    }
+
+    // Recognize common Limited archetypes
+    recognizeArchetype(theme) {
+        const archetypes = {
+            'Control': {
+                indicators: ['counterspell', 'wrath', 'card draw', 'high cmc'],
+                winCondition: 'late game value',
+                gameplan: 'survive early, win late'
+            },
+            'Aggro': {
+                indicators: ['low cmc', 'haste', 'burn', 'creature focus'],
+                winCondition: 'quick damage',
+                gameplan: 'fast pressure'
+            },
+            'Midrange': {
+                indicators: ['versatile threats', 'removal', 'medium cmc'],
+                winCondition: 'efficient threats',
+                gameplan: 'flexible positioning'
+            }
+        };
+        
+        // Score each archetype
+        const scores = {};
+        for (const [name, archetype] of Object.entries(archetypes)) {
+            scores[name] = this.scoreArchetypeMatch(theme, archetype);
+        }
+        
+        return Object.entries(scores)
+            .sort(([,a], [,b]) => b - a)
+            .slice(0, 2); // Return top 2 matches
+    }
+}
+
+// Implement smarter caching with expiration
+class ImprovedPackSynergyAnalyzer extends PackSynergyAnalyzer {
+    constructor() {
+        super();
+        this.cacheExpiry = new Map(); // Track cache timestamps
+        this.CACHE_TTL = 30 * 60 * 1000; // 30 minutes
+    }
+    
+    // Add cache validation
+    getCachedTheme(packName) {
+        const cached = this.packThemeCache.get(packName);
+        const timestamp = this.cacheExpiry.get(packName);
+        
+        if (cached && timestamp && Date.now() - timestamp < this.CACHE_TTL) {
+            return cached;
+        }
+        
+        // Cleanup expired cache
+        this.packThemeCache.delete(packName);
+        this.cacheExpiry.delete(packName);
+        return null;
+    }
 }
 
 // Export for use in main.js
