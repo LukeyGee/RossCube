@@ -284,9 +284,9 @@
 
                     // Koffers pool: filter by tag or column (adjust as needed)
                     const koffersPool = currentCubeData.filter(card =>
-    (card.tags && card.tags.includes("z_Kvatch Koffers")) ||
-    (card.Tags && card.Tags.includes("z_Kvatch Koffers"))
-);
+                        (card.tags && card.tags.includes("z_Kvatch Koffers")) ||
+                        (card.Tags && card.Tags.includes("z_Kvatch Koffers"))
+                    );
                 if (!koffersPool.length) {
                     showMessage('No Koffers cards found!', 'error');
                     setLoading(false);
@@ -483,6 +483,7 @@ function resetToCubeSelection() {
     chosenPack2Display.textContent = "";
     chosenCubeCodeDisplay.textContent = "";
     document.getElementById('selectedCubeName').textContent = "";
+    packSelectionTitle.textContent = "STEP 2: CHOOSE PACK 1"
     // Remove any dynamic UI (commander zone, koffers, fixing lands, etc.)
     const commanderZone = document.getElementById('commanderZone');
     if (commanderZone) commanderZone.remove();

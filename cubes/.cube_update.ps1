@@ -20,7 +20,7 @@ foreach ($cube_code in $cubes) {
 }
 
 #j25-tight
-#We need to handle this cube in a special way
+# We need some special filtering on this cube
 $cube_code = "j25-tight"
 if ( -not (Test-Path ".\$cube_code.csv")) {
   $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
@@ -34,3 +34,37 @@ if ( -not (Test-Path ".\$cube_code.csv")) {
       Invoke-WebRequest $cubeurl -OutFile ".\$cube_code.csv"
   }
 }
+
+#kvatchstart
+# We need to make sure some of the lands have colors associated to them
+$cube_code = "kvatchstart"
+if ( -not (Test-Path ".\$cube_code.csv")) {
+  $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
+  Invoke-WebRequest $cubeurl -OutFile ".\$cube_code.csv"
+} else {
+  $cubedateapi = "https://cubecobra.com/cube/api/date_updated/" + "$cube_code"
+  $response = Invoke-RestMethod -URI "$cubedateapi"
+  $lastupdate = ([datetime] '1970-01-01Z').ToUniversalTime().AddSeconds($response.date_updated/1000)
+  if ($lastupdate -gt $oneweekago) {
+      $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
+      Invoke-WebRequest $cubeurl -OutFile ".\$cube_code.csv"
+  }
+}
+
+$kvatchstart_cube = Get-Content ".\$cube_code.csv" | ConvertFrom-Csv
+
+foreach ($card in $kvatchstart_cube) {
+  if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z") {
+    if ($card.Color -eq "") {
+      $scryfallapi = "https://api.scryfall.com/cards/named?exact=" + [System.Web.HttpUtility]::UrlDecode($card.name)
+      $scryfalloutput = Invoke-RestMethod -URI "$scryfallapi"
+      $temp_color = "";
+      foreach ($color in $scryfalloutput.produced_mana) {
+        $temp_color += $color
+      }
+      $card.Color = $temp_color
+    }
+  }
+}
+
+$kvatchstart_cube | Export-Csv -Path ".\$cube_code.csv"
