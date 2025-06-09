@@ -279,7 +279,7 @@
                         if (
                             cardName && 
                             cardName.trim() !== "" &&
-                            cardName !== "Dungeon of the Mad Mage " &&
+                            cardName !== "Dungeon of the Mad Mage" &&
                             cardName !== "Lost Mine of Phandelver" &&
                             cardName !== "Tomb of Annihilation" &&
                             cardName !== "The Ring" &&
