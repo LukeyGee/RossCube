@@ -126,7 +126,7 @@ name,CMC,Type,Color,Set,Collector Number,Rarity,Color Category,status,Finish,may
 "Swamp",0,"Basic Land - Swamp",B,"40k","310",common,Lands,Owned,Non-foil,false,,,"B - Infinite Gallery","",108474
 "Swamp",0,"Basic Land - Swamp",B,"40k","310",common,Lands,Owned,Non-foil,false,,,"B - Infinite Gallery","",108474
 "Swamp",0,"Basic Land - Swamp",B,"40k","310",common,Lands,Owned,Non-foil,false,,,"B - Infinite Gallery","",108474
-"Vault of Whispers",0,"Artifact Land",,"j25","780",common,Lands,Owned,,false,,,"B - Infinite Gallery","",
+"Vault of Whispers",0,"Artifact Land",B,"j25","780",common,Lands,Owned,,false,,,"B - Infinite Gallery","",
 "Biotransference",4,"Commander",B,"40k","30",rare,Black,Owned,Non-foil,false,,,"B - Infinite Gallery","",108532
 "Trazyn the Infinite",6,"Commander",B,"40k","65",rare,Black,Owned,Non-foil,false,,,"B - Infinite Gallery;zz_Commander","",108602
 "Tinybones, Bauble Burglar",2,"Legendary Creature - Skeleton Rogue",B,"fdn","324",rare,Black,Owned,,false,,,"B - Liliana's Discard","",133182
@@ -719,7 +719,7 @@ name,CMC,Type,Color,Set,Collector Number,Rarity,Color Category,status,Finish,may
 "Forest",0,"Basic Land - Forest",G,"10e","381",common,Lands,Owned,Non-foil,false,,,"G - Forever Forests","",27362
 "Forest",0,"Basic Land - Forest",G,"10e","381",common,Lands,Owned,Non-foil,false,,,"G - Forever Forests","",27362
 "Forest",0,"Basic Land - Forest",G,"10e","381",common,Lands,Owned,Non-foil,false,,,"G - Forever Forests","",27362
-"Yavimaya, Cradle of Growth",0,"Legendary Land",,"ltc","407",mythic,Lands,Owned,Foil,false,,,"G - Forever Forests","",
+"Yavimaya, Cradle of Growth",0,"Legendary Land",G,"ltc","407",mythic,Lands,Owned,Foil,false,,,"G - Forever Forests","",
 "Argoth, Sanctum of Nature",0,"Commander",G,"bro","256a",rare,Lands,Owned,Non-foil,false,,,"G - Forever Forests","",105136
 "Titania, Voice of Gaea",3,"Commander",G,"bro","193",mythic,Green,Owned,Non-foil,false,,,"zz_Commander;G - Forever Forests","",105004
 "Ascendant Packleader",1,"Creature - Wolf",G,"dbl","453",rare,Green,Owned,Non-foil,false,,,"G - Green Screen Wolves","",96004
@@ -3599,27 +3599,27 @@ name,CMC,Type,Color,Set,Collector Number,Rarity,Color Category,status,Finish,may
 "Flooded Strand",0,"Land",WU,"ktk","233",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",54194
 "Hallowed Fountain",0,"Land - Plains Island",WU,"rna","251",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",71542
 "Hengegate Pathway",0,"Land",WU,"khm","293",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
-"Meticulous Archive",0,"Land - Plains Island",,"mkm","328",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121440
+"Meticulous Archive",0,"Land - Plains Island",WU,"mkm","328",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121440
 "Mystic Gate",0,"Land",WU,"2xm","324",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",82682
-"Sea of Clouds",0,"Land",,"clb","605",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
-"Tundra",0,"Land - Plains Island",,"3ed","289",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Sea of Clouds",0,"Land",WU,"clb","605",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Tundra",0,"Land - Plains Island",WU,"3ed","289",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
 "Clearwater Pathway",0,"Land",UB,"znr","286",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
-"Morphic Pool",0,"Land",,"clb","603",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Morphic Pool",0,"Land",UB,"clb","603",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
 "Polluted Delta",0,"Land",UB,"zne","2",mythic,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",83571
 "Shipwreck Marsh",0,"Land",UB,"dbl","267",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",96828
 "Sunken Ruins",0,"Land",BU,"2xm","326",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",82686
-"Undercity Sewers",0,"Land - Island Swamp",,"mkm","332",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121448
+"Undercity Sewers",0,"Land - Island Swamp",UB,"mkm","332",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121448
 "Underground River",0,"Land",UB,"bro","300",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",
-"Underground Sea",0,"Land - Island Swamp",,"3ed","290",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Underground Sea",0,"Land - Island Swamp",UB,"3ed","290",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
 "Watery Grave",0,"Land - Island Swamp",UB,"unf","529",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
-"Badlands",0,"Land - Swamp Mountain",,"3ed","282",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Badlands",0,"Land - Swamp Mountain",BR,"3ed","282",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
 "Blightstep Pathway",0,"Land",BR,"khm","291",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
 "Blood Crypt",0,"Land - Swamp Mountain",BR,"rna","245",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",71530
 "Bloodstained Mire",0,"Land",BR,"ktk","230",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",54198
 "Graven Cairns",0,"Land",BR,"2xm","320",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",82674
 "Haunted Ridge",0,"Land",BR,"dbl","263",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",96818
-"Luxury Suite",0,"Land",,"clb","602",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
-"Raucous Theater",0,"Land - Swamp Mountain",,"mkm","329",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",121442
+"Luxury Suite",0,"Land",BR,"clb","602",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Raucous Theater",0,"Land - Swamp Mountain",BR,"mkm","329",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",121442
 "Sulfurous Springs",0,"Land",BR,"dmu","381",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
 "Commercial District",0,"Land - Mountain Forest",,"mkm","324",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121432
 "Cragcrown Pathway",0,"Land",RG,"znr","287",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
