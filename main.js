@@ -1,5 +1,4 @@
-
-        // NOTE: For better maintainability, consider moving this script to a separate main.js file.
+// NOTE: For better maintainability, consider moving this script to a separate main.js file.
         // DOM Elements
         const cubeSelect = document.getElementById('cubeSelect');
         const confirmCubeBtn = document.getElementById('confirmCubeBtn');
@@ -591,7 +590,7 @@ function renderKoffersStep(koffersPool, onSelect) {
     decklistStep.prepend(koffersDiv);
 }
 
-function renderFixingLandsStep(fixingPool, onSelect) {
+async function renderFixingLandsStep(fixingPool, onSelect) {
     // Remove any existing Fixing Lands step UI
     const existing = document.getElementById('fixingLandsStep');
     if (existing) existing.remove();
@@ -608,69 +607,140 @@ function renderFixingLandsStep(fixingPool, onSelect) {
 
     // --- Filter fixingPool for relevant color identity ---
     function landMatchesColor(card) {
-        // Normalize and extract colors
         let landColors = (card.Color || card.color || '').toUpperCase().replace(/[^WUBRG]/g, '').split('').filter(Boolean);
-
-        // If the Color column is empty, treat as uncolored and show for all decks
         if (!landColors.length) return true;
-
-        // The land's colors must be a non-empty subset of the deck's color identity
-        // (i.e., all landColors are in combinedColors, and landColors is not empty)
-        return landColors.every(color => combinedColors.includes(color));
+        if (!combinedColors.length) return false;
+        return landColors.some(color => combinedColors.includes(color));
     }
     const filteredFixingPool = fixingPool.filter(landMatchesColor);
 
+    // --- Fetch oracle text from Scryfall ---
+    const scryfallCache = {};
+    async function getOracleText(cardName) {
+        if (scryfallCache[cardName]) return scryfallCache[cardName];
+        try {
+            const resp = await fetch(`https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}`);
+            if (!resp.ok) throw new Error('Not found');
+            const data = await resp.json();
+            scryfallCache[cardName] = data.oracle_text ? data.oracle_text.toLowerCase() : '';
+            return scryfallCache[cardName];
+        } catch {
+            scryfallCache[cardName] = '';
+            return '';
+        }
+    }
+
+    // --- Infer effect from oracle text ---
+    function inferEffect(text) {
+        if (text.includes('scry')) return 'Scry Lands';
+        if (text.includes('deals') && text.includes('damage')) return 'Pain Lands';
+        if (text.includes('gain') && text.includes('life')) return 'Gain Lands';
+        if (text.includes('cycling')) return 'Cycling Lands';
+        if (text.includes('fetch') || text.includes('search your library')) return 'Fetch Lands';
+        if (text.includes('enters tapped')) return 'Tapped Lands';
+        if (text.includes('draw a card')) return 'Draw Lands';
+        if (text.includes('sacrifice') && text.includes('add')) return 'Sacrifice for Mana';
+        if (text.includes('untap')) return 'Untap Lands';
+        return 'Other';
+    }
+
+    // --- Build groupedLands with Scryfall text ---
+    const groupedLands = {};
+    const oracleTexts = await Promise.all(filteredFixingPool.map(card =>
+        getOracleText(card.Name || card.name)
+    ));
+    filteredFixingPool.forEach((card, i) => {
+        const cardName = card.Name || card.name;
+        const text = oracleTexts[i] || '';
+        const effect = inferEffect(text);
+        if (!groupedLands[effect]) groupedLands[effect] = [];
+        groupedLands[effect].push(card);
+    });
+
+    // --- Render each group as a disclosure triangle with card art ---
     const fixingDiv = document.createElement('div');
     fixingDiv.id = 'fixingLandsStep';
     fixingDiv.className = 'mt-4';
     fixingDiv.innerHTML = `<h3 style='color:#facc15'>Pick up to 6 Fixing Lands (optional)</h3>
-        <p style="color:#94a3b8;font-size:0.9rem;">Only lands matching your deck's color identity are shown.</p>`;
+        <p style="color:#94a3b8;font-size:0.9rem;">Only lands matching your deck's color identity are shown. Grouped by effect.</p>`;
 
-    const row = document.createElement('div');
-    row.style.display = 'flex';
-    row.style.flexWrap = 'wrap';
-    row.style.gap = '12px';
+    Object.entries(groupedLands).forEach(([effect, cards]) => {
+        const details = document.createElement('details');
+        details.style.marginBottom = '16px';
+        const summary = document.createElement('summary');
+        summary.textContent = effect;
+        summary.style.fontWeight = 'bold';
+        summary.style.color = '#facc15';
+        summary.style.fontSize = '1.1rem';
+        summary.style.cursor = 'pointer';
+        details.appendChild(summary);
 
-    filteredFixingPool.forEach(card => {
-        const cardName = card.Name || card.name;
-        const btn = document.createElement('button');
-        btn.className = 'btn-secondary';
-        btn.style.display = 'flex';
-        btn.style.flexDirection = 'column';
-        btn.style.alignItems = 'center';
+        const row = document.createElement('div');
+        row.style.display = 'flex';
+        row.style.flexWrap = 'wrap';
+        row.style.gap = '12px';
+        row.style.marginTop = '10px';
 
-        // Create the image element and attach hover preview
-        const img = document.createElement('img');
-        img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`;
-        img.alt = cardName;
-        img.title = cardName;
-        img.style.width = '90px';
-        img.style.height = '128px';
-        img.style.marginBottom = '8px';
-        attachCardHoverPreview(img, cardName);
+        cards.forEach(card => {
+            const cardName = card.Name || card.name;
+            const btn = document.createElement('button');
+            btn.style.background = 'none';
+            btn.style.border = 'none';
+            btn.style.padding = '0';
+            btn.style.cursor = 'pointer';
+            btn.style.position = 'relative';
 
-        btn.appendChild(img);
-        btn.appendChild(document.createTextNode(cardName));
-        btn.onclick = () => {
-            if (btn.classList.contains('selected')) {
-                btn.classList.remove('selected');
-                btn.style.backgroundColor = '';
-                btn.style.color = '';
-            } else {
-                const selected = fixingDiv.querySelectorAll('.selected');
-                if (selected.length >= 6) {
-                    showMessage('You can only select up to 6 fixing lands.', 'error', 2000);
-                    return;
+            const img = document.createElement('img');
+            img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`;
+            img.alt = cardName;
+            img.title = cardName;
+            img.style.width = '110px';
+            img.style.height = '156px';
+            img.style.objectFit = 'cover';
+            img.style.border = '2px solid #facc15';
+            img.style.borderRadius = '4px';
+            img.style.background = '#111';
+            img.className = 'decklist-card-thumb';
+
+            attachCardHoverPreview(img, cardName);
+
+            btn.appendChild(img);
+
+            // Add a checkmark overlay if selected
+            const check = document.createElement('span');
+            check.textContent = '✔';
+            check.style.position = 'absolute';
+            check.style.top = '6px';
+            check.style.right = '10px';
+            check.style.fontSize = '1.5rem';
+            check.style.color = '#00ff00';
+            check.style.display = 'none';
+            btn.appendChild(check);
+
+            btn.onclick = () => {
+                if (btn.classList.contains('selected')) {
+                    btn.classList.remove('selected');
+                    check.style.display = 'none';
+                } else {
+                    const selected = fixingDiv.querySelectorAll('.selected');
+                    if (selected.length >= 6) {
+                        showMessage('You can only select up to 6 fixing lands.', 'error', 2000);
+                        return;
+                    }
+                    btn.classList.add('selected');
+                    check.style.display = '';
                 }
-                btn.classList.add('selected');
-                btn.style.backgroundColor = '#facc15';
-                btn.style.color = '#1a1a2e';
-            }
-            updateSelected();
-        };
-        row.appendChild(btn);
+                updateSelected();
+            };
+
+            row.appendChild(btn);
+        });
+
+        details.appendChild(row);
+        fixingDiv.appendChild(details);
     });
 
+    // --- Confirm button ---
     const confirmBtn = document.createElement('button');
     confirmBtn.className = 'btn mt-4';
     confirmBtn.textContent = 'Confirm Fixing Lands';
@@ -681,109 +751,19 @@ function renderFixingLandsStep(fixingPool, onSelect) {
         const selected = fixingDiv.querySelectorAll('.selected');
         confirmBtn.disabled = selected.length > 6;
     }
-
     updateSelected();
 
     confirmBtn.onclick = () => {
         cardHoverPreview.classList.remove('show');
         cardHoverPreview.src = '';
-        const selected = Array.from(fixingDiv.querySelectorAll('.selected')).map(btn => btn.textContent);
+        const selected = Array.from(fixingDiv.querySelectorAll('.selected')).map(btn =>
+            btn.querySelector('img').alt
+        );
         fixingDiv.remove();
         onSelect(selected);
     };
 
     decklistStep.prepend(fixingDiv);
-
-    // Group fixing lands by their color identity string (e.g. "B", "BR", "WUB", etc)
-const groupedLands = {};
-filteredFixingPool.forEach(card => {
-    let landColors = (card.Color || card.color || '').toUpperCase().replace(/[^WUBRG]/g, '').split('').filter(Boolean).sort().join('');
-    if (!landColors) landColors = 'Colorless';
-    if (!groupedLands[landColors]) groupedLands[landColors] = [];
-    groupedLands[landColors].push(card);
-});
-
-Object.entries(groupedLands).forEach(([colorId, cards]) => {
-    // Create the group container
-    const groupDiv = document.createElement('div');
-    groupDiv.style.marginBottom = '12px';
-
-    // Create the header (clickable to expand/collapse)
-    const header = document.createElement('button');
-    header.type = 'button';
-    header.style.display = 'block';
-    header.style.width = '100%';
-    header.style.textAlign = 'left';
-    header.style.background = '#222';
-    header.style.color = '#facc15';
-    header.style.fontWeight = 'bold';
-    header.style.padding = '8px 12px';
-    header.style.border = '2px solid #facc15';
-    header.style.cursor = 'pointer';
-    header.textContent = colorId === 'Colorless' ? 'Colorless' : colorId.split('').join(' / ');
-
-    // Create the content (initially hidden)
-    const content = document.createElement('div');
-    content.style.display = 'none';
-    content.style.padding = '8px 0 0 0';
-
-    // Add the lands to the content
-    const row = document.createElement('div');
-    row.style.display = 'flex';
-    row.style.flexWrap = 'wrap';
-    row.style.gap = '12px';
-
-    cards.forEach(card => {
-        const cardName = card.Name || card.name;
-        const btn = document.createElement('button');
-        btn.className = 'btn-secondary';
-        btn.style.display = 'flex';
-        btn.style.flexDirection = 'column';
-        btn.style.alignItems = 'center';
-
-        // Create the image element and attach hover preview
-        const img = document.createElement('img');
-        img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`;
-        img.alt = cardName;
-        img.title = cardName;
-        img.style.width = '90px';
-        img.style.height = '128px';
-        img.style.marginBottom = '8px';
-        attachCardHoverPreview(img, cardName);
-
-        btn.appendChild(img);
-        btn.appendChild(document.createTextNode(cardName));
-        btn.onclick = () => {
-            if (btn.classList.contains('selected')) {
-                btn.classList.remove('selected');
-                btn.style.backgroundColor = '';
-                btn.style.color = '';
-            } else {
-                const selected = fixingDiv.querySelectorAll('.selected');
-                if (selected.length >= 6) {
-                    showMessage('You can only select up to 6 fixing lands.', 'error', 2000);
-                    return;
-                }
-                btn.classList.add('selected');
-                btn.style.backgroundColor = '#facc15';
-                btn.style.color = '#1a1a2e';
-            }
-            updateSelected();
-        };
-        row.appendChild(btn);
-    });
-
-    content.appendChild(row);
-
-    // Toggle expand/collapse
-    header.addEventListener('click', () => {
-        content.style.display = content.style.display === 'none' ? 'block' : 'none';
-    });
-
-    groupDiv.appendChild(header);
-    groupDiv.appendChild(content);
-    fixingDiv.appendChild(groupDiv);
-});
 }
 
 function renderVisualDecklist(typeGroups) {
