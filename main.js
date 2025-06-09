@@ -192,7 +192,12 @@
                 currentPackOptions = themesToOffer;
             } else { 
                 packSelections.pack2 = null; 
-                themesToOffer = currentPackOptions.filter(theme => theme !== packSelections.pack1);
+                if (isCommanderCube) {
+                    const shuffledThemes = [...availablePackThemes].sort(() => 0.5 - Math.random());
+                    themesToOffer = shuffledThemes.filter(theme => theme !== packSelections.pack1).slice(0, Math.min(9, availablePackThemes.length));
+                } else {
+                    themesToOffer = currentPackOptions.filter(theme => theme !== packSelections.pack1);
+                }
             }
             
             if (themesToOffer.length === 0) {
@@ -414,8 +419,8 @@
             chosenCubeCodeDisplay.textContent = cubeSelect.name;
 
             cubeSelectionStep.classList.add('hidden');
-packSelectionStep.classList.add('hidden');
-decklistStep.classList.remove('hidden');
+            packSelectionStep.classList.add('hidden');
+            decklistStep.classList.remove('hidden');
 
             showMessage('DECKLIST READY!', 'success');
             setLoading(false);
