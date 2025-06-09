@@ -156,7 +156,11 @@
                     cardTags.trim() !== "" &&
                     !cardTags.includes("zz_Commander") && // Exclude any tag with zz_Commander
                     cardTags !== "Other" &&
-                    cardTags !== "z_Fixing Roster_z" // Exclude fixing roster
+                    cardTags !== "z_Fixing Roster_z" && // Exclude fixing roster
+                    cardTags !== "B - The Big Top" &&
+                    cardTags !== "WUR - Mutate" &&
+                    cardTags !== "WU - Studies" &&
+                    cardTags !== "WU - Studies (Lessons)"
                 ) {
                     themes.add(cardTags.trim());
                 }
@@ -272,7 +276,16 @@
                         cardTags.includes(packSelections.pack2)
                     ) {
                         const cardName = card.Name || card.name;
-                        if (cardName && cardName.trim() !== "") {
+                        if (
+                            cardName && 
+                            cardName.trim() !== "" &&
+                            cardName !== "Dungeon of the Mad Mage " &&
+                            cardName !== "Lost Mine of Phandelver" &&
+                            cardName !== "Tomb of Annihilation" &&
+                            cardName !== "The Ring" &&
+                            cardName !== "Undercity" &&
+                            cardName !== "Cragflame"
+                        ) {
                             deck.push(card);
                         }
                     }
