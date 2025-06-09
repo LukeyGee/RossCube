@@ -177,7 +177,7 @@
             const isCommanderCube = selectedCube && selectedCube.isCommander;
 
             // Use 10 packs for commander cube, 6 for others
-            const packsToOffer = isCommanderCube ? 10 : 6;
+            const packsToOffer = isCommanderCube ? 10 : 3;
 
             if (packNumber === 1) {
                 packSelections.pack1 = null; 
@@ -194,9 +194,10 @@
                 packSelections.pack2 = null; 
                 if (isCommanderCube) {
                     const shuffledThemes = [...availablePackThemes].sort(() => 0.5 - Math.random());
-                    themesToOffer = shuffledThemes.filter(theme => theme !== packSelections.pack1).slice(0, Math.min(9, availablePackThemes.length));
+                    themesToOffer = shuffledThemes.filter(theme => theme !== packSelections.pack1).slice(0, Math.min(packsToOffer-1, availablePackThemes.length));
                 } else {
-                    themesToOffer = currentPackOptions.filter(theme => theme !== packSelections.pack1);
+                    const shuffledThemes = [...availablePackThemes].sort(() => 0.5 - Math.random());
+                    themesToOffer = shuffledThemes.filter(theme => theme !== packSelections.pack1).slice(0, Math.min(packsToOffer, availablePackThemes.length));
                 }
             }
             
