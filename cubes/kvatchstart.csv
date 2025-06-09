@@ -3645,46 +3645,46 @@ name,CMC,Type,Color,Set,Collector Number,Rarity,Color Category,status,Finish,may
 "Godless Shrine",0,"Land - Plains Swamp",WB,"rna","248",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",71536
 "Marsh Flats",0,"Land",WB,"mh2","248",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",90877
 "Scrubland",0,"Land - Plains Swamp",,"3ed","286",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
-"Shadowy Backstreet",0,"Land - Plains Swamp",,"mkm","330",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121444
+"Shadowy Backstreet",0,"Land - Plains Swamp",WB,"mkm","330",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121444
 "Shattered Sanctum",0,"Land",WB,"vow","283",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",
-"Vault of Champions",0,"Land",,"cmm","667",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",113751
+"Vault of Champions",0,"Land",WB,"cmm","667",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",113751
 "Cascade Bluffs",0,"Land",UR,"2xm","313",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",82660
 "Riverglide Pathway",0,"Land",UR,"znr","289",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
 "Scalding Tarn",0,"Land",UR,"mh2","254",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",90889
 "Shivan Reef",0,"Land",UR,"dmu","380",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
 "Steam Vents",0,"Land - Island Mountain",UR,"grn","257",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",69927
 "Stormcarved Coast",0,"Land",UR,"dbl","532",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",96192
-"Thundering Falls",0,"Land - Island Mountain",,"mkm","331",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121446
-"Training Center",0,"Land",,"cmm","665",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",113747
-"Volcanic Island",0,"Land - Island Mountain",,"3ed","291",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
-"Bayou",0,"Land - Swamp Forest",,"3ed","283",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Thundering Falls",0,"Land - Island Mountain",UR,"mkm","331",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121446
+"Training Center",0,"Land",UR,"cmm","665",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",113747
+"Volcanic Island",0,"Land - Island Mountain",UR,"3ed","291",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Bayou",0,"Land - Swamp Forest",BG,"3ed","283",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
 "Darkbore Pathway",0,"Land",BG,"khm","292",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
 "Deathcap Glade",0,"Land",BG,"dbl","528",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",96184
 "Llanowar Wastes",0,"Land",BG,"ori","248",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",57672
-"Nurturing Peatland",0,"Land",,"acr","114",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",127638
+"Nurturing Peatland",0,"Land",BG,"acr","114",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",127638
 "Overgrown Tomb",0,"Land - Swamp Forest",BG,"grn","253",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",69919
 "Twilight Mire",0,"Land",BG,"2xm","328",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",82690
-"Underground Mortuary",0,"Land - Swamp Forest",,"mkm","333",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121450
+"Underground Mortuary",0,"Land - Swamp Forest",BG,"mkm","333",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121450
 "Undergrowth Stadium",0,"Land",,"cmm","666",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",113749
 "Verdant Catacombs",0,"Land",BG,"mh2","260",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",90901
 "Arid Mesa",0,"Land",WR,"mh2","244",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",90869
 "Battlefield Forge",0,"Land",RW,"ori","244",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",57670
-"Elegant Parlor",0,"Land - Mountain Plains",,"mkm","325",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121434
+"Elegant Parlor",0,"Land - Mountain Plains",RW,"mkm","325",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121434
 "Needleverge Pathway",0,"Land",WR,"znr","288",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
-"Plateau",0,"Land - Mountain Plains",,"3ed","284",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Plateau",0,"Land - Mountain Plains",RW,"3ed","284",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
 "Rugged Prairie",0,"Land",RW,"2xm","325",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",82684
 "Sacred Foundry",0,"Land - Mountain Plains",WR,"grn","254",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",69921
-"Spectator Seating",0,"Land",,"cmm","618",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",113581
+"Spectator Seating",0,"Land",RW,"cmm","618",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",113581
 "Sundown Pass",0,"Land",WR,"dbl","533",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",96194
 "Barkchannel Pathway",0,"Land",UG,"khm","290",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",
 "Breeding Pool",0,"Land - Forest Island",UG,"rna","246",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",71532
 "Dreamroot Cascade",0,"Land",UG,"dbl","529",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",96186
 "Flooded Grove",0,"Land",UG,"2xm","318",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",82670
-"Hedge Maze",0,"Land - Forest Island",,"mkm","326",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121436
+"Hedge Maze",0,"Land - Forest Island",UG,"mkm","326",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121436
 "Misty Rainforest",0,"Land",UG,"mh2","438",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",91149
-"Rejuvenating Springs",0,"Land",,"cmm","662",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",113741
-"Tropical Island",0,"Land - Forest Island",,"3ed","288",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
-"Waterlogged Grove",0,"Land",,"acr","116",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",127642
+"Rejuvenating Springs",0,"Land",UG,"cmm","662",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",113741
+"Tropical Island",0,"Land - Forest Island",UG,"3ed","288",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Waterlogged Grove",0,"Land",UG,"acr","116",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",127642
 "Yavimaya Coast",0,"Land",UG,"ori","252",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",57676
 "Spara's Headquarters",0,"Land - Forest Plains Island",WGU,"snc","293",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",
 "Raffine's Tower",0,"Land - Plains Island Swamp",WUB,"snc","292",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",
