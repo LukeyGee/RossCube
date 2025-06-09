@@ -297,6 +297,51 @@ input[type="radio"]:checked + label.pack-radio-label {
 .card-hover-preview.show {
     display: block;
 }
+
+/* Add to your index.html <style> section */
+.pack-synergy-amazing {
+    border: 2px solid #ff6b00 !important;
+    background-color: rgba(255, 107, 0, 0.15);
+    box-shadow: 0 0 12px rgba(255, 107, 0, 0.4);
+}
+
+.pack-synergy-excellent {
+    border: 2px solid #00ff00 !important;
+    background-color: rgba(0, 255, 0, 0.1);
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
+}
+
+.pack-synergy-good {
+    border: 2px solid #10b981 !important;
+    background-color: rgba(16, 185, 129, 0.08);
+}
+
+.pack-synergy-neutral {
+    border: 2px solid #94a3b8 !important;
+    background-color: rgba(148, 163, 184, 0.05);
+}
+
+.pack-synergy-poor {
+    border: 2px solid #f59e0b !important;
+    background-color: rgba(245, 158, 11, 0.08);
+}
+
+.pack-synergy-bad {
+    border: 2px solid #ef4444 !important;
+    background-color: rgba(239, 68, 68, 0.08);
+}
+
+.pack-synergy-terrible {
+    border: 2px solid #dc2626 !important;
+    background-color: rgba(220, 38, 38, 0.1);
+    box-shadow: 0 0 8px rgba(220, 38, 38, 0.3);
+}
+
+.synergy-indicator {
+    font-weight: bold;
+    text-shadow: 0 0 4px currentColor;
+    cursor: help;
+}
     </style>
 <!-- Removed duplicate <script defer> block to prevent variable redeclaration errors. -->
 </head>
@@ -411,6 +456,7 @@ input[type="radio"]:checked + label.pack-radio-label {
     </main>
 
     <img id="cardHoverPreview" class="card-hover-preview" src="" alt="Card Preview">
+<script src="pack-synergy.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

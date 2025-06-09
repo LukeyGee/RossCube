@@ -17,7 +17,7 @@
         const chosenPack2Display = document.getElementById('chosenPack2');
         const chosenCubeCodeDisplay = document.getElementById('chosenCubeCode');
         const messageContainer = document.getElementById('messageContainer');
-
+        const cardHoverPreview = document.getElementById('cardHoverPreview');
         // --- Application State ---
         let cubes = [
             { name: "MADChilupa Big Vintage", code: "trs", csvPath: "./cubes/trs.csv" },
@@ -199,6 +199,14 @@
                     const shuffledThemes = [...availablePackThemes].sort(() => 0.5 - Math.random());
                     themesToOffer = shuffledThemes.filter(theme => theme !== packSelections.pack1).slice(0, Math.min(packsToOffer, availablePackThemes.length));
                 }
+                // Add this at the end of your displayPackChoices function, just before the closing }
+                
+                    // Add synergy analysis after rendering pack options
+                    if (packNumber === 2 && packSelections.pack1 && packSynergyAnalyzer && packSynergyAnalyzer.enabled) {
+                        setTimeout(() => {
+                            packSynergyAnalyzer.addDynamicPackWarnings(packSelections.pack1, currentCubeData);
+                        }, 50);
+                    }                
             }
             
             if (themesToOffer.length === 0) {
@@ -526,7 +534,19 @@ function resetToCubeSelection() {
     showMessage('App reset. Please select a cube.', 'info');
 }
 
-populateCubeSelect(); // <-- Add this at the very end
+populateCubeSelect();
+
+// Initialize pack synergy analyzer
+function initializePackSynergy() {
+    if (window.PackSynergyAnalyzer) {
+        packSynergyAnalyzer = new PackSynergyAnalyzer();
+        console.log('Pack synergy analyzer initialized');
+    } else {
+        console.warn('PackSynergyAnalyzer not found - synergy features disabled');
+    }
+}
+
+initializePackSynergy();
 
 function getSelectedCube() {
     return cubes.find(cube => cube.code === cubeSelect.value);
