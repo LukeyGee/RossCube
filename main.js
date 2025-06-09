@@ -309,6 +309,7 @@
                 // Commander cube: Koffers and Fixing Lands steps
                 if (isCommanderCube) {
                     // Group by main type, merging Sorcery+Instant and Artifact+Enchantment
+                    renderCommanderZone(commanders);
                     const typeGroups = {
                         Creature: [],
                         "Instant / Sorcery": [],
