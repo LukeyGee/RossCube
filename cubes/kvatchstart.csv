@@ -3644,7 +3644,7 @@ name,CMC,Type,Color,Set,Collector Number,Rarity,Color Category,status,Finish,may
 "Fetid Heath",0,"Land",WB,"2xm","316",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",82666
 "Godless Shrine",0,"Land - Plains Swamp",WB,"rna","248",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",71536
 "Marsh Flats",0,"Land",WB,"mh2","248",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",90877
-"Scrubland",0,"Land - Plains Swamp",,"3ed","286",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
+"Scrubland",0,"Land - Plains Swamp",BW,"3ed","286",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",
 "Shadowy Backstreet",0,"Land - Plains Swamp",WB,"mkm","330",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121444
 "Shattered Sanctum",0,"Land",WB,"vow","283",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",
 "Vault of Champions",0,"Land",WB,"cmm","667",rare,Lands,Owned,Foil,false,,,"z_Fixing Roster_z","",113751
@@ -3665,7 +3665,7 @@ name,CMC,Type,Color,Set,Collector Number,Rarity,Color Category,status,Finish,may
 "Overgrown Tomb",0,"Land - Swamp Forest",BG,"grn","253",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",69919
 "Twilight Mire",0,"Land",BG,"2xm","328",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",82690
 "Underground Mortuary",0,"Land - Swamp Forest",BG,"mkm","333",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",121450
-"Undergrowth Stadium",0,"Land",,"cmm","666",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",113749
+"Undergrowth Stadium",0,"Land",BG,"cmm","666",rare,Lands,Owned,,false,,,"z_Fixing Roster_z","",113749
 "Verdant Catacombs",0,"Land",BG,"mh2","260",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",90901
 "Arid Mesa",0,"Land",WR,"mh2","244",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",90869
 "Battlefield Forge",0,"Land",RW,"ori","244",rare,Lands,Owned,Non-foil,false,,,"z_Fixing Roster_z","",57670
