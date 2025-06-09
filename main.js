@@ -298,62 +298,68 @@
                         (card.tags && card.tags.includes("z_Fixing Roster_z")) ||
                         (card.Tags && card.Tags.includes("z_Fixing Roster_z"))
                     );
-                    renderFixingLandsStep(fixingPool, fixingLands => {
-                        // Add Koffers card and Command Tower
-                        deck.push(koffersCard);
-                        deck.push({ Name: "Command Tower", name: "Command Tower" });
-                        fixingLands.forEach(landName => {
-                            deck.push({ Name: landName, name: landName });
-                        });
+                    renderFixingLandsStep(fixingPool, deck, async (fixingLands, landsToRemove) => {
+    // Add Koffers card and Command Tower
+    deck.push(koffersCard);
+    deck.push({ Name: "Command Tower", name: "Command Tower" });
 
-                        // Enforce 42-card deck (excluding commanders)
-                        while (deck.length > 42) deck.pop();
+    // Remove a basic land for each fixing land added
+    fixingLands.forEach((landName, i) => {
+        const idx = deck.findIndex(card =>
+            (card.Name || card.name) === landsToRemove[i]
+        );
+        if (idx !== -1) deck.splice(idx, 1);
+        // Add the fixing land
+        deck.push({ Name: landName, name: landName });
+    });
 
-                        // Group by main type, merging Sorcery+Instant and Artifact+Enchantment
-                        const typeGroups = {
-                            Creature: [],
-                            "Instant / Sorcery": [],
-                            "Artifact / Enchantment": [],
-                            Planeswalker: [],
-                            Other: []
-                        };
-                        deck.forEach(card => {
-                            const typeLine = (card.Type || card.type || card.type_line || "").toLowerCase();
-                            if (typeLine.includes("creature")) typeGroups.Creature.push(card);
-                            else if (typeLine.includes("instant") || typeLine.includes("sorcery")) typeGroups["Instant / Sorcery"].push(card);
-                            else if (typeLine.includes("artifact") || typeLine.includes("enchantment")) typeGroups["Artifact / Enchantment"].push(card);
-                            else if (typeLine.includes("planeswalker")) typeGroups.Planeswalker.push(card);
-                            else typeGroups.Other.push(card);
-                        });
+    // Enforce 42-card deck (excluding commanders)
+    while (deck.length > 42) deck.pop();
 
-                        // Show decklist and visual decklist
-                        // For commander cubes, export main deck, then a blank line, then commanders
-if (isCommanderCube && commanders.length > 0) {
-    const mainDeckLines = deck
-        .map(card => `1 ${card.Name || card.name}`)
-        .sort();
-    const commanderLines = commanders
-        .map(card => `1 ${card.Name || card.name}`)
-        .sort();
-    decklistOutput.value = mainDeckLines.join('\n') + '\n\n' + commanderLines.join('\n');
-} else {
-    decklistOutput.value = deck
-        .map(card => `1 ${card.Name || card.name}`)
-        .sort()
-        .join('\n');
-}
-                        chosenPack1Display.textContent = packSelections.pack1;
-                        chosenPack2Display.textContent = packSelections.pack2;
-                        chosenCubeCodeDisplay.textContent = cubeSelect.name;
-                        cubeSelectionStep.classList.add('hidden');
-                        packSelectionStep.classList.add('hidden');
-                        decklistStep.classList.remove('hidden');
+    // Group by main type, merging Sorcery+Instant and Artifact+Enchantment
+    const typeGroups = {
+        Creature: [],
+        "Instant / Sorcery": [],
+        "Artifact / Enchantment": [],
+        Planeswalker: [],
+        Other: []
+    };
+    deck.forEach(card => {
+        const typeLine = (card.Type || card.type || card.type_line || "").toLowerCase();
+        if (typeLine.includes("creature")) typeGroups.Creature.push(card);
+        else if (typeLine.includes("instant") || typeLine.includes("sorcery")) typeGroups["Instant / Sorcery"].push(card);
+        else if (typeLine.includes("artifact") || typeLine.includes("enchantment")) typeGroups["Artifact / Enchantment"].push(card);
+        else if (typeLine.includes("planeswalker")) typeGroups.Planeswalker.push(card);
+        else typeGroups.Other.push(card);
+    });
 
-                        showMessage('DECKLIST READY!', 'success');
-                        setLoading(false);
-                        copyDecklistBtn.disabled = false;
-                        renderVisualDecklist(typeGroups, commanders);
-                    });
+    // Show decklist and visual decklist
+    if (isCommanderCube && commanders.length > 0) {
+        const mainDeckLines = deck
+            .map(card => `1 ${card.Name || card.name}`)
+            .sort();
+        const commanderLines = commanders
+            .map(card => `1 ${card.Name || card.name}`)
+            .sort();
+        decklistOutput.value = mainDeckLines.join('\n') + '\n\n' + commanderLines.join('\n');
+    } else {
+        decklistOutput.value = deck
+            .map(card => `1 ${card.Name || card.name}`)
+            .sort()
+            .join('\n');
+    }
+    chosenPack1Display.textContent = packSelections.pack1;
+    chosenPack2Display.textContent = packSelections.pack2;
+    chosenCubeCodeDisplay.textContent = cubeSelect.name;
+    cubeSelectionStep.classList.add('hidden');
+    packSelectionStep.classList.add('hidden');
+    decklistStep.classList.remove('hidden');
+
+    showMessage('DECKLIST READY!', 'success');
+    setLoading(false);
+    copyDecklistBtn.disabled = false;
+    renderVisualDecklist(typeGroups, commanders);
+});
                 });
                 setLoading(false);
                 return;
@@ -590,7 +596,7 @@ function renderKoffersStep(koffersPool, onSelect) {
     decklistStep.prepend(koffersDiv);
 }
 
-async function renderFixingLandsStep(fixingPool, onSelect) {
+async function renderFixingLandsStep(fixingPool, deck, onSelect) {
     // Remove any existing Fixing Lands step UI
     const existing = document.getElementById('fixingLandsStep');
     if (existing) existing.remove();
@@ -753,15 +759,117 @@ async function renderFixingLandsStep(fixingPool, onSelect) {
     }
     updateSelected();
 
-    confirmBtn.onclick = () => {
+    confirmBtn.onclick = async () => {
         cardHoverPreview.classList.remove('show');
         cardHoverPreview.src = '';
         const selected = Array.from(fixingDiv.querySelectorAll('.selected')).map(btn =>
             btn.querySelector('img').alt
         );
         fixingDiv.remove();
-        onSelect(selected);
+
+        // Clone the deck so we can update it as we remove basics
+        let basicsDeck = deck.filter(card => ["Plains", "Island", "Swamp", "Mountain", "Forest"].includes(card.Name || card.name));
+        const landsToRemove = [];
+        for (let i = 0; i < selected.length; i++) {
+            if (basicsDeck.length === 0) {
+                showMessage('No basic lands left to remove!', 'error', 3000);
+                break;
+            }
+            const choice = await promptBasicLandToRemove(basicsDeck, i + 1, selected.length);
+            if (!choice) break; // User cancelled
+            landsToRemove.push(choice);
+
+            // Remove the chosen basic from basicsDeck (only one copy)
+            const idx = basicsDeck.findIndex(card => (card.Name || card.name) === choice);
+            if (idx !== -1) basicsDeck.splice(idx, 1);
+
+            showMessage(`${choice} removed from the deck.`, 'success', 1200);
+        }
+        onSelect(selected, landsToRemove);
     };
+
+    // Helper: Prompt user to pick a basic land to remove, showing only those left and their counts, with a counter and card images
+    function promptBasicLandToRemove(basicsDeck, current, total) {
+        return new Promise(resolve => {
+            // Count remaining basics
+            const counts = {};
+            basicsDeck.forEach(card => {
+                const name = card.Name || card.name;
+                counts[name] = (counts[name] || 0) + 1;
+            });
+            const basicNames = Object.keys(counts);
+
+            // Create modal
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100vw';
+            modal.style.height = '100vh';
+            modal.style.background = 'rgba(0,0,0,0.7)';
+            modal.style.display = 'flex';
+            modal.style.alignItems = 'center';
+            modal.style.justifyContent = 'center';
+            modal.style.zIndex = '9999';
+
+            const box = document.createElement('div');
+            box.style.background = '#222';
+            box.style.padding = '24px';
+            box.style.borderRadius = '12px';
+            box.style.textAlign = 'center';
+
+            const msg = document.createElement('div');
+            msg.innerHTML = `<span style="color:#facc15">Choose a basic land to remove:</span><br><span style="color:#94a3b8;font-size:0.9rem;">(${current}/${total})</span>`;
+            msg.style.marginBottom = '16px';
+            box.appendChild(msg);
+
+            const row = document.createElement('div');
+            row.style.display = 'flex';
+            row.style.justifyContent = 'center';
+            row.style.gap = '16px';
+            row.style.marginBottom = '8px';
+
+            basicNames.forEach(name => {
+                const btn = document.createElement('button');
+                btn.style.background = 'none';
+                btn.style.border = 'none';
+                btn.style.padding = '0';
+                btn.style.cursor = 'pointer';
+                btn.style.display = 'flex';
+                btn.style.flexDirection = 'column';
+                btn.style.alignItems = 'center';
+
+                const img = document.createElement('img');
+                img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(name)}&format=image`;
+                img.alt = name;
+                img.title = name;
+                img.style.width = '90px';
+                img.style.height = '128px';
+                img.style.marginBottom = '6px';
+                img.style.border = '2px solid #facc15';
+                img.style.borderRadius = '4px';
+                img.style.background = '#111';
+
+                btn.appendChild(img);
+
+                const label = document.createElement('span');
+                label.textContent = `${name} (${counts[name]})`;
+                label.style.color = '#facc15';
+                label.style.fontSize = '1rem';
+                btn.appendChild(label);
+
+                btn.onclick = () => {
+                    document.body.removeChild(modal);
+                    resolve(name);
+                };
+                row.appendChild(btn);
+            });
+
+            box.appendChild(row);
+            modal.appendChild(box);
+            document.body.appendChild(modal);
+        });
+    }
 
     decklistStep.prepend(fixingDiv);
 }
