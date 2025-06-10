@@ -153,13 +153,13 @@
                 let cardName = card.Name || card.name;
                 if (
                     cardName && 
-                    cardName.trim() !== "" &&
-                    cardName !== "Dungeon of the Mad Mage" &&
-                    cardName !== "Lost Mine of Phandelver" &&
-                    cardName !== "Tomb of Annihilation" &&
-                    cardName !== "The Ring" &&
-                    cardName !== "Undercity" &&
-                    cardName !== "Cragflame"
+                    cardName.trim() !== "" ||
+                    (cardName !== "Dungeon of the Mad Mage" ||
+                    cardName !== "Lost Mine of Phandelver" ||
+                    cardName !== "Tomb of Annihilation" ||
+                    cardName !== "The Ring" ||
+                    cardName !== "Undercity" ||
+                    cardName !== "Cragflame")
                 ) {
                     return;
                 }
