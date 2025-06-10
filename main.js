@@ -150,7 +150,7 @@
             currentCubeData.forEach(card => {
                 const cardMaybe = card.Maybe || card.maybeboard;
                 if (cardMaybe && cardMaybe == "true") return;
-                let cardName = card.Name || card.name;
+/*                 let cardName = card.Name || card.name;
                 if (
                     cardName && 
                     cardName.trim() !== "" ||
@@ -162,7 +162,7 @@
                     cardName !== "Cragflame")
                 ) {
                     return;
-                }
+                } */
                 const cardTags = card.Tags || card.tags;
                 if (
                     cardTags &&
