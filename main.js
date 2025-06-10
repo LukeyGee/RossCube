@@ -412,6 +412,15 @@
                         setLoading(false);
                         copyDecklistBtn.disabled = false;
                         renderVisualDecklist(typeGroups, commanders);
+                        
+                        // After deck is generated and displayed, analyze with bully meter
+                        const bullyMeter = initializeBullyMeter();
+                        if (bullyMeter) {
+                            setTimeout(() => {
+                                const powerScore = bullyMeter.analyzeDeck(deck, commanders || []);
+                                console.log(`Deck Power Level: ${Math.round(powerScore)}%`);
+                            }, 1000);
+                        }
                 });
             });
             setLoading(false);
@@ -452,6 +461,15 @@
 
             // Render visual decklist
             renderVisualDecklist(typeGroups);
+            
+            // After deck is generated and displayed, analyze with bully meter
+            const bullyMeter = initializeBullyMeter();
+            if (bullyMeter) {
+                setTimeout(() => {
+                    const powerScore = bullyMeter.analyzeDeck(deck, commanders || []);
+                    console.log(`Deck Power Level: ${Math.round(powerScore)}%`);
+                }, 1000);
+            }
         } catch (err) {
             showMessage('ERROR: ' + err.message, 'error', 5000);
             setLoading(false);
@@ -544,6 +562,9 @@ function resetToCubeSelection() {
     if (koffersStep) koffersStep.remove();
     const fixingLandsStep = document.getElementById('fixingLandsStep');
     if (fixingLandsStep) fixingLandsStep.remove();
+    // Remove bully meter
+    const bullyMeter = document.getElementById('bullyMeter');
+    if (bullyMeter) bullyMeter.remove();
     cardHoverPreview.classList.remove('show');
     cardHoverPreview.src = '';
     showMessage('App reset. Please select a cube.', 'info');
@@ -559,6 +580,15 @@ function initializePackSynergy() {
     } else {
         console.warn('PackSynergyAnalyzer not found - synergy features disabled');
     }
+}
+
+// Initialize bully meter
+function initializeBullyMeter() {
+    if (typeof window.BullyMeter === 'undefined') {
+        console.warn('BullyMeter not loaded');
+        return null;
+    }
+    return new window.BullyMeter();
 }
 
 initializePackSynergy();
