@@ -150,19 +150,19 @@
             currentCubeData.forEach(card => {
                 const cardMaybe = card.Maybe || card.maybeboard;
                 if (cardMaybe && cardMaybe == "true") return;
-/*                 let cardName = card.Name || card.name;
+                let cardName = card.Name || card.name;
                 if (
                     cardName && 
-                    cardName.trim() !== "" ||
-                    (cardName !== "Dungeon of the Mad Mage" ||
-                    cardName !== "Lost Mine of Phandelver" ||
-                    cardName !== "Tomb of Annihilation" ||
-                    cardName !== "The Ring" ||
-                    cardName !== "Undercity" ||
-                    cardName !== "Cragflame")
+                    cardName.trim() !== "" &&
+                    (cardName == "Dungeon of the Mad Mage" ||
+                    cardName == "Lost Mine of Phandelver" ||
+                    cardName == "Tomb of Annihilation" ||
+                    cardName == "The Ring" ||
+                    cardName == "Undercity" ||
+                    cardName == "Cragflame")
                 ) {
                     return;
-                } */
+                }
                 const cardTags = card.Tags || card.tags;
                 if (
                     cardTags &&
