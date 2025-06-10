@@ -457,7 +457,10 @@
             renderVisualDecklist(typeGroups);
             
             // After deck is generated and displayed, analyze with bully meter
-            runBullyMeterAnalysis(deck, commanders);
+            if (!bullyMeterAnalyzed) {
+                runBullyMeterAnalysis(deck, commanders);
+                bullyMeterAnalyzed = true;
+            }
         } catch (err) {
             showMessage('ERROR: ' + err.message, 'error', 5000);
             setLoading(false);
