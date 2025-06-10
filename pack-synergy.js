@@ -335,7 +335,44 @@ class PackSynergyAnalyzer {
         
         // Enhanced tribal detection with more tribes
         const tribeCount = {};
-        const creatureTypes = ['human', 'elf', 'goblin', 'wizard', 'zombie', 'angel', 'dragon', 'beast', 'spirit', 'knight', 'soldier', 'warrior', 'vampire', 'demon', 'elemental', 'construct', 'thopter', 'servo', 'cleric', 'artificer', 'shaman', 'druid'];
+        const creatureTypes = [
+            'human',
+            'elf',
+            'goblin',
+            'wizard',
+            'zombie',
+            'angel',
+            'dragon',
+            'beast',
+            'spirit',
+            'knight',
+            'soldier',
+            'warrior',
+            'vampire',
+            'demon',
+            'elemental',
+            'construct',
+            'thopter',
+            'servo',
+            'cleric',
+            'artificer',
+            'shaman',
+            'druid',
+            'rogue',
+            'phyrexian',
+            'cat',
+            'merfolk',
+            'assassin',
+            'bird',
+            'faerie',
+            'scout',
+            'pirate',
+            'noble',
+            'horror',
+            'dwarf',
+            'archer',
+            'dinosaur'
+        ];
         
         cards.forEach(card => {
             const typeLine = (card.type_line || '').toLowerCase();
