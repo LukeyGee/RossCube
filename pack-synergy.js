@@ -512,31 +512,31 @@ class PackSynergyAnalyzer {
 
         // Visual indicator for synergy score
         if (synergy.score >= 3) {
-            indicator.textContent = '🔥';
+            indicator.textContent = ' 🔥🔥🔥';
             indicator.style.color = '#ff6b00';
             optionDiv.classList.add('pack-synergy-amazing');
         } else if (synergy.score >= 2) {
-            indicator.textContent = '✨';
+            indicator.textContent = ' 👍👍';
             indicator.style.color = '#00ff00';
             optionDiv.classList.add('pack-synergy-excellent');
         } else if (synergy.score >= 1) {
-            indicator.textContent = '👍';
+            indicator.textContent = ' 👍';
             indicator.style.color = '#10b981';
             optionDiv.classList.add('pack-synergy-good');
         } else if (synergy.score >= 0) {
-            indicator.textContent = '➖';
+            indicator.textContent = ' 😑';
             indicator.style.color = '#94a3b8';
             optionDiv.classList.add('pack-synergy-neutral');
         } else if (synergy.score >= -1) {
-            indicator.textContent = '👎';
+            indicator.textContent = ' 👎';
             indicator.style.color = '#f59e0b';
             optionDiv.classList.add('pack-synergy-poor');
         } else if (synergy.score >= -2) {
-            indicator.textContent = '⚠️';
+            indicator.textContent = ' 👎👎';
             indicator.style.color = '#ef4444';
             optionDiv.classList.add('pack-synergy-bad');
         } else {
-            indicator.textContent = '💀';
+            indicator.textContent = ' 💀💀💀';
             indicator.style.color = '#dc2626';
             optionDiv.classList.add('pack-synergy-terrible');
         }
@@ -555,7 +555,7 @@ class PackSynergyAnalyzer {
         tooltip.style.overflowY = 'auto';
         tooltip.style.boxShadow = '0 4px 8px rgba(0,0,0,0.3)';
         tooltip.style.zIndex = '1001';
-        tooltip.style.maxWidth = '320px';
+        tooltip.style.maxWidth = '380px';
         tooltip.style.pointerEvents = 'none';
         tooltip.style.overflowWrap = 'break-word';
         tooltip.style.wordBreak = 'break-word';
