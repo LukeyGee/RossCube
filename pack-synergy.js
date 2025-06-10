@@ -15,28 +15,22 @@ class PackSynergyAnalyzer {
     }
 
     // Main function to analyze pack and show synergy indicators
-    async addDynamicPackWarnings(selectedPack1, cubeData) {
+    async addDynamicPackWarnings(selectedPack1, cubeData, commander1, commander2) {
         if (!this.enabled) return;
-        
         console.log('Analyzing pack synergies for:', selectedPack1);
-        
-        // Show calculating indicator
+
         this.showSynergyCalculatingIndicator(true);
-        
+
         try {
             const pack1Theme = await this.analyzePackCards(selectedPack1, cubeData);
-            console.log('Pack 1 theme:', pack1Theme);
-            
             const packOptions = document.querySelectorAll('input[name^="pack_selection_group_2"]');
-            
             for (const radio of packOptions) {
                 const pack2Name = radio.value;
                 const pack2Theme = await this.analyzePackCards(pack2Name, cubeData);
-                const synergy = this.calculateDynamicSynergy(pack1Theme, pack2Theme);
-                
+                const synergy = this.calculateDynamicSynergy(
+                    pack1Theme, pack2Theme, commander1, commander2, cubeData
+                );
                 this.applySynergyIndicator(radio, synergy);
-                
-                // Small delay for progressive UI
                 await new Promise(resolve => setTimeout(resolve, 100));
             }
         } finally {
@@ -187,7 +181,7 @@ class PackSynergyAnalyzer {
         theme.avgCmc = cards.reduce((sum, card) => sum + card.cmc, 0) / cards.length;
         
         // New: Analyze mana curve for strategy detection
-        theme.curveArchetype = this.analyzeManaCurveStrategy(cards);
+       // theme.curveArchetype = this.analyzeManaCurveStrategy(cards);
         
         // Enhanced theme patterns with weights and semantic analysis
         const themePatterns = {
@@ -518,7 +512,7 @@ class PackSynergyAnalyzer {
     }
 
     // Enhanced synergy calculation using improved themes
-    calculateDynamicSynergy(theme1, theme2) {
+    calculateDynamicSynergy(theme1, theme2, commander1, commander2, cubeData) {
         let synergyScore = 0;
         let reasons = [];
         
@@ -576,11 +570,6 @@ class PackSynergyAnalyzer {
             synergyScore += 0.4; // Reduced from 0.7
             reasons.push(`Shared sub-themes: ${sharedSubThemes.join(', ')}`);
         }
-        
-        // Curve compatibility (keep as is)
-        const curveCompatibility = this.analyzeCurveCompatibility(theme1, theme2);
-        synergyScore += curveCompatibility.score;
-        if (curveCompatibility.reason) reasons.push(curveCompatibility.reason);
         
         // More conservative card synergy bonus
         const combinedSynergies = [...theme1.cardSynergies, ...theme2.cardSynergies];
@@ -697,18 +686,10 @@ class PackSynergyAnalyzer {
         
         // CMC curve penalty for very different curves
         const cmcDiff = Math.abs(theme1.avgCmc - theme2.avgCmc);
-        if (cmcDiff <= 0.5) {
-            synergyScore += 0.2; // Reduced from 0.5
-            reasons.push('Nearly identical curves');
-        } else if (cmcDiff <= 1.5) {
-            synergyScore += 0; // No bonus
-            reasons.push('Similar mana curves');
-        } else if (cmcDiff >= 3.0) { // Increased threshold
-            synergyScore -= 0.8; // Increased penalty
-            reasons.push('Very different mana curves');
-        } else if (cmcDiff >= 2.0) {
-            synergyScore -= 0.3; // New penalty tier
-            reasons.push('Somewhat different mana curves');
+        // Only penalize extreme mismatches, otherwise ignore
+        if (cmcDiff >= 3.0) {
+            synergyScore -= 0.1; // Very small penalty
+            reasons.push('Extreme mana curve mismatch');
         }
         
         // Baseline penalty - most combinations should be neutral or negative
