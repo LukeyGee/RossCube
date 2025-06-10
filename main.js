@@ -414,13 +414,7 @@
                         renderVisualDecklist(typeGroups, commanders);
                         
                         // After deck is generated and displayed, analyze with bully meter
-                        const bullyMeter = initializeBullyMeter();
-                        if (bullyMeter) {
-                            setTimeout(() => {
-                                const powerScore = bullyMeter.analyzeDeck(deck, commanders || []);
-                                console.log(`Deck Power Level: ${Math.round(powerScore)}%`);
-                            }, 1000);
-                        }
+                        runBullyMeterAnalysis(deck, commanders);
                 });
             });
             setLoading(false);
@@ -463,13 +457,7 @@
             renderVisualDecklist(typeGroups);
             
             // After deck is generated and displayed, analyze with bully meter
-            const bullyMeter = initializeBullyMeter();
-            if (bullyMeter) {
-                setTimeout(() => {
-                    const powerScore = bullyMeter.analyzeDeck(deck, commanders || []);
-                    console.log(`Deck Power Level: ${Math.round(powerScore)}%`);
-                }, 1000);
-            }
+            runBullyMeterAnalysis(deck, commanders);
         } catch (err) {
             showMessage('ERROR: ' + err.message, 'error', 5000);
             setLoading(false);
@@ -1133,4 +1121,15 @@ function preloadCardImages(cardNames) {
         const img = new Image();
         img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
     });
+}
+
+// Initialize bully meter analysis helper
+function runBullyMeterAnalysis(deck, commanders = []) {
+    const bullyMeter = initializeBullyMeter();
+    if (bullyMeter) {
+        setTimeout(() => {
+            const powerScore = bullyMeter.analyzeDeck(deck, commanders);
+            console.log(`Deck Power Level: ${Math.round(powerScore)}%`);
+        }, 1000);
+    }
 }
