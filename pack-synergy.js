@@ -22,15 +22,16 @@ class PackSynergyAnalyzer {
         try {
             const pack1Theme = await this.analyzePackCards(selectedPack1, cubeData);
             const packOptions = document.querySelectorAll('input[name^="pack_selection_group_2"]');
-            for (const radio of packOptions) {
+            const packPromises = Array.from(packOptions).map(radio => {
                 const pack2Name = radio.value;
-                const pack2Theme = await this.analyzePackCards(pack2Name, cubeData);
-                const synergy = this.calculateDynamicSynergy(
-                    pack1Theme, pack2Theme, commander1, commander2, cubeData
-                );
-                this.applySynergyIndicator(radio, synergy);
-                await new Promise(resolve => setTimeout(resolve, 100));
-            }
+                return this.analyzePackCards(pack2Name, cubeData).then(pack2Theme => {
+                    const synergy = this.calculateDynamicSynergy(
+                        pack1Theme, pack2Theme, commander1, commander2, cubeData
+                    );
+                    this.applySynergyIndicator(radio, synergy);
+                });
+            });
+            await Promise.all(packPromises);
         } finally {
             this.showSynergyCalculatingIndicator(false);
         }
