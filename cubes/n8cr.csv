@@ -1,401 +1,401 @@
-name,CMC,Type,Color,Set,Collector Number,Rarity,Color Category,status,Finish,maybeboard,image URL,image Back URL,tags,Notes,MTGO ID
-"Icatian Infantry",1,"Creature - Human Soldier",W,"fem","7a",common,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Icatian Priest",1,"Creature - Human Cleric",W,"fem","12",uncommon,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Icatian Scout",1,"Creature - Human Soldier Scout",W,"fem","13b",common,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Kjeldoran Warrior",1,"Creature - Human Warrior",W,"ice","41",common,White,Owned,Non-foil,false,,,"Armageddon","",
-"Icatian Lieutenant",2,"Creature - Human Soldier",W,"fem","9",rare,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Mesa Pegasus",2,"Creature - Pegasus",W,"30a","325",common,White,Owned,Non-foil,false,,,"Armageddon","",
-"Order of Leitbur",2,"Creature - Human Cleric Knight",W,"fem","16b",common,White,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Order of the White Shield",2,"Creature - Human Knight",W,"ath","9",uncommon,White,Owned,Non-foil,false,,,"Armageddon","",
-"Pikemen",2,"Creature - Human Soldier",W,"drk","15",common,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Samite Healer",2,"Creature - Human Cleric",W,"lea","37",common,White,Owned,Non-foil,false,,,"Blessed Zealots","",
-"White Knight",2,"Creature - Human Knight",W,"5ed","68",uncommon,White,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Combat Medic",3,"Creature - Human Cleric Soldier",W,"fem","1c",common,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"D'Avenant Archer",3,"Creature - Human Soldier Archer",W,"6ed","15",common,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Farrel's Zealot",3,"Creature - Human",W,"fem","3b",common,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Preacher",3,"Creature - Human Cleric",W,"drk","16",rare,White,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Wall of Light",3,"Creature - Wall",W,"leg","43",uncommon,White,Owned,Non-foil,false,,,"Labryinth","",
-"Knights of Thorn",4,"Creature - Human Knight",W,"drk","11",rare,White,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Northern Paladin",4,"Creature - Human Knight",W,"sum","29",rare,White,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Wall of Swords",4,"Creature - Wall",W,"3ed","43",uncommon,White,Owned,Non-foil,false,,,"Labryinth","",
-"Witch Hunter",4,"Creature - Human Cleric",W,"tsb","17",special,White,Owned,Non-foil,false,,,"Blessed Zealots","",26039
-"Petra Sphinx",5,"Creature - Sphinx",W,"chr","10",rare,White,Owned,Non-foil,false,,,"Armageddon","",
-"Righteous Avengers",5,"Creature - Human Soldier",W,"leg","34",uncommon,White,Owned,Non-foil,false,,,"Armageddon","",
-"Serra Angel",5,"Creature - Angel",W,"3ed","40",uncommon,White,Owned,Non-foil,false,,,"Armageddon","",
-"Serra Angel",5,"Creature - Angel",W,"3ed","40",uncommon,White,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Personal Incarnation",6,"Creature - Avatar Incarnation",W,"leb","32",rare,White,Owned,Non-foil,false,,,"Armageddon","",
-"Akron Legionnaire",8,"Creature - Giant Soldier",W,"5ed","2",rare,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Swords to Plowshares",1,"Instant",W,"3ed","41",uncommon,White,Owned,Non-foil,false,,,"Armageddon","",
-"Swords to Plowshares",1,"Instant",W,"3ed","41",uncommon,White,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Swords to Plowshares",1,"Instant",W,"3ed","41",uncommon,White,Owned,Non-foil,false,,,"Labryinth","",
-"Disenchant",2,"Instant",W,"ced","19",common,White,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Divine Offering",2,"Instant",W,"leg","9",common,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Holy Light",3,"Instant",W,"drk","10",common,White,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Balance",2,"Sorcery",W,"4ed","6",rare,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Armageddon",4,"Sorcery",W,"3ed","2",rare,White,Owned,Non-foil,false,,,"Armageddon","",
-"Animate Wall",1,"Enchantment - Aura",W,"ced","1",rare,White,Owned,Non-foil,false,,,"Labryinth","",
-"Holy Armor",1,"Enchantment - Aura",W,"3ed","23",common,White,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Holy Strength",1,"Enchantment - Aura",W,"5ed","35",common,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Land Tax",1,"Enchantment",W,"leg","26",uncommon,White,Owned,Non-foil,false,,,"Armageddon","",
-"Crusade",2,"Enchantment",W,"4ed","20",rare,White,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Greater Realm of Preservation",2,"Enchantment",W,"leg","18",uncommon,White,Owned,Non-foil,false,,,"Armageddon","",
-"Fortified Area",3,"Enchantment",W,"leg","14",uncommon,White,Owned,Non-foil,false,,,"Labryinth","",
-"Seeker",4,"Enchantment - Aura",W,"leg","35",uncommon,White,Owned,Non-foil,false,,,"Armageddon","",
-"Electric Eel",1,"Creature - Fish",U,"drk","25",uncommon,Multicolored,Owned,Non-foil,false,,,"Prodigal Voyage","",
-"Flying Men",1,"Creature - Human",U,"arn","14",common,Blue,Owned,Non-foil,false,,,"Prodigal Voyage","",
-"Merfolk of the Pearl Trident",1,"Creature - Merfolk",U,"leb","67",common,Blue,Owned,Non-foil,false,,,"Atlantis Rising","",
-"Lord of Atlantis",2,"Creature - Merfolk",U,"cei","63",rare,Blue,Owned,Non-foil,false,,,"Atlantis Rising","",
-"Merfolk Assassin",2,"Creature - Merfolk Assassin",U,"drk","32",uncommon,Blue,Owned,Non-foil,false,,,"Atlantis Rising","",
-"River Merfolk",2,"Creature - Merfolk",U,"fem","24",rare,Blue,Owned,Non-foil,false,,,"Atlantis Rising","",
-"Sage of Lat-Nam",2,"Creature - Human Artificer",U,"atq","13",common,Blue,Owned,Non-foil,false,,,"Prodigal Voyage","",
-"Vodalian Soldiers",2,"Creature - Merfolk Soldier",U,"6ed","104",common,Blue,Owned,Non-foil,false,,,"Atlantis Rising","",
-"Prodigal Sorcerer",3,"Creature - Human Wizard",U,"lea","73",common,Blue,Owned,Non-foil,false,,,"Prodigal Voyage","",
-"Seasinger",3,"Creature - Merfolk",U,"fem","25",uncommon,Blue,Owned,Non-foil,false,,,"Atlantis Rising","",
-"Serendib Efreet",3,"Creature - Efreet",U,"3ed","79",rare,Blue,Owned,Non-foil,false,,,"Timmy's Spellbook","",
-"Vodalian Mage",3,"Creature - Merfolk Wizard",U,"fem","30a",common,Blue,Owned,Non-foil,false,,,"Atlantis Rising","",
-"Wall of Air",3,"Creature - Wall",U,"sum","90",uncommon,Blue,Owned,Non-foil,false,,,"Labryinth","",
-"Wall of Water",3,"Creature - Wall",U,"2ed","91",uncommon,Blue,Owned,Non-foil,false,,,"Labryinth","",
-"Ghost Ship",4,"Creature - Spirit",U,"drk","28",common,Blue,Owned,Non-foil,false,,,"Prodigal Voyage","",
-"Phantasmal Forces",4,"Creature - Illusion",U,"2ed","68",uncommon,Blue,Owned,Non-foil,false,,,"Atlantis Rising","",
-"Wall of Wonder",4,"Creature - Wall",U,"leg","85",uncommon,Blue,Owned,Non-foil,false,,,"Labryinth","",
-"Air Elemental",5,"Creature - Elemental",U,"3ed","47",uncommon,Blue,Owned,Non-foil,false,,,"Prodigal Voyage","",
-"Air Elemental",5,"Creature - Elemental",U,"3ed","47",uncommon,Blue,Owned,Non-foil,false,,,"Atlantis Rising","",
-"Water Elemental",5,"Creature - Elemental",U,"3ed","92",uncommon,Blue,Owned,Non-foil,false,,,"Timmy's Spellbook","",
-"Giant Shark",6,"Creature - Shark",U,"drk","29",common,Blue,Owned,Non-foil,false,,,"Prodigal Voyage","",
-"Mahamoti Djinn",6,"Creature - Djinn",U,"2ed","65",rare,Blue,Owned,Non-foil,false,,,"Timmy's Spellbook","",
-"Force Spike",1,"Instant",U,"leg","58",common,Blue,Owned,Non-foil,false,,,"Timmy's Spellbook","",
-"Power Sink",1,"Instant",U,"ced","73",common,Blue,Owned,Non-foil,false,,,"Atlantis Rising","",
-"Unsummon",1,"Instant",U,"3ed","87",common,Blue,Owned,Non-foil,false,,,"Timmy's Spellbook","",
-"Boomerang",2,"Instant",U,"chr","16",common,Blue,Owned,Non-foil,false,,,"Timmy's Spellbook","",
-"Counterspell",2,"Instant",U,"3ed","54",uncommon,Blue,Owned,Non-foil,false,,,"Timmy's Spellbook","",
-"Psionic Blast",3,"Instant",U,"tsb","30",special,Blue,Owned,Non-foil,false,,,"Timmy's Spellbook","",25977
-"Recall",1,"Sorcery",U,"chr","24",uncommon,Blue,Owned,Non-foil,false,,,"Timmy's Spellbook","",
-"Juxtapose",4,"Sorcery",U,"chr","22",rare,Blue,Owned,Non-foil,false,,,"Prodigal Voyage","",
-"Amnesia",6,"Sorcery",U,"drk","20",uncommon,Blue,Owned,Non-foil,false,,,"Timmy's Spellbook","",
-"Unstable Mutation",1,"Enchantment - Aura",U,"3ed","86",common,Blue,Owned,Non-foil,false,,,"Atlantis Rising","",
-"Copy Artifact",2,"Enchantment",U,"lea","53",rare,Blue,Owned,Non-foil,false,,,"Prodigal Voyage","",
-"Invisibility",2,"Enchantment - Aura",U,"2ed","60",common,Blue,Owned,Non-foil,false,,,"Timmy's Spellbook","",
-"Phantasmal Terrain",2,"Enchantment - Aura",U,"inv","65",common,Blue,Owned,Non-foil,false,,,"Atlantis Rising","",15007
-"Psychic Venom",2,"Enchantment - Aura",U,"lea","75",common,Blue,Owned,Non-foil,false,,,"Timmy's Spellbook","",
-"Spectral Cloak",2,"Enchantment - Aura",U,"leg","78",uncommon,Blue,Owned,Non-foil,false,,,"Prodigal Voyage","",
-"Control Magic",4,"Enchantment - Aura",U,"3ed","52",uncommon,Blue,Owned,Non-foil,false,,,"Labryinth","",
-"Psychic Allergy",5,"Enchantment",U,"drk","34",rare,Blue,Owned,Non-foil,false,,,"Prodigal Voyage","",
-"Basal Thrull",2,"Creature - Thrull",B,"fem","34b",common,Black,Owned,Non-foil,false,,,"Thrull Pit","",
-"Black Knight",2,"Creature - Human Knight",B,"3ed","95",uncommon,Black,Owned,Non-foil,false,,,"Something Wicked This Wa","",
-"Cyclopean Mummy",2,"Creature - Zombie",B,"leg","93",common,Black,Owned,Non-foil,false,,,"Walking Dead","",
-"Drudge Skeletons",2,"Creature - Skeleton",B,"3ed","107",common,Black,Owned,Non-foil,false,,,"Something Wicked This Wa","",
-"Frozen Shade",3,"Creature - Shade",B,"sum","112",common,Black,Owned,Non-foil,false,,,"Something Wicked This Wa","",
-"Headless Horseman",3,"Creature - Zombie Knight",B,"leg","102",common,Black,Owned,Non-foil,false,,,"Walking Dead","",
-"Hypnotic Specter",3,"Creature - Specter",B,"leb","113",uncommon,Black,Owned,Non-foil,false,,,"Something Wicked This Wa","",
-"Mindstab Thrull",3,"Creature - Thrull",B,"fem","40b",common,Black,Owned,Non-foil,false,,,"Thrull Pit","",
-"Necrite",3,"Creature - Thrull",B,"fem","41b",common,Black,Owned,Non-foil,false,,,"Thrull Pit","",
-"Plague Rats",3,"Creature - Rat",B,"2ed","122",common,Black,Owned,Non-foil,false,,,"Walking Dead","",
-"Plague Rats",3,"Creature - Rat",B,"2ed","122",common,Black,Owned,Non-foil,false,,,"Walking Dead","",
-"Plague Rats",3,"Creature - Rat",B,"2ed","122",common,Black,Owned,Non-foil,false,,,"Walking Dead","",
-"Plague Rats",3,"Creature - Rat",B,"2ed","122",common,Black,Owned,Non-foil,false,,,"Walking Dead","",
-"Thrull Wizard",3,"Creature - Thrull Wizard",B,"fem","46",uncommon,Black,Owned,Non-foil,false,,,"Thrull Pit","",
-"Zombie Master",3,"Creature - Zombie",B,"3ed","138",rare,Black,Owned,Non-foil,false,,,"Walking Dead","",
-"Derelor",4,"Creature - Thrull",B,"fem","36",rare,Black,Owned,Non-foil,false,,,"Thrull Pit","",
-"The Fallen",4,"Creature - Zombie",B,"drk","53",uncommon,Black,Owned,Non-foil,false,,,"Walking Dead","",
-"Fallen Angel",5,"Creature - Angel",B,"leg","97",uncommon,Black,Owned,Non-foil,false,,,"Something Wicked This Wa","",
-"Sengir Vampire",5,"Creature - Vampire",B,"2ed","128",uncommon,Black,Owned,Non-foil,false,,,"Walking Dead","",
-"Thrull Champion",5,"Creature - Thrull",B,"fem","44",rare,Black,Owned,Non-foil,false,,,"Thrull Pit","",
-"Demonic Hordes",6,"Creature - Demon",B,"leb","104",rare,Black,Owned,Non-foil,false,,,"Something Wicked This Wa","",
-"Ebon Praetor",6,"Creature - Avatar Praetor",B,"fem","37",rare,Black,Owned,Non-foil,false,,,"Thrull Pit","",
-"Yawgmoth Demon",6,"Creature - Phyrexian Demon",B,"atq","21",rare,Black,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Dark Ritual",1,"Instant",B,"3ed","99",common,Black,Owned,Non-foil,false,,,"Walking Dead","",
-"Howl from Beyond",1,"Instant",B,"leb","112",common,Black,Owned,Non-foil,false,,,"Thrull Pit","",
-"Terror",2,"Instant",B,"3ed","132",common,Black,Owned,Non-foil,false,,,"Something Wicked This Wa","",
-"Terror",2,"Instant",B,"3ed","132",common,Black,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Drain Life",2,"Sorcery",B,"3ed","106",common,Black,Owned,Non-foil,false,,,"Something Wicked This Wa","",
-"Ashes to Ashes",3,"Sorcery",B,"drk","39",common,Black,Owned,Non-foil,false,,,"Thrull Pit","",
-"Evil Presence",1,"Enchantment - Aura",B,"ced","108",uncommon,Black,Owned,Non-foil,false,,,"Walking Dead","",
-"Weakness",1,"Enchantment - Aura",B,"cei","135",common,Black,Owned,Non-foil,false,,,"Thrull Pit","",
-"Animate Dead",2,"Enchantment - Aura",B,"3ed","93",uncommon,Black,Owned,Non-foil,false,,,"Something Wicked This Wa","",
-"Blight",2,"Enchantment - Aura",B,"leg","89",uncommon,Black,Owned,Non-foil,false,,,"Something Wicked This Wa","",
-"Fear",2,"Enchantment - Aura",B,"ced","109",common,Black,Owned,Non-foil,false,,,"Something Wicked This Wa","",
-"Breeding Pit",4,"Enchantment",B,"fem","35",uncommon,Black,Owned,Non-foil,false,,,"Thrull Pit","",
-"Pestilence",4,"Enchantment",B,"3ed","122",common,Black,Owned,Non-foil,false,,,"Walking Dead","",
-"Horror of Horrors",5,"Enchantment",B,"leg","106",uncommon,Black,Owned,Non-foil,false,,,"Thrull Pit","",
-"Worms of the Earth",5,"Enchantment",B,"drk","56",rare,Black,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Goblin Balloon Brigade",1,"Creature - Goblin Warrior",R,"3ed","154",uncommon,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Goblin Digging Team",1,"Creature - Goblin",R,"chr","49",common,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Goblins of the Flarg",1,"Creature - Goblin Warrior",R,"drk","70",common,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Kird Ape",1,"Creature - Ape",R,"arn","40",common,Red,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"Mons's Goblin Raiders",1,"Creature - Goblin",R,"ced","165",common,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Primordial Ooze",1,"Creature - Ooze",R,"chr","54",uncommon,Red,Owned,Non-foil,false,,,"Red Tide","",
-"Atog",2,"Creature - Atog",R,"atq","23†",common,Red,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Goblin Rock Sled",2,"Creature - Goblin",R,"drk","67",common,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Ball Lightning",3,"Creature - Elemental",R,"4ed","176",rare,Red,Owned,Non-foil,false,,,"Red Tide","",
-"Ball Lightning",3,"Creature - Elemental",R,"4ed","176",rare,Red,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"Fire Drake",3,"Creature - Drake",R,"drk","62",uncommon,Red,Owned,Non-foil,false,,,"Red Tide","",
-"Goblin King",3,"Creature - Goblin",R,"3ed","155",rare,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Granite Gargoyle",3,"Creature - Gargoyle",R,"lea","155",rare,Red,Owned,Non-foil,false,,,"Red Tide","",
-"Gray Ogre",3,"Creature - Ogre",R,"2ed","157",common,Red,Owned,Non-foil,false,,,"Red Tide","",
-"Uthden Troll",3,"Creature - Troll",R,"3ed","182",uncommon,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Wall of Fire",3,"Creature - Wall",R,"3ed","183",uncommon,Red,Owned,Non-foil,false,,,"Red Tide","",
-"Aladdin",4,"Creature - Human Rogue",R,"chr","44",uncommon,Red,Owned,Non-foil,false,,,"Desert Journey","",
-"Mountain Yeti",4,"Creature - Yeti",R,"chr","53",common,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Roc of Kher Ridges",4,"Creature - Bird",R,"leb","171",rare,Red,Owned,Non-foil,false,,,"Red Tide","",
-"Stone Giant",4,"Creature - Giant",R,"3ed","179",uncommon,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Shivan Dragon",6,"Creature - Dragon",R,"lea","174",rare,Red,Owned,Non-foil,false,,,"Red Tide","",
-"Lightning Bolt",1,"Instant",R,"2ed","162",common,Red,Owned,Non-foil,false,,,"Desert Journey","",
-"Lightning Bolt",1,"Instant",R,"2ed","162",common,Red,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"Lightning Bolt",1,"Instant",R,"2ed","162",common,Red,Owned,Non-foil,false,,,"Red Tide","",
-"Red Elemental Blast",1,"Instant",R,"3ed","171",common,Red,Owned,Non-foil,false,,,"Red Tide","",
-"Blood Lust",2,"Instant",R,"leg","135",uncommon,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Fork",2,"Instant",R,"ced","153",rare,Red,Owned,Non-foil,false,,,"Desert Journey","",
-"Shatter",2,"Instant",R,"3ed","175",common,Red,Owned,Non-foil,false,,,"Desert Journey","",
-"Fissure",5,"Instant",R,"drk","63",common,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Chain Lightning",1,"Sorcery",R,"leg","137",common,Red,Owned,Non-foil,false,,,"Desert Journey","",
-"Earthquake",1,"Sorcery",R,"lea","146",rare,Red,Owned,Non-foil,false,,,"Desert Journey","",
-"Fireball",1,"Sorcery",R,"3ed","150",common,Red,Owned,Non-foil,false,,,"Desert Journey","",
-"Fireball",1,"Sorcery",R,"3ed","150",common,Red,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"Goblin Grenade",1,"Sorcery",R,"fem","56b",common,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Stone Rain",3,"Sorcery",R,"3ed","180",common,Red,Owned,Non-foil,false,,,"Desert Journey","",
-"Stone Rain",3,"Sorcery",R,"3ed","180",common,Red,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"Earthbind",1,"Enchantment - Aura",R,"leb","146",common,Red,Owned,Non-foil,false,,,"Desert Journey","",
-"Firebreathing",1,"Enchantment - Aura",R,"2ed","151",common,Red,Owned,Non-foil,false,,,"Red Tide","",
-"Goblin Shrine",3,"Enchantment - Aura",R,"drk","68",common,Red,Owned,Non-foil,false,,,"Treacherous Pass","",
-"Orcish Oriflamme",4,"Enchantment",R,"leb","167",uncommon,Red,Owned,Non-foil,false,,,"Red Tide","",
-"Llanowar Elves",1,"Creature - Elf Druid",G,"2ed","211",common,Green,Owned,Non-foil,false,,,"Lure Them In","",
-"Llanowar Elves",1,"Creature - Elf Druid",G,"2ed","211",common,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"Nafs Asp",1,"Creature - Snake",G,"arn","52",common,Green,Owned,Non-foil,false,,,"Lure Them In","",
-"Scavenger Folk",1,"Creature - Human",G,"chr","69",common,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Scryb Sprites",1,"Creature - Faerie",G,"leb","216",common,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"Scryb Sprites",1,"Creature - Faerie",G,"leb","216",common,Green,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"Thallid",1,"Creature - Fungus",G,"fem","74b",common,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Timber Wolves",1,"Creature - Wolf",G,"30a","512",rare,Green,Owned,Non-foil,false,,,"Lure Them In","",
-"Argothian Pixies",2,"Creature - Faerie",G,"chr","57",common,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"Elvish Farmer",2,"Creature - Elf",G,"fem","66",rare,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Emerald Dragonfly",2,"Creature - Insect",G,"leg","184",common,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"People of the Woods",2,"Creature - Human",G,"drk","83",uncommon,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"Spore Flower",2,"Creature - Fungus",G,"fem","73",uncommon,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Whirling Dervish",2,"Creature - Human Monk",G,"leg","211",uncommon,Green,Owned,Non-foil,false,,,"Lure Them In","",
-"Cat Warriors",3,"Creature - Cat Warrior",G,"chr","58",common,Green,Owned,Non-foil,false,,,"Lure Them In","",
-"Spitting Slug",3,"Creature - Slug",G,"tsb","85",special,Green,Owned,Non-foil,false,,,"Lure Them In","",26029
-"Thorn Thallid",3,"Creature - Fungus",G,"fem","80b",common,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Wall of Brambles",3,"Creature - Plant Wall",G,"3ed","224",uncommon,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Wall of Ice",3,"Creature - Wall",G,"3ed","225",uncommon,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Erhnam Djinn",4,"Creature - Djinn",G,"chr","64",uncommon,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"Erhnam Djinn",4,"Creature - Djinn",G,"chr","64",uncommon,Green,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"Giant Spider",4,"Creature - Spider",G,"ath","56",common,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"War Mammoth",4,"Creature - Elephant",G,"3ed","228",common,Green,Owned,Non-foil,false,,,"Lure Them In","",
-"Cockatrice",5,"Creature - Cockatrice",G,"leb","190",rare,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"Thicket Basilisk",5,"Creature - Basilisk",G,"lea","218",uncommon,Green,Owned,Non-foil,false,,,"Lure Them In","",
-"Feral Thallid",6,"Creature - Fungus",G,"fem","69",uncommon,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Force of Nature",6,"Creature - Elemental",G,"3ed","196",rare,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"Fog",1,"Instant",G,"ced","194",common,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Giant Growth",1,"Instant",G,"3ed","199",common,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"Giant Growth",1,"Instant",G,"3ed","199",common,Green,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"Spore Cloud",3,"Instant",G,"fem","72b",common,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Storm Seeker",4,"Instant",G,"chr","70",uncommon,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Metamorphosis",1,"Sorcery",G,"chr","66",common,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Channel",2,"Sorcery",G,"4ed","236",uncommon,Green,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"Regrowth",2,"Sorcery",G,"3ed","214",uncommon,Green,Owned,Non-foil,false,,,"Lure Them In","",
-"Concordant Crossroads",1,"World Enchantment",G,"leg","179",rare,Green,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"Wild Growth",1,"Enchantment - Aura",G,"lea","229",common,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"Wild Growth",1,"Enchantment - Aura",G,"lea","229",common,Green,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"Aspect of Wolf",2,"Enchantment - Aura",G,"lea","184",rare,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"Fungal Bloom",2,"Enchantment",G,"fem","70",rare,Green,Owned,Non-foil,false,,,"Thallid Lair","",
-"Lure",3,"Enchantment - Aura",G,"2ed","212",uncommon,Green,Owned,Non-foil,false,,,"Lure Them In","",
-"Venom",3,"Enchantment - Aura",G,"5ed","336",common,Green,Owned,Non-foil,false,,,"Lure Them In","",
-"Living Lands",4,"Enchantment",G,"leb","210",rare,Green,Owned,Non-foil,false,,,"Forest Ire","",
-"Titania's Song",4,"Enchantment",G,"atq","35",uncommon,Green,Owned,Non-foil,false,,,"Titania's Army","",
-"Brass Man",1,"Artifact Creature - Construct",,"4ed","302",uncommon,Colorless,Owned,Non-foil,false,,,"Brother's War","",
-"Brass Man",1,"Artifact Creature - Construct",,"4ed","302",uncommon,Colorless,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Phyrexian War Beast",3,"Artifact Creature - Phyrexian Beast",,"all","127b",common,Colorless,Owned,Non-foil,false,,,"Brother's War","",
-"Yotian Soldier",3,"Artifact Creature - Soldier",,"4ed","360",common,Colorless,Owned,Non-foil,false,,,"Brother's War","",
-"Dancing Scimitar",4,"Artifact Creature - Spirit",,"arn","61",rare,Colorless,Owned,Non-foil,false,,,"Brother's War","",
-"Juggernaut",4,"Artifact Creature - Juggernaut",,"3ed","259",uncommon,Colorless,Owned,Non-foil,false,,,"Brother's War","",
-"Juggernaut",4,"Artifact Creature - Juggernaut",,"3ed","259",uncommon,Colorless,Owned,Non-foil,false,,,"Prodigal Voyage","",
-"Juggernaut",4,"Artifact Creature - Juggernaut",,"2ed","256",uncommon,Colorless,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Sentinel",4,"Artifact Creature - Shapeshifter",,"chr","107",rare,Colorless,Owned,Non-foil,false,,,"Labryinth","",
-"Walking Wall",4,"Artifact Creature - Wall",,"ice","346",uncommon,Colorless,Owned,Non-foil,false,,,"Labryinth","",
-"Clockwork Avian",5,"Artifact Creature - Bird",,"atq","45",rare,Colorless,Owned,Non-foil,false,,,"Brother's War","",
-"Clockwork Beast",6,"Artifact Creature - Beast",,"2ed","237",rare,Colorless,Owned,Non-foil,false,,,"Brother's War","",
-"Tetravus",6,"Artifact Creature - Construct",,"4ed","350",rare,Colorless,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Diabolic Machine",7,"Artifact Creature - Construct",,"drk","101",uncommon,Colorless,Owned,Non-foil,false,,,"Titania's Army","",
-"Fountain of Youth",0,"Artifact",,"drk","103†",uncommon,Colorless,Owned,Non-foil,false,,,"Labryinth","",
-"Lodestone Bauble",0,"Artifact",,"all","122",rare,Colorless,Owned,Non-foil,false,,,"Brother's War","",
-"Zuran Orb",0,"Artifact",,"ice","350",uncommon,Colorless,Owned,Non-foil,false,,,"Brother's War","",
-"Ashnod's Transmogrant",1,"Artifact",,"atq","40",uncommon,Colorless,Owned,Non-foil,false,,,"Lure Them In","",
-"Black Vise",1,"Artifact",,"leb","234",uncommon,Colorless,Owned,Non-foil,false,,,"Desert Journey","",
-"Black Vise",1,"Artifact",,"leb","234",uncommon,Colorless,Owned,Non-foil,false,,,"Titania's Army","",
-"Black Vise",1,"Artifact",,"leb","234",uncommon,Colorless,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Meekstone",1,"Artifact",,"4ed","335",rare,Colorless,Owned,Non-foil,false,,,"Lure Them In","",
-"Sol Ring",1,"Artifact",,"3ed","274",uncommon,Colorless,Owned,Non-foil,false,,,"Titania's Army","",
-"The Rack",1,"Artifact",,"3ed","278",uncommon,Colorless,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Fellwar Stone",2,"Artifact",,"drk","102",uncommon,Colorless,Owned,Non-foil,false,,,"Desert Journey","",
-"Fellwar Stone",2,"Artifact",,"drk","102",uncommon,Colorless,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Howling Mine",2,"Artifact",,"brr","20",rare,Colorless,Owned,Non-foil,false,,,"Brother's War","",104458
-"Jandor's Saddlebags",2,"Artifact",,"3ed","257",rare,Colorless,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Millstone",2,"Artifact",,"4ed","336",rare,Colorless,Owned,Non-foil,false,,,"Titania's Army","",
-"Relic Barrier",2,"Artifact",,"leg","292",uncommon,Colorless,Owned,Non-foil,false,,,"Brother's War","",
-"Winter Orb",2,"Artifact",,"3ed","280",rare,Colorless,Owned,Non-foil,false,,,"Brother's War","",
-"Basalt Monolith",3,"Artifact",,"3ed","235",uncommon,Colorless,Owned,Non-foil,false,,,"Desert Journey","",
-"Disrupting Scepter",3,"Artifact",,"4ed","316",rare,Colorless,Owned,Non-foil,false,,,"Titania's Army","",
-"Dingus Egg",4,"Artifact",,"leb","242",rare,Colorless,Owned,Non-foil,false,,,"Something Wicked This Wa","",
-"Horn of Deafening",4,"Artifact",,"chr","100",rare,Colorless,Owned,Non-foil,false,,,"Titania's Army","",
-"Icy Manipulator",4,"Artifact",,"ced","249",uncommon,Colorless,Owned,Non-foil,false,,,"Timmy's Spellbook","",
-"Icy Manipulator",4,"Artifact",,"ced","249",uncommon,Colorless,Owned,Non-foil,false,,,"Titania's Army","",
-"Jayemdae Tome",4,"Artifact",,"6ed","295",rare,Colorless,Owned,Non-foil,false,,,"Titania's Army","",
-"Kormus Bell",4,"Artifact",,"ced","257",rare,Colorless,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Nevinyrral's Disk",4,"Artifact",,"3ed","267",rare,Colorless,Owned,Non-foil,false,,,"Titania's Army","",
-"Rod of Ruin",4,"Artifact",,"3ed","273",uncommon,Colorless,Owned,Non-foil,false,,,"Titania's Army","",
-"War Barge",4,"Artifact",,"drk","115",uncommon,Colorless,Owned,Non-foil,false,,,"Atlantis Rising","",
-"Serpent Generator",6,"Artifact",,"leg","295",rare,Colorless,Owned,Non-foil,false,,,"Titania's Army","",
-"Scarwood Goblins",2,"Creature - Goblin",RG,"drk","94",common,Multicolored,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"Tundra",0,"Land - Plains Island",WU,"cei","285",rare,Lands,Owned,Non-foil,false,,,"Labryinth","",
-"Badlands",0,"Land - Swamp Mountain",BR,"3ed","282",rare,Lands,Owned,Non-foil,false,,,"Yawgmoth's Pets","",
-"Taiga",0,"Land - Mountain Forest",RG,"3ed","287",rare,Lands,Owned,Non-foil,false,,,"Dominaria's Zoo","",
-"City of Brass",0,"Land",,"arn","71",uncommon,Lands,Owned,Non-foil,false,,,"Brother's War","",
-"Desert",0,"Land - Desert",,"arn","72",common,Lands,Owned,Non-foil,false,,,"Desert Journey","",
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Thallid Lair","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Thallid Lair","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Thallid Lair","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Thallid Lair","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Thallid Lair","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Thallid Lair","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Thallid Lair","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Lure Them In","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Lure Them In","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Lure Them In","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Lure Them In","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Lure Them In","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Lure Them In","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Lure Them In","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Forest Ire","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Forest Ire","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Forest Ire","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Forest Ire","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Forest Ire","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Forest Ire","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Forest Ire","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Titania's Army","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Titania's Army","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Titania's Army","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Titania's Army","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Titania's Army","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Dominaria's Zoo","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Dominaria's Zoo","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Dominaria's Zoo","",45176
-"Forest",0,"Basic Land - Forest",G,"pc2","156",common,Lands,Owned,Non-foil,false,,,"Dominaria's Zoo","",45176
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Prodigal Voyage","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Prodigal Voyage","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Prodigal Voyage","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Prodigal Voyage","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Prodigal Voyage","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Prodigal Voyage","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Prodigal Voyage","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Prodigal Voyage","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Timmy's Spellbook","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Timmy's Spellbook","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Timmy's Spellbook","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Timmy's Spellbook","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Timmy's Spellbook","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Timmy's Spellbook","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Timmy's Spellbook","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Atlantis Rising","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Atlantis Rising","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Atlantis Rising","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Atlantis Rising","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Atlantis Rising","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Atlantis Rising","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Atlantis Rising","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Labryinth","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Labryinth","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Labryinth","",40739
-"Island",0,"Basic Land - Island",U,"cmd","306",common,Lands,Owned,Non-foil,false,,,"Labryinth","",40739
-"Mishra's Factory",0,"Land",,"4ed","361",uncommon,Lands,Owned,Non-foil,false,,,"Brother's War","",
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Treacherous Pass","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Treacherous Pass","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Treacherous Pass","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Treacherous Pass","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Treacherous Pass","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Treacherous Pass","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Treacherous Pass","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Red Tide","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Red Tide","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Red Tide","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Red Tide","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Red Tide","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Red Tide","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Red Tide","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Red Tide","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Desert Journey","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Desert Journey","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Desert Journey","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Desert Journey","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Desert Journey","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Desert Journey","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Yawgmoth's Pets","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Yawgmoth's Pets","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Yawgmoth's Pets","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Dominaria's Zoo","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Dominaria's Zoo","",15704
-"Mountain",0,"Basic Land - Mountain",R,"7ed","340",common,Lands,Owned,Non-foil,false,,,"Dominaria's Zoo","",15704
-"Oasis",0,"Land",,"arn","78",uncommon,Lands,Owned,Non-foil,false,,,"Desert Journey","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Armageddon","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Armageddon","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Armageddon","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Armageddon","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Armageddon","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Armageddon","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Armageddon","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Armageddon","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Icatian Stronghold","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Labryinth","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Labryinth","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Labryinth","",
-"Plains",0,"Basic Land - Plains",W,"gnt","59",common,Lands,Owned,Non-foil,false,,,"Blessed Zealots","",
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Something Wicked This Wa","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Something Wicked This Wa","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Something Wicked This Wa","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Something Wicked This Wa","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Something Wicked This Wa","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Something Wicked This Wa","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Something Wicked This Wa","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Something Wicked This Wa","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Thrull Pit","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Thrull Pit","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Thrull Pit","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Thrull Pit","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Thrull Pit","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Thrull Pit","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Thrull Pit","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Thrull Pit","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Walking Dead","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Walking Dead","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Walking Dead","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Walking Dead","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Walking Dead","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Walking Dead","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Walking Dead","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Walking Dead","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Yawgmoth's Pets","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Yawgmoth's Pets","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Yawgmoth's Pets","",96896
-"Swamp",0,"Basic Land - Swamp",B,"neo","288",common,Lands,Owned,Non-foil,false,,,"Yawgmoth's Pets","",96896
-"Urza's Mine",0,"Land - Urza's Mine",,"chr","114d",uncommon,Lands,Owned,Non-foil,false,,,"Brother's War","",
-"Urza's Mine",0,"Land - Urza's Mine",,"chr","114d",uncommon,Lands,Owned,Non-foil,false,,,"Brother's War","",
-"Urza's Mine",0,"Land - Urza's Mine",,"chr","114d",uncommon,Lands,Owned,Non-foil,false,,,"Titania's Army","",
-"Urza's Power Plant",0,"Land - Urza's Power-Plant",,"atq","84b",uncommon,Lands,Owned,Non-foil,false,,,"Brother's War","",
-"Urza's Power Plant",0,"Land - Urza's Power-Plant",,"atq","84b",uncommon,Lands,Owned,Non-foil,false,,,"Brother's War","",
-"Urza's Power Plant",0,"Land - Urza's Power-Plant",,"atq","84b",uncommon,Lands,Owned,Non-foil,false,,,"Titania's Army","",
-"Urza's Tower",0,"Land - Urza's Tower",,"chr","116b",uncommon,Lands,Owned,Non-foil,false,,,"Brother's War","",
-"Urza's Tower",0,"Land - Urza's Tower",,"chr","116b",uncommon,Lands,Owned,Non-foil,false,,,"Brother's War","",
-"Urza's Tower",0,"Land - Urza's Tower",,"chr","116b",uncommon,Lands,Owned,Non-foil,false,,,"Titania's Army","",
+"name","Type","Color","Color Category","maybeboard","tags"
+"Icatian Infantry","Creature - Human Soldier","W","White","false","Icatian Stronghold"
+"Icatian Priest","Creature - Human Cleric","W","White","false","Icatian Stronghold"
+"Icatian Scout","Creature - Human Soldier Scout","W","White","false","Icatian Stronghold"
+"Kjeldoran Warrior","Creature - Human Warrior","W","White","false","Armageddon"
+"Icatian Lieutenant","Creature - Human Soldier","W","White","false","Icatian Stronghold"
+"Mesa Pegasus","Creature - Pegasus","W","White","false","Armageddon"
+"Order of Leitbur","Creature - Human Cleric Knight","W","White","false","Blessed Zealots"
+"Order of the White Shield","Creature - Human Knight","W","White","false","Armageddon"
+"Pikemen","Creature - Human Soldier","W","White","false","Icatian Stronghold"
+"Samite Healer","Creature - Human Cleric","W","White","false","Blessed Zealots"
+"White Knight","Creature - Human Knight","W","White","false","Blessed Zealots"
+"Combat Medic","Creature - Human Cleric Soldier","W","White","false","Icatian Stronghold"
+"D'Avenant Archer","Creature - Human Soldier Archer","W","White","false","Icatian Stronghold"
+"Farrel's Zealot","Creature - Human","W","White","false","Icatian Stronghold"
+"Preacher","Creature - Human Cleric","W","White","false","Blessed Zealots"
+"Wall of Light","Creature - Wall","W","White","false","Labryinth"
+"Knights of Thorn","Creature - Human Knight","W","White","false","Blessed Zealots"
+"Northern Paladin","Creature - Human Knight","W","White","false","Blessed Zealots"
+"Wall of Swords","Creature - Wall","W","White","false","Labryinth"
+"Witch Hunter","Creature - Human Cleric","W","White","false","Blessed Zealots"
+"Petra Sphinx","Creature - Sphinx","W","White","false","Armageddon"
+"Righteous Avengers","Creature - Human Soldier","W","White","false","Armageddon"
+"Serra Angel","Creature - Angel","W","White","false","Armageddon"
+"Serra Angel","Creature - Angel","W","White","false","Blessed Zealots"
+"Personal Incarnation","Creature - Avatar Incarnation","W","White","false","Armageddon"
+"Akron Legionnaire","Creature - Giant Soldier","W","White","false","Icatian Stronghold"
+"Swords to Plowshares","Instant","W","White","false","Armageddon"
+"Swords to Plowshares","Instant","W","White","false","Blessed Zealots"
+"Swords to Plowshares","Instant","W","White","false","Labryinth"
+"Disenchant","Instant","W","White","false","Blessed Zealots"
+"Divine Offering","Instant","W","White","false","Icatian Stronghold"
+"Holy Light","Instant","W","White","false","Blessed Zealots"
+"Balance","Sorcery","W","White","false","Icatian Stronghold"
+"Armageddon","Sorcery","W","White","false","Armageddon"
+"Animate Wall","Enchantment - Aura","W","White","false","Labryinth"
+"Holy Armor","Enchantment - Aura","W","White","false","Blessed Zealots"
+"Holy Strength","Enchantment - Aura","W","White","false","Icatian Stronghold"
+"Land Tax","Enchantment","W","White","false","Armageddon"
+"Crusade","Enchantment","W","White","false","Icatian Stronghold"
+"Greater Realm of Preservation","Enchantment","W","White","false","Armageddon"
+"Fortified Area","Enchantment","W","White","false","Labryinth"
+"Seeker","Enchantment - Aura","W","White","false","Armageddon"
+"Electric Eel","Creature - Fish","U","Multicolored","false","Prodigal Voyage"
+"Flying Men","Creature - Human","U","Blue","false","Prodigal Voyage"
+"Merfolk of the Pearl Trident","Creature - Merfolk","U","Blue","false","Atlantis Rising"
+"Lord of Atlantis","Creature - Merfolk","U","Blue","false","Atlantis Rising"
+"Merfolk Assassin","Creature - Merfolk Assassin","U","Blue","false","Atlantis Rising"
+"River Merfolk","Creature - Merfolk","U","Blue","false","Atlantis Rising"
+"Sage of Lat-Nam","Creature - Human Artificer","U","Blue","false","Prodigal Voyage"
+"Vodalian Soldiers","Creature - Merfolk Soldier","U","Blue","false","Atlantis Rising"
+"Prodigal Sorcerer","Creature - Human Wizard","U","Blue","false","Prodigal Voyage"
+"Seasinger","Creature - Merfolk","U","Blue","false","Atlantis Rising"
+"Serendib Efreet","Creature - Efreet","U","Blue","false","Timmy's Spellbook"
+"Vodalian Mage","Creature - Merfolk Wizard","U","Blue","false","Atlantis Rising"
+"Wall of Air","Creature - Wall","U","Blue","false","Labryinth"
+"Wall of Water","Creature - Wall","U","Blue","false","Labryinth"
+"Ghost Ship","Creature - Spirit","U","Blue","false","Prodigal Voyage"
+"Phantasmal Forces","Creature - Illusion","U","Blue","false","Atlantis Rising"
+"Wall of Wonder","Creature - Wall","U","Blue","false","Labryinth"
+"Air Elemental","Creature - Elemental","U","Blue","false","Prodigal Voyage"
+"Air Elemental","Creature - Elemental","U","Blue","false","Atlantis Rising"
+"Water Elemental","Creature - Elemental","U","Blue","false","Timmy's Spellbook"
+"Giant Shark","Creature - Shark","U","Blue","false","Prodigal Voyage"
+"Mahamoti Djinn","Creature - Djinn","U","Blue","false","Timmy's Spellbook"
+"Force Spike","Instant","U","Blue","false","Timmy's Spellbook"
+"Power Sink","Instant","U","Blue","false","Atlantis Rising"
+"Unsummon","Instant","U","Blue","false","Timmy's Spellbook"
+"Boomerang","Instant","U","Blue","false","Timmy's Spellbook"
+"Counterspell","Instant","U","Blue","false","Timmy's Spellbook"
+"Psionic Blast","Instant","U","Blue","false","Timmy's Spellbook"
+"Recall","Sorcery","U","Blue","false","Timmy's Spellbook"
+"Juxtapose","Sorcery","U","Blue","false","Prodigal Voyage"
+"Amnesia","Sorcery","U","Blue","false","Timmy's Spellbook"
+"Unstable Mutation","Enchantment - Aura","U","Blue","false","Atlantis Rising"
+"Copy Artifact","Enchantment","U","Blue","false","Prodigal Voyage"
+"Invisibility","Enchantment - Aura","U","Blue","false","Timmy's Spellbook"
+"Phantasmal Terrain","Enchantment - Aura","U","Blue","false","Atlantis Rising"
+"Psychic Venom","Enchantment - Aura","U","Blue","false","Timmy's Spellbook"
+"Spectral Cloak","Enchantment - Aura","U","Blue","false","Prodigal Voyage"
+"Control Magic","Enchantment - Aura","U","Blue","false","Labryinth"
+"Psychic Allergy","Enchantment","U","Blue","false","Prodigal Voyage"
+"Basal Thrull","Creature - Thrull","B","Black","false","Thrull Pit"
+"Black Knight","Creature - Human Knight","B","Black","false","Something Wicked This Wa"
+"Cyclopean Mummy","Creature - Zombie","B","Black","false","Walking Dead"
+"Drudge Skeletons","Creature - Skeleton","B","Black","false","Something Wicked This Wa"
+"Frozen Shade","Creature - Shade","B","Black","false","Something Wicked This Wa"
+"Headless Horseman","Creature - Zombie Knight","B","Black","false","Walking Dead"
+"Hypnotic Specter","Creature - Specter","B","Black","false","Something Wicked This Wa"
+"Mindstab Thrull","Creature - Thrull","B","Black","false","Thrull Pit"
+"Necrite","Creature - Thrull","B","Black","false","Thrull Pit"
+"Plague Rats","Creature - Rat","B","Black","false","Walking Dead"
+"Plague Rats","Creature - Rat","B","Black","false","Walking Dead"
+"Plague Rats","Creature - Rat","B","Black","false","Walking Dead"
+"Plague Rats","Creature - Rat","B","Black","false","Walking Dead"
+"Thrull Wizard","Creature - Thrull Wizard","B","Black","false","Thrull Pit"
+"Zombie Master","Creature - Zombie","B","Black","false","Walking Dead"
+"Derelor","Creature - Thrull","B","Black","false","Thrull Pit"
+"The Fallen","Creature - Zombie","B","Black","false","Walking Dead"
+"Fallen Angel","Creature - Angel","B","Black","false","Something Wicked This Wa"
+"Sengir Vampire","Creature - Vampire","B","Black","false","Walking Dead"
+"Thrull Champion","Creature - Thrull","B","Black","false","Thrull Pit"
+"Demonic Hordes","Creature - Demon","B","Black","false","Something Wicked This Wa"
+"Ebon Praetor","Creature - Avatar Praetor","B","Black","false","Thrull Pit"
+"Yawgmoth Demon","Creature - Phyrexian Demon","B","Black","false","Yawgmoth's Pets"
+"Dark Ritual","Instant","B","Black","false","Walking Dead"
+"Howl from Beyond","Instant","B","Black","false","Thrull Pit"
+"Terror","Instant","B","Black","false","Something Wicked This Wa"
+"Terror","Instant","B","Black","false","Yawgmoth's Pets"
+"Drain Life","Sorcery","B","Black","false","Something Wicked This Wa"
+"Ashes to Ashes","Sorcery","B","Black","false","Thrull Pit"
+"Evil Presence","Enchantment - Aura","B","Black","false","Walking Dead"
+"Weakness","Enchantment - Aura","B","Black","false","Thrull Pit"
+"Animate Dead","Enchantment - Aura","B","Black","false","Something Wicked This Wa"
+"Blight","Enchantment - Aura","B","Black","false","Something Wicked This Wa"
+"Fear","Enchantment - Aura","B","Black","false","Something Wicked This Wa"
+"Breeding Pit","Enchantment","B","Black","false","Thrull Pit"
+"Pestilence","Enchantment","B","Black","false","Walking Dead"
+"Horror of Horrors","Enchantment","B","Black","false","Thrull Pit"
+"Worms of the Earth","Enchantment","B","Black","false","Yawgmoth's Pets"
+"Goblin Balloon Brigade","Creature - Goblin Warrior","R","Red","false","Treacherous Pass"
+"Goblin Digging Team","Creature - Goblin","R","Red","false","Treacherous Pass"
+"Goblins of the Flarg","Creature - Goblin Warrior","R","Red","false","Treacherous Pass"
+"Kird Ape","Creature - Ape","R","Red","false","Dominaria's Zoo"
+"Mons's Goblin Raiders","Creature - Goblin","R","Red","false","Treacherous Pass"
+"Primordial Ooze","Creature - Ooze","R","Red","false","Red Tide"
+"Atog","Creature - Atog","R","Red","false","Yawgmoth's Pets"
+"Goblin Rock Sled","Creature - Goblin","R","Red","false","Treacherous Pass"
+"Ball Lightning","Creature - Elemental","R","Red","false","Red Tide"
+"Ball Lightning","Creature - Elemental","R","Red","false","Dominaria's Zoo"
+"Fire Drake","Creature - Drake","R","Red","false","Red Tide"
+"Goblin King","Creature - Goblin","R","Red","false","Treacherous Pass"
+"Granite Gargoyle","Creature - Gargoyle","R","Red","false","Red Tide"
+"Gray Ogre","Creature - Ogre","R","Red","false","Red Tide"
+"Uthden Troll","Creature - Troll","R","Red","false","Treacherous Pass"
+"Wall of Fire","Creature - Wall","R","Red","false","Red Tide"
+"Aladdin","Creature - Human Rogue","R","Red","false","Desert Journey"
+"Mountain Yeti","Creature - Yeti","R","Red","false","Treacherous Pass"
+"Roc of Kher Ridges","Creature - Bird","R","Red","false","Red Tide"
+"Stone Giant","Creature - Giant","R","Red","false","Treacherous Pass"
+"Shivan Dragon","Creature - Dragon","R","Red","false","Red Tide"
+"Lightning Bolt","Instant","R","Red","false","Desert Journey"
+"Lightning Bolt","Instant","R","Red","false","Dominaria's Zoo"
+"Lightning Bolt","Instant","R","Red","false","Red Tide"
+"Red Elemental Blast","Instant","R","Red","false","Red Tide"
+"Blood Lust","Instant","R","Red","false","Treacherous Pass"
+"Fork","Instant","R","Red","false","Desert Journey"
+"Shatter","Instant","R","Red","false","Desert Journey"
+"Fissure","Instant","R","Red","false","Treacherous Pass"
+"Chain Lightning","Sorcery","R","Red","false","Desert Journey"
+"Earthquake","Sorcery","R","Red","false","Desert Journey"
+"Fireball","Sorcery","R","Red","false","Desert Journey"
+"Fireball","Sorcery","R","Red","false","Dominaria's Zoo"
+"Goblin Grenade","Sorcery","R","Red","false","Treacherous Pass"
+"Stone Rain","Sorcery","R","Red","false","Desert Journey"
+"Stone Rain","Sorcery","R","Red","false","Dominaria's Zoo"
+"Earthbind","Enchantment - Aura","R","Red","false","Desert Journey"
+"Firebreathing","Enchantment - Aura","R","Red","false","Red Tide"
+"Goblin Shrine","Enchantment - Aura","R","Red","false","Treacherous Pass"
+"Orcish Oriflamme","Enchantment","R","Red","false","Red Tide"
+"Llanowar Elves","Creature - Elf Druid","G","Green","false","Lure Them In"
+"Llanowar Elves","Creature - Elf Druid","G","Green","false","Forest Ire"
+"Nafs Asp","Creature - Snake","G","Green","false","Lure Them In"
+"Scavenger Folk","Creature - Human","G","Green","false","Thallid Lair"
+"Scryb Sprites","Creature - Faerie","G","Green","false","Forest Ire"
+"Scryb Sprites","Creature - Faerie","G","Green","false","Dominaria's Zoo"
+"Thallid","Creature - Fungus","G","Green","false","Thallid Lair"
+"Timber Wolves","Creature - Wolf","G","Green","false","Lure Them In"
+"Argothian Pixies","Creature - Faerie","G","Green","false","Forest Ire"
+"Elvish Farmer","Creature - Elf","G","Green","false","Thallid Lair"
+"Emerald Dragonfly","Creature - Insect","G","Green","false","Forest Ire"
+"People of the Woods","Creature - Human","G","Green","false","Forest Ire"
+"Spore Flower","Creature - Fungus","G","Green","false","Thallid Lair"
+"Whirling Dervish","Creature - Human Monk","G","Green","false","Lure Them In"
+"Cat Warriors","Creature - Cat Warrior","G","Green","false","Lure Them In"
+"Spitting Slug","Creature - Slug","G","Green","false","Lure Them In"
+"Thorn Thallid","Creature - Fungus","G","Green","false","Thallid Lair"
+"Wall of Brambles","Creature - Plant Wall","G","Green","false","Thallid Lair"
+"Wall of Ice","Creature - Wall","G","Green","false","Thallid Lair"
+"Erhnam Djinn","Creature - Djinn","G","Green","false","Forest Ire"
+"Erhnam Djinn","Creature - Djinn","G","Green","false","Dominaria's Zoo"
+"Giant Spider","Creature - Spider","G","Green","false","Forest Ire"
+"War Mammoth","Creature - Elephant","G","Green","false","Lure Them In"
+"Cockatrice","Creature - Cockatrice","G","Green","false","Forest Ire"
+"Thicket Basilisk","Creature - Basilisk","G","Green","false","Lure Them In"
+"Feral Thallid","Creature - Fungus","G","Green","false","Thallid Lair"
+"Force of Nature","Creature - Elemental","G","Green","false","Forest Ire"
+"Fog","Instant","G","Green","false","Thallid Lair"
+"Giant Growth","Instant","G","Green","false","Forest Ire"
+"Giant Growth","Instant","G","Green","false","Dominaria's Zoo"
+"Spore Cloud","Instant","G","Green","false","Thallid Lair"
+"Storm Seeker","Instant","G","Green","false","Thallid Lair"
+"Metamorphosis","Sorcery","G","Green","false","Thallid Lair"
+"Channel","Sorcery","G","Green","false","Dominaria's Zoo"
+"Regrowth","Sorcery","G","Green","false","Lure Them In"
+"Concordant Crossroads","World Enchantment","G","Green","false","Dominaria's Zoo"
+"Wild Growth","Enchantment - Aura","G","Green","false","Forest Ire"
+"Wild Growth","Enchantment - Aura","G","Green","false","Dominaria's Zoo"
+"Aspect of Wolf","Enchantment - Aura","G","Green","false","Forest Ire"
+"Fungal Bloom","Enchantment","G","Green","false","Thallid Lair"
+"Lure","Enchantment - Aura","G","Green","false","Lure Them In"
+"Venom","Enchantment - Aura","G","Green","false","Lure Them In"
+"Living Lands","Enchantment","G","Green","false","Forest Ire"
+"Titania's Song","Enchantment","G","Green","false","Titania's Army"
+"Brass Man","Artifact Creature - Construct","","Colorless","false","Brother's War"
+"Brass Man","Artifact Creature - Construct","","Colorless","false","Yawgmoth's Pets"
+"Phyrexian War Beast","Artifact Creature - Phyrexian Beast","","Colorless","false","Brother's War"
+"Yotian Soldier","Artifact Creature - Soldier","","Colorless","false","Brother's War"
+"Dancing Scimitar","Artifact Creature - Spirit","","Colorless","false","Brother's War"
+"Juggernaut","Artifact Creature - Juggernaut","","Colorless","false","Brother's War"
+"Juggernaut","Artifact Creature - Juggernaut","","Colorless","false","Prodigal Voyage"
+"Juggernaut","Artifact Creature - Juggernaut","","Colorless","false","Yawgmoth's Pets"
+"Sentinel","Artifact Creature - Shapeshifter","","Colorless","false","Labryinth"
+"Walking Wall","Artifact Creature - Wall","","Colorless","false","Labryinth"
+"Clockwork Avian","Artifact Creature - Bird","","Colorless","false","Brother's War"
+"Clockwork Beast","Artifact Creature - Beast","","Colorless","false","Brother's War"
+"Tetravus","Artifact Creature - Construct","","Colorless","false","Yawgmoth's Pets"
+"Diabolic Machine","Artifact Creature - Construct","","Colorless","false","Titania's Army"
+"Fountain of Youth","Artifact","","Colorless","false","Labryinth"
+"Lodestone Bauble","Artifact","","Colorless","false","Brother's War"
+"Zuran Orb","Artifact","","Colorless","false","Brother's War"
+"Ashnod's Transmogrant","Artifact","","Colorless","false","Lure Them In"
+"Black Vise","Artifact","","Colorless","false","Desert Journey"
+"Black Vise","Artifact","","Colorless","false","Titania's Army"
+"Black Vise","Artifact","","Colorless","false","Yawgmoth's Pets"
+"Meekstone","Artifact","","Colorless","false","Lure Them In"
+"Sol Ring","Artifact","","Colorless","false","Titania's Army"
+"The Rack","Artifact","","Colorless","false","Yawgmoth's Pets"
+"Fellwar Stone","Artifact","","Colorless","false","Desert Journey"
+"Fellwar Stone","Artifact","","Colorless","false","Yawgmoth's Pets"
+"Howling Mine","Artifact","","Colorless","false","Brother's War"
+"Jandor's Saddlebags","Artifact","","Colorless","false","Yawgmoth's Pets"
+"Millstone","Artifact","","Colorless","false","Titania's Army"
+"Relic Barrier","Artifact","","Colorless","false","Brother's War"
+"Winter Orb","Artifact","","Colorless","false","Brother's War"
+"Basalt Monolith","Artifact","","Colorless","false","Desert Journey"
+"Disrupting Scepter","Artifact","","Colorless","false","Titania's Army"
+"Dingus Egg","Artifact","","Colorless","false","Something Wicked This Wa"
+"Horn of Deafening","Artifact","","Colorless","false","Titania's Army"
+"Icy Manipulator","Artifact","","Colorless","false","Timmy's Spellbook"
+"Icy Manipulator","Artifact","","Colorless","false","Titania's Army"
+"Jayemdae Tome","Artifact","","Colorless","false","Titania's Army"
+"Kormus Bell","Artifact","","Colorless","false","Yawgmoth's Pets"
+"Nevinyrral's Disk","Artifact","","Colorless","false","Titania's Army"
+"Rod of Ruin","Artifact","","Colorless","false","Titania's Army"
+"War Barge","Artifact","","Colorless","false","Atlantis Rising"
+"Serpent Generator","Artifact","","Colorless","false","Titania's Army"
+"Scarwood Goblins","Creature - Goblin","RG","Multicolored","false","Dominaria's Zoo"
+"Tundra","Land - Plains Island","WU","Lands","false","Labryinth"
+"Badlands","Land - Swamp Mountain","BR","Lands","false","Yawgmoth's Pets"
+"Taiga","Land - Mountain Forest","RG","Lands","false","Dominaria's Zoo"
+"City of Brass","Land","","Lands","false","Brother's War"
+"Desert","Land - Desert","","Lands","false","Desert Journey"
+"Forest","Basic Land - Forest","G","Lands","false","Thallid Lair"
+"Forest","Basic Land - Forest","G","Lands","false","Thallid Lair"
+"Forest","Basic Land - Forest","G","Lands","false","Thallid Lair"
+"Forest","Basic Land - Forest","G","Lands","false","Thallid Lair"
+"Forest","Basic Land - Forest","G","Lands","false","Thallid Lair"
+"Forest","Basic Land - Forest","G","Lands","false","Thallid Lair"
+"Forest","Basic Land - Forest","G","Lands","false","Thallid Lair"
+"Forest","Basic Land - Forest","G","Lands","false","Lure Them In"
+"Forest","Basic Land - Forest","G","Lands","false","Lure Them In"
+"Forest","Basic Land - Forest","G","Lands","false","Lure Them In"
+"Forest","Basic Land - Forest","G","Lands","false","Lure Them In"
+"Forest","Basic Land - Forest","G","Lands","false","Lure Them In"
+"Forest","Basic Land - Forest","G","Lands","false","Lure Them In"
+"Forest","Basic Land - Forest","G","Lands","false","Lure Them In"
+"Forest","Basic Land - Forest","G","Lands","false","Forest Ire"
+"Forest","Basic Land - Forest","G","Lands","false","Forest Ire"
+"Forest","Basic Land - Forest","G","Lands","false","Forest Ire"
+"Forest","Basic Land - Forest","G","Lands","false","Forest Ire"
+"Forest","Basic Land - Forest","G","Lands","false","Forest Ire"
+"Forest","Basic Land - Forest","G","Lands","false","Forest Ire"
+"Forest","Basic Land - Forest","G","Lands","false","Forest Ire"
+"Forest","Basic Land - Forest","G","Lands","false","Titania's Army"
+"Forest","Basic Land - Forest","G","Lands","false","Titania's Army"
+"Forest","Basic Land - Forest","G","Lands","false","Titania's Army"
+"Forest","Basic Land - Forest","G","Lands","false","Titania's Army"
+"Forest","Basic Land - Forest","G","Lands","false","Titania's Army"
+"Forest","Basic Land - Forest","G","Lands","false","Dominaria's Zoo"
+"Forest","Basic Land - Forest","G","Lands","false","Dominaria's Zoo"
+"Forest","Basic Land - Forest","G","Lands","false","Dominaria's Zoo"
+"Forest","Basic Land - Forest","G","Lands","false","Dominaria's Zoo"
+"Island","Basic Land - Island","U","Lands","false","Prodigal Voyage"
+"Island","Basic Land - Island","U","Lands","false","Prodigal Voyage"
+"Island","Basic Land - Island","U","Lands","false","Prodigal Voyage"
+"Island","Basic Land - Island","U","Lands","false","Prodigal Voyage"
+"Island","Basic Land - Island","U","Lands","false","Prodigal Voyage"
+"Island","Basic Land - Island","U","Lands","false","Prodigal Voyage"
+"Island","Basic Land - Island","U","Lands","false","Prodigal Voyage"
+"Island","Basic Land - Island","U","Lands","false","Prodigal Voyage"
+"Island","Basic Land - Island","U","Lands","false","Timmy's Spellbook"
+"Island","Basic Land - Island","U","Lands","false","Timmy's Spellbook"
+"Island","Basic Land - Island","U","Lands","false","Timmy's Spellbook"
+"Island","Basic Land - Island","U","Lands","false","Timmy's Spellbook"
+"Island","Basic Land - Island","U","Lands","false","Timmy's Spellbook"
+"Island","Basic Land - Island","U","Lands","false","Timmy's Spellbook"
+"Island","Basic Land - Island","U","Lands","false","Timmy's Spellbook"
+"Island","Basic Land - Island","U","Lands","false","Atlantis Rising"
+"Island","Basic Land - Island","U","Lands","false","Atlantis Rising"
+"Island","Basic Land - Island","U","Lands","false","Atlantis Rising"
+"Island","Basic Land - Island","U","Lands","false","Atlantis Rising"
+"Island","Basic Land - Island","U","Lands","false","Atlantis Rising"
+"Island","Basic Land - Island","U","Lands","false","Atlantis Rising"
+"Island","Basic Land - Island","U","Lands","false","Atlantis Rising"
+"Island","Basic Land - Island","U","Lands","false","Labryinth"
+"Island","Basic Land - Island","U","Lands","false","Labryinth"
+"Island","Basic Land - Island","U","Lands","false","Labryinth"
+"Island","Basic Land - Island","U","Lands","false","Labryinth"
+"Mishra's Factory","Land","","Lands","false","Brother's War"
+"Mountain","Basic Land - Mountain","R","Lands","false","Treacherous Pass"
+"Mountain","Basic Land - Mountain","R","Lands","false","Treacherous Pass"
+"Mountain","Basic Land - Mountain","R","Lands","false","Treacherous Pass"
+"Mountain","Basic Land - Mountain","R","Lands","false","Treacherous Pass"
+"Mountain","Basic Land - Mountain","R","Lands","false","Treacherous Pass"
+"Mountain","Basic Land - Mountain","R","Lands","false","Treacherous Pass"
+"Mountain","Basic Land - Mountain","R","Lands","false","Treacherous Pass"
+"Mountain","Basic Land - Mountain","R","Lands","false","Red Tide"
+"Mountain","Basic Land - Mountain","R","Lands","false","Red Tide"
+"Mountain","Basic Land - Mountain","R","Lands","false","Red Tide"
+"Mountain","Basic Land - Mountain","R","Lands","false","Red Tide"
+"Mountain","Basic Land - Mountain","R","Lands","false","Red Tide"
+"Mountain","Basic Land - Mountain","R","Lands","false","Red Tide"
+"Mountain","Basic Land - Mountain","R","Lands","false","Red Tide"
+"Mountain","Basic Land - Mountain","R","Lands","false","Red Tide"
+"Mountain","Basic Land - Mountain","R","Lands","false","Desert Journey"
+"Mountain","Basic Land - Mountain","R","Lands","false","Desert Journey"
+"Mountain","Basic Land - Mountain","R","Lands","false","Desert Journey"
+"Mountain","Basic Land - Mountain","R","Lands","false","Desert Journey"
+"Mountain","Basic Land - Mountain","R","Lands","false","Desert Journey"
+"Mountain","Basic Land - Mountain","R","Lands","false","Desert Journey"
+"Mountain","Basic Land - Mountain","R","Lands","false","Yawgmoth's Pets"
+"Mountain","Basic Land - Mountain","R","Lands","false","Yawgmoth's Pets"
+"Mountain","Basic Land - Mountain","R","Lands","false","Yawgmoth's Pets"
+"Mountain","Basic Land - Mountain","R","Lands","false","Dominaria's Zoo"
+"Mountain","Basic Land - Mountain","R","Lands","false","Dominaria's Zoo"
+"Mountain","Basic Land - Mountain","R","Lands","false","Dominaria's Zoo"
+"Oasis","Land","","Lands","false","Desert Journey"
+"Plains","Basic Land - Plains","W","Lands","false","Armageddon"
+"Plains","Basic Land - Plains","W","Lands","false","Armageddon"
+"Plains","Basic Land - Plains","W","Lands","false","Armageddon"
+"Plains","Basic Land - Plains","W","Lands","false","Armageddon"
+"Plains","Basic Land - Plains","W","Lands","false","Armageddon"
+"Plains","Basic Land - Plains","W","Lands","false","Armageddon"
+"Plains","Basic Land - Plains","W","Lands","false","Armageddon"
+"Plains","Basic Land - Plains","W","Lands","false","Armageddon"
+"Plains","Basic Land - Plains","W","Lands","false","Icatian Stronghold"
+"Plains","Basic Land - Plains","W","Lands","false","Icatian Stronghold"
+"Plains","Basic Land - Plains","W","Lands","false","Icatian Stronghold"
+"Plains","Basic Land - Plains","W","Lands","false","Icatian Stronghold"
+"Plains","Basic Land - Plains","W","Lands","false","Icatian Stronghold"
+"Plains","Basic Land - Plains","W","Lands","false","Icatian Stronghold"
+"Plains","Basic Land - Plains","W","Lands","false","Icatian Stronghold"
+"Plains","Basic Land - Plains","W","Lands","false","Blessed Zealots"
+"Plains","Basic Land - Plains","W","Lands","false","Blessed Zealots"
+"Plains","Basic Land - Plains","W","Lands","false","Blessed Zealots"
+"Plains","Basic Land - Plains","W","Lands","false","Blessed Zealots"
+"Plains","Basic Land - Plains","W","Lands","false","Blessed Zealots"
+"Plains","Basic Land - Plains","W","Lands","false","Blessed Zealots"
+"Plains","Basic Land - Plains","W","Lands","false","Blessed Zealots"
+"Plains","Basic Land - Plains","W","Lands","false","Labryinth"
+"Plains","Basic Land - Plains","W","Lands","false","Labryinth"
+"Plains","Basic Land - Plains","W","Lands","false","Labryinth"
+"Plains","Basic Land - Plains","W","Lands","false","Blessed Zealots"
+"Swamp","Basic Land - Swamp","B","Lands","false","Something Wicked This Wa"
+"Swamp","Basic Land - Swamp","B","Lands","false","Something Wicked This Wa"
+"Swamp","Basic Land - Swamp","B","Lands","false","Something Wicked This Wa"
+"Swamp","Basic Land - Swamp","B","Lands","false","Something Wicked This Wa"
+"Swamp","Basic Land - Swamp","B","Lands","false","Something Wicked This Wa"
+"Swamp","Basic Land - Swamp","B","Lands","false","Something Wicked This Wa"
+"Swamp","Basic Land - Swamp","B","Lands","false","Something Wicked This Wa"
+"Swamp","Basic Land - Swamp","B","Lands","false","Something Wicked This Wa"
+"Swamp","Basic Land - Swamp","B","Lands","false","Thrull Pit"
+"Swamp","Basic Land - Swamp","B","Lands","false","Thrull Pit"
+"Swamp","Basic Land - Swamp","B","Lands","false","Thrull Pit"
+"Swamp","Basic Land - Swamp","B","Lands","false","Thrull Pit"
+"Swamp","Basic Land - Swamp","B","Lands","false","Thrull Pit"
+"Swamp","Basic Land - Swamp","B","Lands","false","Thrull Pit"
+"Swamp","Basic Land - Swamp","B","Lands","false","Thrull Pit"
+"Swamp","Basic Land - Swamp","B","Lands","false","Thrull Pit"
+"Swamp","Basic Land - Swamp","B","Lands","false","Walking Dead"
+"Swamp","Basic Land - Swamp","B","Lands","false","Walking Dead"
+"Swamp","Basic Land - Swamp","B","Lands","false","Walking Dead"
+"Swamp","Basic Land - Swamp","B","Lands","false","Walking Dead"
+"Swamp","Basic Land - Swamp","B","Lands","false","Walking Dead"
+"Swamp","Basic Land - Swamp","B","Lands","false","Walking Dead"
+"Swamp","Basic Land - Swamp","B","Lands","false","Walking Dead"
+"Swamp","Basic Land - Swamp","B","Lands","false","Walking Dead"
+"Swamp","Basic Land - Swamp","B","Lands","false","Yawgmoth's Pets"
+"Swamp","Basic Land - Swamp","B","Lands","false","Yawgmoth's Pets"
+"Swamp","Basic Land - Swamp","B","Lands","false","Yawgmoth's Pets"
+"Swamp","Basic Land - Swamp","B","Lands","false","Yawgmoth's Pets"
+"Urza's Mine","Land - Urza's Mine","","Lands","false","Brother's War"
+"Urza's Mine","Land - Urza's Mine","","Lands","false","Brother's War"
+"Urza's Mine","Land - Urza's Mine","","Lands","false","Titania's Army"
+"Urza's Power Plant","Land - Urza's Power-Plant","","Lands","false","Brother's War"
+"Urza's Power Plant","Land - Urza's Power-Plant","","Lands","false","Brother's War"
+"Urza's Power Plant","Land - Urza's Power-Plant","","Lands","false","Titania's Army"
+"Urza's Tower","Land - Urza's Tower","","Lands","false","Brother's War"
+"Urza's Tower","Land - Urza's Tower","","Lands","false","Brother's War"
+"Urza's Tower","Land - Urza's Tower","","Lands","false","Titania's Army"
