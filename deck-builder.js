@@ -19,12 +19,7 @@ function getCardsFromPacks(cubeData, pack1Name, pack2Name) {
             if (
                 cardName && 
                 cardName.trim() !== "" &&
-                cardName !== "Dungeon of the Mad Mage" &&
-                cardName !== "Lost Mine of Phandelver" &&
-                cardName !== "Tomb of Annihilation" &&
-                cardName !== "The Ring" &&
-                cardName !== "Undercity" &&
-                cardName !== "Cragflame"
+                !EXCLUDED_CARD_NAMES.includes(cardName)
             ) {
                 deck.push(card);
             }

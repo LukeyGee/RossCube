@@ -31,6 +31,8 @@ let cubes = [
     { name: "Rocky Mountain 93/94 JumpStart", code: "n8cr", csvPath: "./cubes/n8cr.csv" },
     { name: "Todsa Jumpstart Cube", code: "jumpsa", csvPath: "./cubes/jumpsa.csv" },
     { name: "Jumpstart 2025 Tight", code: "j25-tight", csvPath: "./cubes/j25-tight.csv" },
+    { name: "Jumpstart 2022 Tight", code: "j22-tight", csvPath: "./cubes/j22-tight.csv" },
+    { name: "Jumpstart 2020 Tight", code: "jmp2020tight", csvPath: "./cubes/jmp2020tight.csv" },
     { name: "Old School Jumpstart", code: "osjs", csvPath: "./cubes/osjs.csv" },
     { name: "KvatchStart Commander Cube", code: "kvatchstart", csvPath: "./cubes/kvatchstart.csv", isCommander: true }
 ];

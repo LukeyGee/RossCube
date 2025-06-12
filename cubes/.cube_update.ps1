@@ -1,4 +1,4 @@
-function Remove-DiacriticsAndSpaces
+function Remove-Diacritics
 {
     Param(
         [String]$inputString
@@ -19,7 +19,7 @@ foreach ($cube_code in $cubes) {
   if ( -not (Test-Path ".\$cube_code.csv")) {
       $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code"
       $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
-      foreach ($card in $cubedata) {$card.name = Remove-DiacriticsAndSpaces -inputString $card.name}
+      foreach ($card in $cubedata) {$card.name = Remove-Diacritics -inputString $card.name}
       $cubedata | select name,Type,Color,"Color Category",maybeboard,tags | Export-Csv -Path ".\$cube_code.csv" –NoTypeInformation
     } else {
       $cubedateapi = "https://cubecobra.com/cube/api/date_updated/" + "$cube_code"
@@ -28,29 +28,31 @@ foreach ($cube_code in $cubes) {
       if ($lastupdate -gt $oneweekago) {
           $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code"
           $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
-          foreach ($card in $cubedata) {$card.name = Remove-DiacriticsAndSpaces -inputString $card.name}
+          foreach ($card in $cubedata) {$card.name = Remove-Diacritics -inputString $card.name}
           $cubedata | select name,Type,Color,"Color Category",maybeboard,tags | Export-Csv -Path ".\$cube_code.csv" –NoTypeInformation
       }
     }
 }
 
-#j25-tight
-# We need some special filtering on this cube
-$cube_code = "j25-tight"
-if ( -not (Test-Path ".\$cube_code.csv")) {
-  $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
-  $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
-  foreach ($card in $cubedata) {$card.name = Remove-DiacriticsAndSpaces -inputString $card.name}
-  $cubedata | select name,Type,Color,"Color Category",maybeboard,tags | Export-Csv -Path ".\$cube_code.csv" –NoTypeInformation
-} else {
-  $cubedateapi = "https://cubecobra.com/cube/api/date_updated/" + "$cube_code"
-  $response = Invoke-RestMethod -URI "$cubedateapi"
-  $lastupdate = ([datetime] '1970-01-01Z').ToUniversalTime().AddSeconds($response.date_updated/1000)
-  if ($lastupdate -gt $oneweekago) {
-      $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
-      $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
-      foreach ($card in $cubedata) {$card.name = Remove-DiacriticsAndSpaces -inputString $card.name}
-      $cubedata | select name,Type,Color,"Color Category",maybeboard,tags | Export-Csv -Path ".\$cube_code.csv" –NoTypeInformation
+# Tight Cubes
+# We need some special filtering on these cubes
+$cubes = @("j25-tight", "j22-tight", "jmp2020tight")
+foreach ($cube_code in $cubes) {
+  if ( -not (Test-Path ".\$cube_code.csv")) {
+    $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
+    $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
+    foreach ($card in $cubedata) {$card.name = Remove-Diacritics -inputString $card.name}
+    $cubedata | select name,Type,Color,"Color Category",maybeboard,tags | Export-Csv -Path ".\$cube_code.csv" –NoTypeInformation
+  } else {
+    $cubedateapi = "https://cubecobra.com/cube/api/date_updated/" + "$cube_code"
+    $response = Invoke-RestMethod -URI "$cubedateapi"
+    $lastupdate = ([datetime] '1970-01-01Z').ToUniversalTime().AddSeconds($response.date_updated/1000)
+    if ($lastupdate -gt $oneweekago) {
+        $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
+        $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
+        foreach ($card in $cubedata) {$card.name = Remove-Diacritics -inputString $card.name}
+        $cubedata | select name,Type,Color,"Color Category",maybeboard,tags | Export-Csv -Path ".\$cube_code.csv" –NoTypeInformation
+    }
   }
 }
 
@@ -61,7 +63,7 @@ if ( -not (Test-Path ".\$cube_code.csv")) {
   $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
   $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
   foreach ($card in $cubedata) {
-    $card.name = Remove-DiacriticsAndSpaces -inputString $card.name
+    $card.name = Remove-Diacritics -inputString $card.name
     if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z") {
       if ($card.Color -eq "") {
         $scryfallapi = "https://api.scryfall.com/cards/named?exact=" + [System.Web.HttpUtility]::UrlDecode($card.name)
@@ -84,7 +86,7 @@ if ( -not (Test-Path ".\$cube_code.csv")) {
     $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
     $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
     foreach ($card in $cubedata) {
-      $card.name = Remove-DiacriticsAndSpaces -inputString $card.name
+      $card.name = Remove-Diacritics -inputString $card.name
       if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z") {
         if ($card.Color -eq "") {
           $scryfallapi = "https://api.scryfall.com/cards/named?exact=" + [System.Web.HttpUtility]::UrlDecode($card.name)
