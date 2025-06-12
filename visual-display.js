@@ -114,8 +114,8 @@ function createCardWrapper(cardName, count, idx, cardsPerRow) {
     cardWrapper.style.marginLeft = idx % cardsPerRow === 0 ? '0' : '-32px'; // overlap by 32px
 
     const cardImg = createCardImage(cardName, {
-        width: '110px',
-        height: '156px',
+        width: '122px',
+        height: '170px',
         className: 'decklist-card-thumb'
     });
     cardImg.style.border = '2px solid #222';

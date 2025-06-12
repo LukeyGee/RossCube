@@ -61,22 +61,22 @@ function preloadCardImages(cardNames) {
  * Create a standard card image element with consistent styling
  * @param {string} cardName - The name of the card
  * @param {Object} options - Styling options
- * @param {string} options.width - Image width (default: '110px')
- * @param {string} options.height - Image height (default: '156px')
+ * @param {string} options.width - Image width (default: '122px')
+ * @param {string} options.height - Image height (default: '170px')
  * @param {boolean} options.hoverPreview - Whether to attach hover preview (default: true)
  * @param {string} options.className - Additional CSS class (default: 'decklist-card-thumb')
  * @returns {HTMLImageElement} The created image element
  */
 function createCardImage(cardName, options = {}) {
     const {
-        width = '110px',
-        height = '156px',
+        width = '122px',
+        height = '170px',
         hoverPreview = true,
         className = 'decklist-card-thumb'
     } = options;
 
     const img = document.createElement('img');
-    img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`;
+    img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
     img.alt = cardName;
     img.title = cardName;
     img.style.width = width;

@@ -31,8 +31,8 @@ function renderCommanderZone(commanders) {
         img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`;
         img.alt = cardName;
         img.title = cardName;
-        img.style.width = '110px';
-        img.style.height = '156px';
+        img.style.width = '122px';
+        img.style.height = '170px';
         img.style.objectFit = 'cover';
         img.style.border = '2px solid #facc15';
         img.style.borderRadius = '4px';
@@ -85,8 +85,8 @@ function renderKoffersStep(koffersPool, onSelect) {
         img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`;
         img.alt = cardName;
         img.title = cardName;
-        img.style.width = '90px';
-        img.style.height = '128px';
+        img.style.width = '122px';
+        img.style.height = '170px';
         img.style.marginBottom = '8px';
         attachCardHoverPreview(img, cardName);
 
@@ -212,7 +212,7 @@ async function renderFixingLandsStep(fixingPool, deck, onSelect, packSelections)
             btn.style.cursor = 'pointer';
             btn.style.position = 'relative';
 
-            const img = createCardImage(cardName, { width: '110px', height: '156px' });
+            const img = createCardImage(cardName, { width: '122px', height: '170px' });
             btn.appendChild(img);
 
             // Add a checkmark overlay if selected
@@ -352,7 +352,7 @@ function promptBasicLandToRemove(basicsDeck, current, total) {
             btn.style.flexDirection = 'column';
             btn.style.alignItems = 'center';
 
-            const img = createCardImage(name, { width: '90px', height: '128px', hoverPreview: false });
+            const img = createCardImage(name, { width: '122px', height: '170px', hoverPreview: false });
             img.style.marginBottom = '6px';
             btn.appendChild(img);
 
