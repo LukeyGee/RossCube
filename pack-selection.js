@@ -25,7 +25,7 @@ function displayPackChoices(packNumber, globals) {
     const selectedCube = getSelectedCube(cubeSelect.value, cubes);
     const isCommanderCube = selectedCube && selectedCube.isCommander;
 
-    // Use 10 packs for commander cube, 6 for others
+    // Use 10 packs for commander cube, 3 for others
     const packsToOffer = isCommanderCube ? 10 : 3;
 
     if (packNumber === 1) {

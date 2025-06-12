@@ -1,5 +1,25 @@
 // Cube loading and processing functions
 
+const EXCLUDED_CARD_NAMES = [
+	"Dungeon of the Mad Mage", 
+	"Lost Mine of Phandelver",
+	"Tomb of Annihilation",
+	"The Ring",
+	"Undercity",
+	"Cragflame"
+];
+
+const EXCLUDED_TAGS_NAMES = [
+	"Other", 
+	"z_Fixing Roster_z",
+	"z_Kvatch Koffers",
+	"B - The Big Top",
+	"WUR - Mutate",
+	"WU - Studies",
+	"WU - Studies (Lessons)",
+	"UBR - Mirror Breakers"
+];
+
 function parseCSV(csvText) {
     const lines = csvText.trim().split('\n');
     if (lines.length < 1) return [];
@@ -93,12 +113,7 @@ function extractPackThemes() {
         if (
             cardName && 
             cardName.trim() !== "" &&
-            (cardName == "Dungeon of the Mad Mage" ||
-            cardName == "Lost Mine of Phandelver" ||
-            cardName == "Tomb of Annihilation" ||
-            cardName == "The Ring" ||
-            cardName == "Undercity" ||
-            cardName == "Cragflame")
+            EXCLUDED_CARD_NAMES.includes(cardName)
         ) {
             return;
         }
@@ -107,13 +122,7 @@ function extractPackThemes() {
             cardTags &&
             cardTags.trim() !== "" &&
             !cardTags.includes("zz_Commander") && // Exclude any tag with zz_Commander
-            cardTags !== "Other" &&
-            cardTags !== "z_Fixing Roster_z" && // Exclude fixing roster
-            cardTags !== "z_Kvatch Koffers" && // Exclude koffers
-            cardTags !== "B - The Big Top" &&
-            cardTags !== "WUR - Mutate" &&
-            cardTags !== "WU - Studies" &&
-            cardTags !== "WU - Studies (Lessons)"
+            !EXCLUDED_TAGS_NAMES.includes(cardTags)
         ) {
             themes.add(cardTags.trim());
         }
