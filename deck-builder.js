@@ -10,6 +10,10 @@ function getCardsFromPacks(cubeData, pack1Name, pack2Name) {
         
         if (cardMaybe && cardMaybe == "true") return;
 
+        // Exclude commander cards from main deck
+        const isCommander = cardTags.some(tag => tag.includes("zz_Commander"));
+        if (isCommander) return;
+
         if (cardTags.includes(pack1Name) || cardTags.includes(pack2Name)) {
             const cardName = card.Name || card.name;
             if (
