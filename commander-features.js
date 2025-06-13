@@ -498,7 +498,9 @@ function createManaDistributionChart(deck) {
         return !cardType.includes('land');
     });
     
-    console.log('Total non-land cards:', nonLandCards.length);
+    if (DEBUG) {
+        console.log('Total non-land cards:', nonLandCards.length);
+    }
     
     // Analyze all non-land cards in the deck (including commanders)
     nonLandCards.forEach(card => {
