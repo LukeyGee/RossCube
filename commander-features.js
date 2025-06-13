@@ -396,6 +396,44 @@ function handleCommanderCubeFlow(deckResult, globals) {
     renderCommanderZone(deckResult.commanders);
     renderVisualDecklist(deckResult.typeGroups, deckResult.commanders);
 
+    // Add mana distribution chart to the right of commanders
+    const allCards = [...deckResult.deck, ...deckResult.commanders];
+    const chartHTML = createManaDistributionChart(allCards);
+    if (chartHTML) {
+        const commanderZone = document.getElementById('commanderZone');
+        if (commanderZone) {
+            // Create a wrapper div to hold both commanders and chart side by side
+            const wrapper = document.createElement('div');
+            wrapper.style.display = 'flex';
+            wrapper.style.alignItems = 'flex-start';
+            wrapper.style.justifyContent = 'space-between';
+            wrapper.style.width = '100%';
+            wrapper.style.gap = '40px';
+            
+            // Create commanders container
+            const commandersContainer = document.createElement('div');
+            commandersContainer.style.flexShrink = '0';
+            commandersContainer.innerHTML = commanderZone.innerHTML;
+            
+            // Re-attach hover previews to commander images
+            const commanderImages = commandersContainer.querySelectorAll('img');
+            commanderImages.forEach(img => {
+                attachCardHoverPreview(img, img.alt);
+            });
+            
+            // Create chart container
+            const chartContainer = document.createElement('div');
+            chartContainer.style.marginRight = '20px';
+            chartContainer.innerHTML = chartHTML;
+            
+            // Clear and rebuild commander zone
+            commanderZone.innerHTML = '';
+            wrapper.appendChild(commandersContainer);
+            wrapper.appendChild(chartContainer);
+            commanderZone.appendChild(wrapper);
+        }
+    }
+
     // Koffers step
     const koffersPool = currentCubeData.filter(card =>
         (card.tags && card.tags.includes("z_Kvatch Koffers")) ||
@@ -441,4 +479,114 @@ function handleCommanderCubeFlow(deckResult, globals) {
     });
     
     toggleLoading(false);
+}
+
+// Add this function to analyze mana costs and create a pie chart
+
+function createManaDistributionChart(deck) {
+    const colorCounts = {
+        W: 0,
+        U: 0,
+        B: 0,
+        R: 0,
+        G: 0
+    };
+    
+    // Filter out lands before analyzing mana costs
+    const nonLandCards = deck.filter(card => {
+        const cardType = (card.Type || card.type || '').toLowerCase();
+        return !cardType.includes('land');
+    });
+    
+    console.log('Total non-land cards:', nonLandCards.length);
+    
+    // Analyze all non-land cards in the deck (including commanders)
+    nonLandCards.forEach(card => {
+        const cardName = card.Name || card.name;
+        const manacost = card.manacost;
+        
+        // Debug log each card's mana cost
+        console.log(`${cardName}: "${manacost}"`);
+        
+        if (card.manacost) {
+            // Extract color symbols using regex - back to {W} format
+            const whiteMatches = card.manacost.match(/{W}/g);
+            const blueMatches = card.manacost.match(/{U}/g);
+            const blackMatches = card.manacost.match(/{B}/g);
+            const redMatches = card.manacost.match(/{R}/g);
+            const greenMatches = card.manacost.match(/{G}/g);
+            
+            const wCount = whiteMatches ? whiteMatches.length : 0;
+            const uCount = blueMatches ? blueMatches.length : 0;
+            const bCount = blackMatches ? blackMatches.length : 0;
+            const rCount = redMatches ? redMatches.length : 0;
+            const gCount = greenMatches ? greenMatches.length : 0;
+            
+            if (wCount > 0 || uCount > 0 || bCount > 0 || rCount > 0 || gCount > 0) {
+                console.log(`  → W:${wCount} U:${uCount} B:${bCount} R:${rCount} G:${gCount}`);
+            }
+            
+            colorCounts.W += wCount;
+            colorCounts.U += uCount;
+            colorCounts.B += bCount;
+            colorCounts.R += rCount;
+            colorCounts.G += gCount;
+            
+            // Handle hybrid mana
+            const hybridMatches = card.manacost.match(/{[WUBRG]\/[WUBRG]}/g);
+            if (hybridMatches) {
+                console.log(`  → Hybrid: ${hybridMatches.join(', ')}`);
+                hybridMatches.forEach(hybrid => {
+                    const colors = hybrid.match(/[WUBRG]/g);
+                    colors.forEach(color => {
+                        colorCounts[color]++;
+                    });
+                });
+            }
+        }
+    });
+    
+    console.log('Final color counts:', colorCounts);
+    
+    // Create pie chart HTML
+    const total = Object.values(colorCounts).reduce((sum, count) => sum + count, 0);
+    if (total === 0) return '';
+    
+    const colorData = [
+        { color: 'W', count: colorCounts.W, name: 'White', hex: '#FFFBD5' },
+        { color: 'U', count: colorCounts.U, name: 'Blue', hex: '#0E68AB' },
+        { color: 'B', count: colorCounts.B, name: 'Black', hex: '#150B00' },
+        { color: 'R', count: colorCounts.R, name: 'Red', hex: '#D3202A' },
+        { color: 'G', count: colorCounts.G, name: 'Green', hex: '#00733E' }
+    ].filter(item => item.count > 0);
+    
+    // Simple CSS-based pie chart
+    let cumulativePercentage = 0;
+    const segments = colorData.map(item => {
+        const percentage = (item.count / total) * 100;
+        const segment = {
+            ...item,
+            percentage,
+            startAngle: cumulativePercentage * 3.6,
+            endAngle: (cumulativePercentage + percentage) * 3.6
+        };
+        cumulativePercentage += percentage;
+        return segment;
+    });
+    
+    return `
+        <div style="text-align: center; margin: 20px 0;">
+            <div style="width: 200px; height: 200px; border-radius: 50%; position: relative; margin: 0 auto; background: conic-gradient(${
+                segments.map(s => `${s.hex} ${s.startAngle}deg ${s.endAngle}deg`).join(', ')
+            }); border: 3px solid #FFD700;">
+            </div>
+            <div style="margin-top: 15px; font-size: 14px; color: #CCCCCC;">
+                ${segments.map(s => `
+                    <div style="margin: 3px 0;">
+                        <span style="color: ${s.hex};">●</span> ${s.name}: ${s.count} (${s.percentage.toFixed(1)}%)
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
 }
