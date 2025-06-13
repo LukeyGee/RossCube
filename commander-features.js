@@ -28,7 +28,7 @@ function renderCommanderZone(commanders) {
     commanders.forEach(card => {
         const cardName = card.Name || card.name;
         const img = document.createElement('img');
-        img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`;
+        sleep(101).then(img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`);
         img.alt = cardName;
         img.title = cardName;
         img.style.width = '122px';
