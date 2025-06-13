@@ -47,13 +47,21 @@ function attachCardHoverPreview(imgElement, cardName) {
 }
 
 /**
+ * Simple Sleep Function to ratelimit API calls
+ * @param {*} ms to sleep
+ */
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
  * Preload card images for better performance
  * @param {string[]} cardNames - Array of card names to preload
  */
 function preloadCardImages(cardNames) {
     cardNames.forEach(cardName => {
         const img = new Image();
-        img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+        sleep(101).then(img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`);
     });
 }
 
