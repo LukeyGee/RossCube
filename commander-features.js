@@ -28,7 +28,7 @@ function renderCommanderZone(commanders) {
     commanders.forEach(card => {
         const cardName = card.Name || card.name;
         const img = document.createElement('img');
-        sleep(101).then(img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`);
+        sleep(101).then(img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`);
         img.alt = cardName;
         img.title = cardName;
         img.style.width = '122px';
@@ -82,7 +82,7 @@ function renderKoffersStep(koffersPool, onSelect) {
 
         // Create the image element and attach hover preview
         const img = document.createElement('img');
-        sleep(101).then(img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`);
+        sleep(101).then(img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`);
         img.alt = cardName;
         img.title = cardName;
         img.style.width = '122px';
