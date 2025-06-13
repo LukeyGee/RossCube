@@ -84,7 +84,7 @@ function createCardImage(cardName, options = {}) {
     } = options;
 
     const img = document.createElement('img');
-    img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`;
+    sleep(101).then(img.src = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image&version=normal`);
     img.alt = cardName;
     img.title = cardName;
     img.style.width = width;
