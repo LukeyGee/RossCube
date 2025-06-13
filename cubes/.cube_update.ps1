@@ -1,105 +1,80 @@
-function Remove-Diacritics
-{
-    Param(
-        [String]$inputString
-    )
-    #replace diacritics
-    $sb = [Text.Encoding]::ASCII.GetString([Text.Encoding]::GetEncoding("Cyrillic").GetBytes($inputString))
- 
-    return($sb)
+function Remove-Diacritics{
+    Param([String]$inputString)
+    return [Text.Encoding]::ASCII.GetString([Text.Encoding]::GetEncoding("Cyrillic").GetBytes($inputString))
 }
+
+# Fetch Scryfall oracle cards
+$bulkUrl = "https://api.scryfall.com/bulk-data"
+$oracleData = (Invoke-RestMethod -Uri $bulkUrl).data | Where-Object { $_.type -eq "oracle_cards" }
+$scryfallCards = Invoke-RestMethod -Uri $oracleData.download_uri
+
+# Build a hashtable of Scryfall cards for fast lookup
+$scryHash = @{}
+foreach ($card in $scryfallCards) {
+    $scryHash[$card.name] = $card
+}
+
+Set-Location -Path ".\cubes"
+Remove-Item * -Include *.csv
 
 # Cube Code Array
 $cubes = @("trs", "krstart1", "infjumpstartcube", "ajsc", "jumpstartdecks", "jump-start-cube", "HastedPJC", "vuq", "osjs", "n8cr", "jumpsa")
 
-Set-Location -Path ".\cubes"
-$oneweekago = (Get-Date -AsUTC).AddDays(-7)
-
 foreach ($cube_code in $cubes) {
-  if ( -not (Test-Path ".\$cube_code.csv")) {
-      $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code"
-      $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
-      foreach ($card in $cubedata) {$card.name = Remove-Diacritics -inputString $card.name}
-      $cubedata | select name,Type,Color,"Color Category",maybeboard,tags | Export-Csv -Path ".\$cube_code.csv" –NoTypeInformation
-    } else {
-      $cubedateapi = "https://cubecobra.com/cube/api/date_updated/" + "$cube_code"
-      $response = Invoke-RestMethod -URI "$cubedateapi"
-      $lastupdate = ([datetime] '1970-01-01Z').ToUniversalTime().AddSeconds($response.date_updated/1000)
-      if ($lastupdate -gt $oneweekago) {
-          $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code"
-          $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
-          foreach ($card in $cubedata) {$card.name = Remove-Diacritics -inputString $card.name}
-          $cubedata | select name,Type,Color,"Color Category",maybeboard,tags | Export-Csv -Path ".\$cube_code.csv" –NoTypeInformation
-      }
+  $cubeUrl = "https://cubecobra.com/cube/download/csv/" + "$cube_code"
+  $csvText = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeUrl).RawContentStream.ToArray())
+  $cubeData = $csvText | ConvertFrom-Csv | Select-Object *, @{Name='manacost'; Expression={""}}
+  foreach ($card in $cubeData) {
+    if ($scryHash.ContainsKey($card.name)) {
+        $scryCard = $scryHash[$card.name]
+        $card.manacost = $scryCard.mana_cost
     }
+    $name = $card.name
+    $cleanName = Remove-Diacritics -inputString $name
+    $card.name = $cleanName
+  }
+  $cubeData | Select-Object name, Type, Color, "Color Category", manacost, maybeboard, tags |
+        Export-Csv -Path ".\$cube_code.csv" -NoTypeInformation
 }
 
 # Tight Cubes
 # We need some special filtering on these cubes
 $cubes = @("j25-tight", "j22-tight", "jmp2020tight")
 foreach ($cube_code in $cubes) {
-  if ( -not (Test-Path ".\$cube_code.csv")) {
-    $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
-    $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
-    foreach ($card in $cubedata) {$card.name = Remove-Diacritics -inputString $card.name}
-    $cubedata | select name,Type,Color,"Color Category",maybeboard,tags | Export-Csv -Path ".\$cube_code.csv" –NoTypeInformation
-  } else {
-    $cubedateapi = "https://cubecobra.com/cube/api/date_updated/" + "$cube_code"
-    $response = Invoke-RestMethod -URI "$cubedateapi"
-    $lastupdate = ([datetime] '1970-01-01Z').ToUniversalTime().AddSeconds($response.date_updated/1000)
-    if ($lastupdate -gt $oneweekago) {
-        $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
-        $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
-        foreach ($card in $cubedata) {$card.name = Remove-Diacritics -inputString $card.name}
-        $cubedata | select name,Type,Color,"Color Category",maybeboard,tags | Export-Csv -Path ".\$cube_code.csv" –NoTypeInformation
+  $cubeUrl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
+  $csvText = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeUrl).RawContentStream.ToArray())
+  $cubeData = $csvText | ConvertFrom-Csv | Select-Object *, @{Name='manacost'; Expression={""}}
+  foreach ($card in $cubeData) {
+    if ($scryHash.ContainsKey($card.name)) {
+        $scryCard = $scryHash[$card.name]
+        $card.manacost = $scryCard.mana_cost
     }
+    $name = $card.name
+    $cleanName = Remove-Diacritics -inputString $name
+    $card.name = $cleanName
   }
+  $cubeData | Select-Object name, Type, Color, "Color Category", manacost, maybeboard, tags |
+        Export-Csv -Path ".\$cube_code.csv" -NoTypeInformation
 }
 
 #kvatchstart
 # We need to make sure some of the lands have colors associated to them
 $cube_code = "kvatchstart"
-if ( -not (Test-Path ".\$cube_code.csv")) {
-  $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
-  $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
-  foreach ($card in $cubedata) {
-    $card.name = Remove-Diacritics -inputString $card.name
-    if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z") {
-      if ($card.Color -eq "") {
-        $scryfallapi = "https://api.scryfall.com/cards/named?exact=" + [System.Web.HttpUtility]::UrlDecode($card.name)
-        $scryfalloutput = Invoke-RestMethod -URI "$scryfallapi"
-        $temp_color = "";
-        foreach ($color in $scryfalloutput.produced_mana) {
-          $temp_color += $color
-        }
-        $card.Color = $temp_color
-      }
-    }
-  }
-  $selectedcolumns = $cubedata | select name,Type,Color,"Color Category",maybeboard,tags 
-  $selectedcolumns | Export-Csv -Path ".\$cube_code.csv" –NoTypeInformation
-} else {
-  $cubedateapi = "https://cubecobra.com/cube/api/date_updated/" + "$cube_code"
-  $response = Invoke-RestMethod -URI "$cubedateapi"
-  $lastupdate = ([datetime] '1970-01-01Z').ToUniversalTime().AddSeconds($response.date_updated/1000)
-  if ($lastupdate -gt $oneweekago) {
-    $cubeurl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
-    $cubedata = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeurl).RawContentStream.ToArray()) | ConvertFrom-Csv
-    foreach ($card in $cubedata) {
-      $card.name = Remove-Diacritics -inputString $card.name
+$cubeUrl = "https://cubecobra.com/cube/download/csv/" + "$cube_code"
+$csvText = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest $cubeUrl).RawContentStream.ToArray())
+$cubeData = $csvText | ConvertFrom-Csv | Select-Object *, @{Name='manacost'; Expression={""}}
+foreach ($card in $cubeData) {
+  if ($scryHash.ContainsKey($card.name)) {
+      $scryCard = $scryHash[$card.name]
+      $card.manacost = $scryCard.mana_cost
+
       if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z") {
-        if ($card.Color -eq "") {
-          $scryfallapi = "https://api.scryfall.com/cards/named?exact=" + [System.Web.HttpUtility]::UrlDecode($card.name)
-          $scryfalloutput = Invoke-RestMethod -URI "$scryfallapi"
-          $temp_color = "";
-          foreach ($color in $scryfalloutput.produced_mana) {
-            $temp_color += $color
-          }
-          $card.Color = $temp_color
-        }
+          $card.Color = -join $scryCard.produced_mana
       }
-    }
-    $selectedcolumns = $cubedata | select name,Type,Color,"Color Category",maybeboard,tags 
-    $selectedcolumns | Export-Csv -Path ".\$cube_code.csv" –NoTypeInformation
   }
+  $name = $card.name
+  $cleanName = Remove-Diacritics -inputString $name
+  $card.name = $cleanName
 }
+$cubeData | Select-Object name, Type, Color, "Color Category", manacost, maybeboard, tags |
+      Export-Csv -Path ".\$cube_code.csv" -NoTypeInformation
