@@ -396,6 +396,44 @@ function handleCommanderCubeFlow(deckResult, globals) {
     renderCommanderZone(deckResult.commanders);
     renderVisualDecklist(deckResult.typeGroups, deckResult.commanders);
 
+    // Add mana distribution chart to the right of commanders
+    const allCards = [...deckResult.deck, ...deckResult.commanders];
+    const chartHTML = createManaDistributionChart(allCards);
+    if (chartHTML) {
+        const commanderZone = document.getElementById('commanderZone');
+        if (commanderZone) {
+            // Create a wrapper div to hold both commanders and chart side by side
+            const wrapper = document.createElement('div');
+            wrapper.style.display = 'flex';
+            wrapper.style.alignItems = 'flex-start';
+            wrapper.style.justifyContent = 'space-between';
+            wrapper.style.width = '100%';
+            wrapper.style.gap = '40px';
+            
+            // Create commanders container
+            const commandersContainer = document.createElement('div');
+            commandersContainer.style.flexShrink = '0';
+            commandersContainer.innerHTML = commanderZone.innerHTML;
+            
+            // Re-attach hover previews to commander images
+            const commanderImages = commandersContainer.querySelectorAll('img');
+            commanderImages.forEach(img => {
+                attachCardHoverPreview(img, img.alt);
+            });
+            
+            // Create chart container
+            const chartContainer = document.createElement('div');
+            chartContainer.style.marginRight = '20px';
+            chartContainer.innerHTML = chartHTML;
+            
+            // Clear and rebuild commander zone
+            commanderZone.innerHTML = '';
+            wrapper.appendChild(commandersContainer);
+            wrapper.appendChild(chartContainer);
+            commanderZone.appendChild(wrapper);
+        }
+    }
+
     // Koffers step
     const koffersPool = currentCubeData.filter(card =>
         (card.tags && card.tags.includes("z_Kvatch Koffers")) ||
@@ -441,4 +479,136 @@ function handleCommanderCubeFlow(deckResult, globals) {
     });
     
     toggleLoading(false);
+}
+
+// Add this function to analyze mana costs and create a pie chart
+
+function createManaDistributionChart(deck) {
+    const colorCounts = {
+        W: 0,
+        U: 0,
+        B: 0,
+        R: 0,
+        G: 0
+    };
+    
+    // Filter out lands before analyzing mana costs
+    const nonLandCards = deck.filter(card => {
+        const cardType = (card.Type || card.type || '').toLowerCase();
+        return !cardType.includes('land');
+    });
+    
+    // Analyze all non-land cards in the deck (including commanders)
+    nonLandCards.forEach(card => {
+        if (card.manacost) {
+            // Extract color symbols using regex
+            const whiteMatches = card.manacost.match(/{W}/g);
+            const blueMatches = card.manacost.match(/{U}/g);
+            const blackMatches = card.manacost.match(/{B}/g);
+            const redMatches = card.manacost.match(/{R}/g);
+            const greenMatches = card.manacost.match(/{G}/g);
+            
+            colorCounts.W += (whiteMatches ? whiteMatches.length : 0);
+            colorCounts.U += (blueMatches ? blueMatches.length : 0);
+            colorCounts.B += (blackMatches ? blackMatches.length : 0);
+            colorCounts.R += (redMatches ? redMatches.length : 0);
+            colorCounts.G += (greenMatches ? greenMatches.length : 0);
+            
+            // Handle hybrid mana
+            const hybridMatches = card.manacost.match(/{[WUBRG]\/[WUBRG]}/g);
+            if (hybridMatches) {
+                hybridMatches.forEach(hybrid => {
+                    const colors = hybrid.match(/[WUBRG]/g);
+                    colors.forEach(color => {
+                        colorCounts[color]++;
+                    });
+                });
+            }
+        }
+    });
+    
+    // Create pie chart HTML with animation
+    const total = Object.values(colorCounts).reduce((sum, count) => sum + count, 0);
+    if (total === 0) return '';
+    
+    const colorData = [
+        { color: 'W', count: colorCounts.W, name: 'White', hex: '#F9FAF4' },
+        { color: 'U', count: colorCounts.U, name: 'Blue', hex: '#0E68AB' },
+        { color: 'B', count: colorCounts.B, name: 'Black', hex: '#150B00' },
+        { color: 'R', count: colorCounts.R, name: 'Red', hex: '#D3202A' },
+        { color: 'G', count: colorCounts.G, name: 'Green', hex: '#009B3E' }
+    ].filter(item => item.count > 0);
+    
+    // Generate unique ID for this chart
+    const chartId = 'mana-chart-' + Math.random().toString(36).substr(2, 9);
+    
+    // Calculate segments
+    let cumulativePercentage = 0;
+    const segments = colorData.map(item => {
+        const percentage = (item.count / total) * 100;
+        const segment = {
+            ...item,
+            percentage,
+            startAngle: cumulativePercentage * 3.6,
+            endAngle: (cumulativePercentage + percentage) * 3.6
+        };
+        cumulativePercentage += percentage;
+        return segment;
+    });
+    
+    const html = `
+        <div style="text-align: center; margin: 20px 0;">
+            <div id="${chartId}" style="width: 200px; height: 200px; border-radius: 50%; position: relative; margin: 0 auto; border: 3px solid #FFD700; background: #333; overflow: hidden;">
+            </div>
+            <div style="margin-top: 15px; font-size: 14px; color: #CCCCCC;">
+                ${segments.map(s => `
+                    <div style="margin: 3px 0;">
+                        <span style="color: ${s.hex};">●</span> ${s.name}: ${s.count} (${s.percentage.toFixed(1)}%)
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+    
+    // Start animation after the HTML is inserted
+    setTimeout(() => {
+        animatePieChart(chartId, segments);
+    }, 100);
+    
+    return html;
+}
+
+function animatePieChart(chartId, segments) {
+    const chart = document.getElementById(chartId);
+    if (!chart) return;
+    
+    const duration = 5000; // 5 seconds total animation
+    const startTime = Date.now();
+    
+    function animate() {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Ease-out animation curve
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+        
+        // Calculate current segments based on progress
+        let currentAngle = 0;
+        const gradientSegments = segments.map(segment => {
+            const segmentProgress = Math.min(easedProgress * segments.length, 1);
+            const segmentAngle = segment.percentage * 3.6 * segmentProgress;
+            const gradientSegment = `${segment.hex} ${currentAngle}deg ${currentAngle + segmentAngle}deg`;
+            currentAngle += segmentAngle;
+            return gradientSegment;
+        });
+        
+        // Apply the animated gradient
+        chart.style.background = `conic-gradient(${gradientSegments.join(', ')}, #333 ${currentAngle}deg)`;
+        
+        if (progress < 1) {
+            requestAnimationFrame(animate);
+        }
+    }
+    
+    animate();
 }
