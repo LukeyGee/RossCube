@@ -237,7 +237,7 @@
 "Plague Wight","Creature - Zombie","B","Black","{1}{B}","false","BR - Rakdos Aggro"
 "Ravenous Rats","Creature - Rat","B","Black","{1}{B}","false","B - Discard"
 "Slaughter Drone","Creature - Eldrazi Drone","B","Black","{1}{B}","false","UBG - Eldrazi"
-"Smitten Swordmaster","Creature - Human Knight","B","Black","","false","B - Lifelink"
+"Smitten Swordmaster","Creature - Human Knight","B","Black","{1}{B}","false","B - Lifelink"
 "Thriving Rats","Creature - Rat","B","Black","{1}{B}","false","BG - Energy"
 "Whipstitched Zombie","Creature - Zombie","B","Black","{1}{B}","false","WBR - Alesha"
 "Agent of the Fates","Creature - Human Assassin","B","Black","{1}{B}{B}","false","B - Deathtouch"
