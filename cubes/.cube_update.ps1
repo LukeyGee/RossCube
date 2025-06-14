@@ -13,6 +13,7 @@ $scryHash = @{}
 foreach ($card in $scryfallCards) {
     $scryHash[$card.name] = $card
 }
+$scryHashKeys = $scryHash.keys
 
 Set-Location -Path ".\cubes"
 Remove-Item * -Include *.csv
@@ -28,6 +29,28 @@ foreach ($cube_code in $cubes) {
     if ($scryHash.ContainsKey($card.name)) {
         $scryCard = $scryHash[$card.name]
         $card.manacost = $scryCard.mana_cost
+    } else {
+      $searchString = '*' + $card.name + '*'
+      $scryLike = $scryHashKeys -like $searchString
+      if ($scryLike.Length -eq 1) {
+        $scryCard = $scryHash[$scryLike[0]]
+        foreach ($scryCardFaces in $ScryCard.card_faces) {
+          if ($scryCardFaces.name -eq $card.name) {
+            $card.manacost = $scryCardFaces.mana_cost
+          }
+        }
+      } elseif ($scryLike.Length -gt 1) {
+        foreach ($scryMatch in $scryLike) {
+          $scryCard = $scryHash[$scryMatch]
+          if ($scryCard.layout -ne "art_series") {
+            foreach ($scryCardFaces in $ScryCard.card_faces) {
+              if ($scryCardFaces.name -eq $card.name) {
+                $card.manacost = $scryCardFaces.mana_cost
+              }
+            }
+          }
+        }
+      }
     }
     $name = $card.name
     $cleanName = Remove-Diacritics -inputString $name
@@ -48,6 +71,28 @@ foreach ($cube_code in $cubes) {
     if ($scryHash.ContainsKey($card.name)) {
         $scryCard = $scryHash[$card.name]
         $card.manacost = $scryCard.mana_cost
+    } else {
+      $searchString = '*' + $card.name + '*'
+      $scryLike = $scryHashKeys -like $searchString
+      if ($scryLike.Length -eq 1) {
+        $scryCard = $scryHash[$scryLike[0]]
+        foreach ($scryCardFaces in $ScryCard.card_faces) {
+          if ($scryCardFaces.name -eq $card.name) {
+            $card.manacost = $scryCardFaces.mana_cost
+          }
+        }
+      } elseif ($scryLike.Length -gt 1) {
+        foreach ($scryMatch in $scryLike) {
+          $scryCard = $scryHash[$scryMatch]
+          if ($scryCard.layout -ne "art_series") {
+            foreach ($scryCardFaces in $ScryCard.card_faces) {
+              if ($scryCardFaces.name -eq $card.name) {
+                $card.manacost = $scryCardFaces.mana_cost
+              }
+            }
+          }
+        }
+      }
     }
     $name = $card.name
     $cleanName = Remove-Diacritics -inputString $name
@@ -67,10 +112,28 @@ foreach ($card in $cubeData) {
   if ($scryHash.ContainsKey($card.name)) {
       $scryCard = $scryHash[$card.name]
       $card.manacost = $scryCard.mana_cost
-
-      if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z") {
-          $card.Color = -join $scryCard.produced_mana
+  } else {
+    $searchString = '*' + $card.name + '*'
+    $scryLike = $scryHashKeys -like $searchString
+    if ($scryLike.Length -eq 1) {
+      $scryCard = $scryHash[$scryLike[0]]
+      foreach ($scryCardFaces in $ScryCard.card_faces) {
+        if ($scryCardFaces.name -eq $card.name) {
+          $card.manacost = $scryCardFaces.mana_cost
+        }
       }
+    } elseif ($scryLike.Length -gt 1) {
+      foreach ($scryMatch in $scryLike) {
+        $scryCard = $scryHash[$scryMatch]
+        if ($scryCard.layout -ne "art_series") {
+          foreach ($scryCardFaces in $ScryCard.card_faces) {
+            if ($scryCardFaces.name -eq $card.name) {
+              $card.manacost = $scryCardFaces.mana_cost
+            }
+          }
+        }
+      }
+    }
   }
   $name = $card.name
   $cleanName = Remove-Diacritics -inputString $name
