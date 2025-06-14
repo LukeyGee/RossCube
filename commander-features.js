@@ -532,11 +532,11 @@ function createManaDistributionChart(deck) {
     if (total === 0) return '';
     
     const colorData = [
-        { color: 'W', count: colorCounts.W, name: 'White', hex: '#FFFBD5' },
+        { color: 'W', count: colorCounts.W, name: 'White', hex: '#F9FAF4' },
         { color: 'U', count: colorCounts.U, name: 'Blue', hex: '#0E68AB' },
         { color: 'B', count: colorCounts.B, name: 'Black', hex: '#150B00' },
         { color: 'R', count: colorCounts.R, name: 'Red', hex: '#D3202A' },
-        { color: 'G', count: colorCounts.G, name: 'Green', hex: '#00733E' }
+        { color: 'G', count: colorCounts.G, name: 'Green', hex: '#009B3E' }
     ].filter(item => item.count > 0);
     
     // Generate unique ID for this chart
