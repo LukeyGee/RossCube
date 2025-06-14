@@ -498,44 +498,25 @@ function createManaDistributionChart(deck) {
         return !cardType.includes('land');
     });
     
-    console.log('Total non-land cards:', nonLandCards.length);
-    
     // Analyze all non-land cards in the deck (including commanders)
     nonLandCards.forEach(card => {
-        const cardName = card.Name || card.name;
-        const manacost = card.manacost;
-        
-        // Debug log each card's mana cost
-        console.log(`${cardName}: "${manacost}"`);
-        
         if (card.manacost) {
-            // Extract color symbols using regex - back to {W} format
+            // Extract color symbols using regex
             const whiteMatches = card.manacost.match(/{W}/g);
             const blueMatches = card.manacost.match(/{U}/g);
             const blackMatches = card.manacost.match(/{B}/g);
             const redMatches = card.manacost.match(/{R}/g);
             const greenMatches = card.manacost.match(/{G}/g);
             
-            const wCount = whiteMatches ? whiteMatches.length : 0;
-            const uCount = blueMatches ? blueMatches.length : 0;
-            const bCount = blackMatches ? blackMatches.length : 0;
-            const rCount = redMatches ? redMatches.length : 0;
-            const gCount = greenMatches ? greenMatches.length : 0;
-            
-            if (wCount > 0 || uCount > 0 || bCount > 0 || rCount > 0 || gCount > 0) {
-                console.log(`  → W:${wCount} U:${uCount} B:${bCount} R:${rCount} G:${gCount}`);
-            }
-            
-            colorCounts.W += wCount;
-            colorCounts.U += uCount;
-            colorCounts.B += bCount;
-            colorCounts.R += rCount;
-            colorCounts.G += gCount;
+            colorCounts.W += (whiteMatches ? whiteMatches.length : 0);
+            colorCounts.U += (blueMatches ? blueMatches.length : 0);
+            colorCounts.B += (blackMatches ? blackMatches.length : 0);
+            colorCounts.R += (redMatches ? redMatches.length : 0);
+            colorCounts.G += (greenMatches ? greenMatches.length : 0);
             
             // Handle hybrid mana
             const hybridMatches = card.manacost.match(/{[WUBRG]\/[WUBRG]}/g);
             if (hybridMatches) {
-                console.log(`  → Hybrid: ${hybridMatches.join(', ')}`);
                 hybridMatches.forEach(hybrid => {
                     const colors = hybrid.match(/[WUBRG]/g);
                     colors.forEach(color => {
@@ -546,9 +527,7 @@ function createManaDistributionChart(deck) {
         }
     });
     
-    console.log('Final color counts:', colorCounts);
-    
-    // Create pie chart HTML
+    // Create pie chart HTML with animation
     const total = Object.values(colorCounts).reduce((sum, count) => sum + count, 0);
     if (total === 0) return '';
     
@@ -560,7 +539,10 @@ function createManaDistributionChart(deck) {
         { color: 'G', count: colorCounts.G, name: 'Green', hex: '#00733E' }
     ].filter(item => item.count > 0);
     
-    // Simple CSS-based pie chart
+    // Generate unique ID for this chart
+    const chartId = 'mana-chart-' + Math.random().toString(36).substr(2, 9);
+    
+    // Calculate segments
     let cumulativePercentage = 0;
     const segments = colorData.map(item => {
         const percentage = (item.count / total) * 100;
@@ -574,11 +556,9 @@ function createManaDistributionChart(deck) {
         return segment;
     });
     
-    return `
+    const html = `
         <div style="text-align: center; margin: 20px 0;">
-            <div style="width: 200px; height: 200px; border-radius: 50%; position: relative; margin: 0 auto; background: conic-gradient(${
-                segments.map(s => `${s.hex} ${s.startAngle}deg ${s.endAngle}deg`).join(', ')
-            }); border: 3px solid #FFD700;">
+            <div id="${chartId}" style="width: 200px; height: 200px; border-radius: 50%; position: relative; margin: 0 auto; border: 3px solid #FFD700; background: #333; overflow: hidden;">
             </div>
             <div style="margin-top: 15px; font-size: 14px; color: #CCCCCC;">
                 ${segments.map(s => `
@@ -589,4 +569,46 @@ function createManaDistributionChart(deck) {
             </div>
         </div>
     `;
+    
+    // Start animation after the HTML is inserted
+    setTimeout(() => {
+        animatePieChart(chartId, segments);
+    }, 100);
+    
+    return html;
+}
+
+function animatePieChart(chartId, segments) {
+    const chart = document.getElementById(chartId);
+    if (!chart) return;
+    
+    const duration = 5000; // 5 seconds total animation
+    const startTime = Date.now();
+    
+    function animate() {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Ease-out animation curve
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+        
+        // Calculate current segments based on progress
+        let currentAngle = 0;
+        const gradientSegments = segments.map(segment => {
+            const segmentProgress = Math.min(easedProgress * segments.length, 1);
+            const segmentAngle = segment.percentage * 3.6 * segmentProgress;
+            const gradientSegment = `${segment.hex} ${currentAngle}deg ${currentAngle + segmentAngle}deg`;
+            currentAngle += segmentAngle;
+            return gradientSegment;
+        });
+        
+        // Apply the animated gradient
+        chart.style.background = `conic-gradient(${gradientSegments.join(', ')}, #333 ${currentAngle}deg)`;
+        
+        if (progress < 1) {
+            requestAnimationFrame(animate);
+        }
+    }
+    
+    animate();
 }
