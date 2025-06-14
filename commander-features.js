@@ -557,17 +557,17 @@ function createManaDistributionChart(deck) {
     });
     
     const html = `
-        <div style="text-align: center; margin: 20px 0;">
-            <div id="${chartId}" style="width: 200px; height: 200px; border-radius: 50%; position: relative; margin: 0 auto; border: 3px solid #FFD700; background: #333; overflow: hidden;">
-            </div>
-            <div style="margin-top: 15px; font-size: 14px; color: #CCCCCC;">
-                ${segments.map(s => `
-                    <div style="margin: 3px 0;">
-                        <span style="color: ${s.hex};">●</span> ${s.name}: ${s.count} (${s.percentage.toFixed(1)}%)
-                    </div>
-                `).join('')}
-            </div>
+    <div style="display: flex; align-items: center; margin: 30px 0; width: 100%; overflow: hidden;">
+        <div id="${chartId}" style="width: 170px; height: 170px; border-radius: 50%; position: relative; margin: 0 auto; border: 3px solid #FFD700; background: #333; overflow: hidden;">
         </div>
+        <div style="margin-left: 20px; font-size: 14px; color: #CCCCCC;">
+            ${segments.map(s => `
+                <div style="margin: 3px 0;">
+                    <span style="color: ${s.hex};">${s.name}:</span> ${s.count} (${s.percentage.toFixed(1)}%)
+                </div>
+            `).join('')}
+        </div>
+    </div>
     `;
     
     // Start animation after the HTML is inserted
