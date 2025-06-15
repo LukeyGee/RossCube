@@ -24,7 +24,10 @@ const EXCLUDED_TAGS_NAMES = [
     "G - Grow Tall",
     "G - Constructs",
     "U - Flash 2",
-    "U - Sea Monsters"
+    "U - Sea Monsters",
+    "B - Suicide Black",
+    "B - Cant Deathtouch This",
+    "WUBRG - Maze's End"
 ];
 
 function parseCSV(csvText) {
