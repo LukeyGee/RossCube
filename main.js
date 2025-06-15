@@ -96,7 +96,7 @@ confirmCubeBtn.addEventListener('click', async () => {
         const success = await fetchAndProcessCube(cubeSelect.value);
         
         if (success) {
-            await smoothTransition(cubeSelectionStep, packSelectionStep, 'fade', {
+            await smoothTransition(cubeSelectionStep, packSelectionStep, {
                 loadingText: 'Loading packs...',
                 contentPreparer: () => {                    const globals = {
                         packOptionsContainer,
@@ -148,7 +148,7 @@ confirmPackBtn.addEventListener('click', async () => {
     setButtonLoading(confirmPackBtn, true);
     
     try {
-        await smoothTransition(packSelectionStep, decklistStep, 'scale', {
+        await smoothTransition(packSelectionStep, decklistStep, {
             loadingText: 'Generating your deck...',
             contentPreparer: async () => {
                 // Generate deck content

@@ -5,9 +5,7 @@
 /**
  * Smooth content transition with pixel dissolve and box resize
  */
-function smoothTransition(fromElement, toElement, animationType = 'fade', options = {}) {
-    const {
-        loadingText = 'Loading...',
+function smoothTransition(fromElement, toElement, options = {}) {    const {
         contentPreparer = null,
         onComplete = null
     } = options;
