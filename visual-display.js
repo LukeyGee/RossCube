@@ -173,14 +173,13 @@ function updateDeckDisplay(deckResult, globals) {
  * @param {Array} commanders - Commander cards
  */
 function finalizeDeckGeneration(deck, commanders = []) {
-    const cubeSelectionStep = document.getElementById('cubeSelectionStep');
-    const packSelectionStep = document.getElementById('packSelectionStep');
-    const decklistStep = document.getElementById('decklistStep');
     const copyDecklistBtn = document.getElementById('copyDecklistBtn');
     
-    cubeSelectionStep.classList.add('hidden');
-    packSelectionStep.classList.add('hidden');
-    decklistStep.classList.remove('hidden');
+    // Don't manipulate visibility here - let smoothTransition handle it
+    // cubeSelectionStep.classList.add('hidden');
+    // packSelectionStep.classList.add('hidden');
+    // decklistStep.classList.remove('hidden');
+    
     copyDecklistBtn.disabled = false;
     showMessage('DECKLIST READY!', 'success');
     toggleLoading(false);
