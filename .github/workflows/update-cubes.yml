@@ -2,7 +2,7 @@ name: Update Cube CSVs
 
 on:
   schedule:
-    - cron: '0 6 * * 1' # Runs every Monday at 6:00 UTC
+    - cron: '0 0 * * 1,4' # Runs every Monday and Thursday at 6:00 UTC
   workflow_dispatch: # allow manual trigger
 
 jobs:
