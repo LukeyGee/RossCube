@@ -112,10 +112,8 @@ foreach ($card in $cubeData) {
   if ($scryHash.ContainsKey($card.name)) {
       $scryCard = $scryHash[$card.name]
       $card.manacost = $scryCard.mana_cost
-      if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z") {
-        if ($scryCard.produced_mana) {
-          $card.Color = -join $scryCard.produced_mana
-        }
+      if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z" -and $scryCard.produced_mana) {
+        $card.Color = -join $scryCard.produced_mana
       }
   } else {
     $searchString = '*' + $card.name + '*'
@@ -125,10 +123,8 @@ foreach ($card in $cubeData) {
       foreach ($scryCardFaces in $ScryCard.card_faces) {
         if ($scryCardFaces.name -eq $card.name) {
           $card.manacost = $scryCardFaces.mana_cost
-          if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z") {
-	          if ($scryCardFaces.produced_mana) {
-              $card.Color = -join $scryCardFaces.produced_mana
-            }
+          if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z" -and $scryCardFaces.produced_mana) {
+            $card.Color = -join $scryCardFaces.produced_mana
           }
         }
       }
@@ -139,10 +135,8 @@ foreach ($card in $cubeData) {
           foreach ($scryCardFaces in $ScryCard.card_faces) {
             if ($scryCardFaces.name -eq $card.name) {
               $card.manacost = $scryCardFaces.mana_cost
-              if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z") {
-	              if ($scryCardFaces.produced_mana) {
-                  $card.Color = -join $scryCardFaces.produced_mana
-                }
+              if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z" -and $scryCardFaces.produced_mana) {
+                $card.Color = -join $scryCardFaces.produced_mana
               }
             }
           }
