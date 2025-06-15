@@ -91,16 +91,13 @@ function displayPackChoices(packNumber, globals) {
  * @param {Object} globals - Global variables needed
  */
 function handlePackSelectionChange(theme, packNumber, globals) {
-    console.log('Pack selection changed:', theme, packNumber); // Debug log
     const { packSelections, confirmPackBtn } = globals;
     
     if (packNumber === 1) {
         packSelections.pack1 = theme;
     } else { 
-        packSelections.pack2 = theme;
-    }
-    confirmPackBtn.disabled = false; 
-    console.log('Pack selections:', packSelections); // Debug log
+        packSelections.pack2 = theme;    }
+    confirmPackBtn.disabled = false;
 }
 
 /**
@@ -124,25 +121,45 @@ function transitionToPackSelection(packNumber, globals) {
  * @returns {boolean} True if both packs chosen, false if need to continue
  */
 function validatePackSelections(packSelections, globals) {
-    console.log('Validating pack selections:', packSelections); // Debug log
     const { packSelectionTitle } = globals;
     
     // If pack 1 not chosen, show error
     if (!packSelections.pack1) {
-        console.log('Pack 1 not selected'); // Debug log
         showMessage('Please select your first pack.', 'error');
         return false;
     }
-    
+
     // If pack 2 not chosen, move to pack 2 selection
     if (!packSelections.pack2) {
-        console.log('Pack 2 not selected, transitioning to pack 2'); // Debug log
-        transitionToPackSelection(2, globals);
-        packSelectionTitle.textContent = "STEP 2: CHOOSE PACK 2";
+        
+        // Custom transition for pack 1 to pack 2 - dissolve only the options
+        const packOptionsContainer = globals.packOptionsContainer;
+        packOptionsContainer.classList.add('pixel-dissolve');
+        
+        setTimeout(() => {
+            // Update content during dissolve
+            transitionToPackSelection(2, globals);
+            globals.packSelectionTitle.textContent = "STEP 2: CHOOSE PACK 2";
+            
+            // Remove dissolve and prepare for materialize
+            packOptionsContainer.classList.remove('pixel-dissolve');
+            packOptionsContainer.classList.add('pixel-materialize-ready');
+            
+            // Use requestAnimationFrame to ensure DOM changes are processed
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    packOptionsContainer.classList.add('pixel-materialize');
+                    
+                    setTimeout(() => {
+                        packOptionsContainer.classList.remove('pixel-materialize');
+                        packOptionsContainer.classList.remove('pixel-materialize-ready');
+                    }, 600);
+                });
+            });
+        }, 800); // Match dissolve duration
+        
         return false;
     }
-    
-    // Both packs chosen
-    console.log('Both packs selected, proceeding to deck generation'); // Debug log
+      // Both packs chosen
     return true;
 }

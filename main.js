@@ -88,29 +88,43 @@ cubeSelect.addEventListener('change', () => {
 });
 
 confirmCubeBtn.addEventListener('click', async () => {
-    if (cubeSelect.value) {
+    if (!cubeSelect.value) return;
+    
+    setButtonLoading(confirmCubeBtn, true);
+    
+    try {
         const success = await fetchAndProcessCube(cubeSelect.value);
+        
         if (success) {
-            // Create globals for pack selection
-            const globals = {
-                packOptionsContainer,
-                confirmPackBtn,
-                availablePackThemes,
-                packSelections,
-                cubeSelect,
-                cubes,
-                currentCubeData,
-                packSynergyAnalyzer,
-                cubeSelectionStep,
-                packSelectionStep,
-                decklistStep
-            };
-            transitionToPackSelection(1, globals);
+            await smoothTransition(cubeSelectionStep, packSelectionStep, 'fade', {
+                loadingText: 'Loading packs...',
+                contentPreparer: () => {                    const globals = {
+                        packOptionsContainer,
+                        confirmPackBtn,
+                        availablePackThemes,
+                        packSelections,
+                        cubeSelect,
+                        cubes,
+                        currentCubeData,
+                        packSynergyAnalyzer,
+                        packSelectionTitle,
+                        cubeSelectionStep,
+                        packSelectionStep,
+                        decklistStep
+                    };                    
+                    // Prepare pack content for measurement
+                    transitionToPackSelection(1, globals);
+                }
+            });
         }
+    } catch (error) {
+        console.error('Error loading cube:', error);
+    } finally {
+        setButtonLoading(confirmCubeBtn, false);
     }
 });
 
-confirmPackBtn.addEventListener('click', () => {
+confirmPackBtn.addEventListener('click', async () => {
     const globals = {
         packOptionsContainer,
         confirmPackBtn,
@@ -131,10 +145,22 @@ confirmPackBtn.addEventListener('click', () => {
         return;
     }
     
-    // If we get here, both packs are chosen
-    packSelectionStep.classList.add('hidden');
-    decklistStep.classList.remove('hidden');
-    generateDecklist();
+    setButtonLoading(confirmPackBtn, true);
+    
+    try {
+        await smoothTransition(packSelectionStep, decklistStep, 'scale', {
+            loadingText: 'Generating your deck...',
+            contentPreparer: async () => {
+                // Generate deck content
+                generateDecklist();
+                
+                // Wait for images to load for proper height measurement
+                await waitForImagesToLoad(decklistStep);
+            }
+        });
+    } finally {
+        setButtonLoading(confirmPackBtn, false);
+    }
 });
 
 copyDecklistBtn.addEventListener('click', () => {
@@ -198,3 +224,38 @@ function handleRegularCubeFlow(deckResult, globals) {
     
     toggleLoading(false);
 }
+
+// Utility function to wait for images to load for proper height measurement
+function waitForImagesToLoad(element) {
+    return new Promise((resolve) => {
+        const images = element.querySelectorAll('img');
+        if (images.length === 0) {
+            resolve();
+            return;
+        }
+        
+        let loadedImages = 0;
+        const imageCount = images.length;
+        
+        const onImageLoad = () => {
+            loadedImages++;
+            if (loadedImages === imageCount) {
+                resolve();
+            }
+        };
+        
+        images.forEach(img => {
+            if (img.complete) {
+                onImageLoad();
+            } else {
+                img.addEventListener('load', onImageLoad);
+                img.addEventListener('error', onImageLoad); // Count errors as "loaded" too
+            }
+        });
+        
+        // Fallback timeout in case images take too long
+        setTimeout(resolve, 1000);
+    });
+}
+
+// Global variables
