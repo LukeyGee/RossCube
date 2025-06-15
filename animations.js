@@ -20,28 +20,36 @@ function smoothTransition(fromElement, toElement, animationType = 'fade', option
         const currentHeight = contentBox.offsetHeight;
         contentBox.style.height = `${currentHeight}px`;
         contentBox.style.transition = 'none';        // Step 2: Start pixel dissolve effect directly (no loading spinner!)
-        fromElement.classList.add('pixel-dissolve');// Start content preparation but delay border animation until glitch completes
-        setTimeout(() => {
+        fromElement.classList.add('pixel-dissolve');        // Start content preparation but delay border animation until glitch completes
+        setTimeout(async () => {
             // Step 3: Prepare new content if needed (but keep fromElement visible and glitching)
             if (contentPreparer) {
-                contentPreparer();
+                await contentPreparer();
             }
 
             // Step 4: Show new content invisibly for measurement (clean, no dissolved effects yet)
             toElement.classList.remove('hidden');
             toElement.style.opacity = '0';
-            toElement.style.visibility = 'hidden';
-              // Delay height measurement and border animation until glitch is nearly complete
+            toElement.style.visibility = 'hidden';            // Delay height measurement and border animation until glitch is nearly complete
             setTimeout(() => {
                 // Step 5: Measure final height (with clean, normal styling)
+                // Temporarily make content visible for accurate height measurement
+                toElement.style.opacity = '1';
+                toElement.style.visibility = 'visible';
+                
                 contentBox.style.height = 'auto';
                 const finalHeight = contentBox.offsetHeight;
                 contentBox.style.height = `${currentHeight}px`;
                 
+                // Hide content again for animation
+                toElement.style.opacity = '0';
+                toElement.style.visibility = 'hidden';
+                
                 // Calculate animation duration
                 const heightDifference = Math.abs(finalHeight - currentHeight);
                 const baseDuration = 400;
-                const extraDuration = heightDifference * 0.8;                const totalDuration = Math.min(baseDuration + extraDuration, 1200);
+                const extraDuration = heightDifference * 0.8;
+                const totalDuration = Math.min(baseDuration + extraDuration, 1200);
                 
                 // Step 6: Animate height while content is hidden
                 requestAnimationFrame(() => {
