@@ -17,7 +17,17 @@ const EXCLUDED_TAGS_NAMES = [
 	"WUR - Mutate",
 	"WU - Studies",
 	"WU - Studies (Lessons)",
-	"UBR - Mirror Breakers"
+	"UBR - Mirror Breakers",
+    "G - Mutate",
+    "W - Cats",
+    "UR - Draw 2",
+    "G - Grow Tall",
+    "G - Constructs",
+    "U - Flash 2",
+    "U - Sea Monsters",
+    "B - Suicide Black",
+    "B - Cant Deathtouch This",
+    "WUBRG - Maze's End"
 ];
 
 function parseCSV(csvText) {

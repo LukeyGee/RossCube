@@ -781,7 +781,7 @@ class ImprovedPackSynergyAnalyzer extends PackSynergyAnalyzer {
     constructor() {
         super();
         this.cacheExpiry = new Map();
-        this.CACHE_TTL = 30 * 60 * 1000;
+        this.CACHE_TTL = 1440 * 60 * 1000;
     }
     getCachedTheme(packName) {
         const cached = this.packThemeCache.get(packName);
