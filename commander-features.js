@@ -232,8 +232,8 @@ async function renderFixingLandsStep(fixingPool, deck, onSelect, packSelections)
                     check.style.display = 'none';
                 } else {
                     const selected = fixingDiv.querySelectorAll('.selected');
-                    if (selected.length >= 6) {
-                        showMessage('You can only select up to 6 fixing lands.', 'error', 2000);
+                    if (selected.length >= 4) {
+                        showMessage('You can only select up to 4 fixing lands.', 'error', 2000);
                         return;
                     }
                     btn.classList.add('selected');
@@ -258,7 +258,7 @@ async function renderFixingLandsStep(fixingPool, deck, onSelect, packSelections)
 
     function updateSelected() {
         const selected = fixingDiv.querySelectorAll('.selected');
-        confirmBtn.disabled = selected.length > 6;
+        confirmBtn.disabled = selected.length > 4;
     }
     updateSelected();
 
