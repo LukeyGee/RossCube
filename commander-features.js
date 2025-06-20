@@ -183,7 +183,7 @@ async function renderFixingLandsStep(fixingPool, deck, onSelect, packSelections)
     const fixingDiv = document.createElement('div');
     fixingDiv.id = 'fixingLandsStep';
     fixingDiv.className = 'mt-4';
-    fixingDiv.innerHTML = `<h3 style='color:#facc15'>Pick up to 6 Fixing Lands (optional)</h3>
+    fixingDiv.innerHTML = `<h3 style='color:#facc15'>Pick up to 4 Fixing Lands (optional)</h3>
         <p style="color:#94a3b8;font-size:0.9rem;">Only lands matching your deck's color identity are shown. Grouped by effect.</p>`;
 
     Object.entries(groupedLands).forEach(([effect, cards]) => {
