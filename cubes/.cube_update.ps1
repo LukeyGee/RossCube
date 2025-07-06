@@ -19,7 +19,7 @@ Set-Location -Path ".\cubes"
 Remove-Item * -Include *.csv
 
 # Cube Code Array
-$cubes = @("trs", "krstart1", "infjumpstartcube", "ajsc", "jumpstartdecks", "jump-start-cube", "HastedPJC", "vuq", "osjs", "n8cr", "jumpsa", "premodern-jumpstart")
+$cubes = @("trs", "krstart1", "infjumpstartcube", "ajsc", "jumpstartdecks", "jump-start-cube", "HastedPJC", "vuq", "osjs", "n8cr", "jumpsa", "premodern-jumpstart", "superjump-2023")
 
 foreach ($cube_code in $cubes) {
   $cubeUrl = "https://cubecobra.com/cube/download/csv/" + "$cube_code"
