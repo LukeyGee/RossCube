@@ -28,6 +28,7 @@ let cubes = [
     { name: "Jumpstart Cube 900", code: "jump-start-cube", csvPath: "./cubes/jump-start-cube.csv" },
     { name: "Big Beginner Jumpstart", code: "vuq", csvPath: "./cubes/vuq.csv" },
     { name: "Todsa Jumpstart Cube", code: "jumpsa", csvPath: "./cubes/jumpsa.csv" },
+    { name: "MTGO Super Jump! 2023", code: "superjump-2023", csvPath: "./cubes/superjump-2023.csv" },
     { name: "Jumpstart 2025 Tight", code: "j25-tight", csvPath: "./cubes/j25-tight.csv" },
     { name: "Jumpstart 2022 Tight", code: "j22-tight", csvPath: "./cubes/j22-tight.csv" },
     { name: "Jumpstart 2020 Tight", code: "jmp2020tight", csvPath: "./cubes/jmp2020tight.csv" },
