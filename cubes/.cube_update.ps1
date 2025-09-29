@@ -52,7 +52,19 @@ foreach ($cube_code in $cubes) {
         }
       }
     }
-    $name = $card.name
+    if ($card.Type -eq "Basic Land - Swamp") {
+      $name = "Swamp"
+    } elseif ($card.Type -eq "Basic Land - Island") {
+      $name = "Island"
+    } elseif ($card.Type -eq "Basic Land - Plains") {
+      $name = "Plains"
+    } elseif ($card.Type -eq "Basic Land - Mountain") {
+      $name = "Mountain"
+    } elseif ($card.Type -eq "Basic Land - Forest") {
+      $name = "Forest"
+    } else {
+      $name = $card.name
+    }
     $cleanName = Remove-Diacritics -inputString $name
     $card.name = $cleanName
   }
@@ -94,7 +106,19 @@ foreach ($cube_code in $cubes) {
         }
       }
     }
-    $name = $card.name
+    if ($card.Type -eq "Basic Land - Swamp") {
+      $name = "Swamp"
+    } elseif ($card.Type -eq "Basic Land - Island") {
+      $name = "Island"
+    } elseif ($card.Type -eq "Basic Land - Plains") {
+      $name = "Plains"
+    } elseif ($card.Type -eq "Basic Land - Mountain") {
+      $name = "Mountain"
+    } elseif ($card.Type -eq "Basic Land - Forest") {
+      $name = "Forest"
+    } else {
+      $name = $card.name
+    }
     $cleanName = Remove-Diacritics -inputString $name
     $card.name = $cleanName
   }
@@ -144,7 +168,19 @@ foreach ($card in $cubeData) {
       }
     }
   }
-  $name = $card.name
+  if ($card.Type -eq "Basic Land - Swamp") {
+    $name = "Swamp"
+  } elseif ($card.Type -eq "Basic Land - Island") {
+    $name = "Island"
+  } elseif ($card.Type -eq "Basic Land - Plains") {
+    $name = "Plains"
+  } elseif ($card.Type -eq "Basic Land - Mountain") {
+    $name = "Mountain"
+  } elseif ($card.Type -eq "Basic Land - Forest") {
+    $name = "Forest"
+  } else {
+    $name = $card.name
+  }
   $cleanName = Remove-Diacritics -inputString $name
   $card.name = $cleanName
 }
