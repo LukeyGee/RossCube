@@ -19,7 +19,7 @@ Set-Location -Path ".\cubes"
 Remove-Item * -Include *.csv
 
 # Cube Code Array
-$cubes = @("trs", "krstart1", "infjumpstartcube", "ajsc", "jumpstartdecks", "jump-start-cube", "HastedPJC", "vuq", "osjs", "n8cr", "jumpsa", "premodern-jumpstart", "superjump-2023")
+$cubes = @("trs", "krstart1", "infjumpstartcube", "ajsc", "jumpstartdecks", "jump-start-cube", "thepauperjumpstartcube", "vuq", "osjs", "n8cr", "jumpsa", "premodern-jumpstart", "superjump-2023")
 
 foreach ($cube_code in $cubes) {
   $cubeUrl = "https://cubecobra.com/cube/download/csv/" + "$cube_code"
@@ -68,7 +68,7 @@ foreach ($cube_code in $cubes) {
     $cleanName = Remove-Diacritics -inputString $name
     $card.name = $cleanName
   }
-  $cubeData | Select-Object name, Type, Color, "Color Category", manacost, maybeboard, tags |
+  $cubeData | Select-Object name, Type, Color, manacost, maybeboard, tags |
         Export-Csv -Path ".\$cube_code.csv" -NoTypeInformation
 }
 
@@ -122,7 +122,7 @@ foreach ($cube_code in $cubes) {
     $cleanName = Remove-Diacritics -inputString $name
     $card.name = $cleanName
   }
-  $cubeData | Select-Object name, Type, Color, "Color Category", manacost, maybeboard, tags |
+  $cubeData | Select-Object name, Type, Color, manacost, maybeboard, tags |
         Export-Csv -Path ".\$cube_code.csv" -NoTypeInformation
 }
 
@@ -136,7 +136,7 @@ foreach ($card in $cubeData) {
   if ($scryHash.ContainsKey($card.name)) {
       $scryCard = $scryHash[$card.name]
       $card.manacost = $scryCard.mana_cost
-      if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z" -and $scryCard.produced_mana) {
+      if ($card.tags -eq "z_Fixing Roster_z" -and $scryCard.produced_mana) {
         $card.Color = -join $scryCard.produced_mana
       }
   } else {
@@ -147,7 +147,7 @@ foreach ($card in $cubeData) {
       foreach ($scryCardFaces in $ScryCard.card_faces) {
         if ($scryCardFaces.name -eq $card.name) {
           $card.manacost = $scryCardFaces.mana_cost
-          if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z" -and $scryCardFaces.produced_mana) {
+          if ($card.tags -eq "z_Fixing Roster_z" -and $scryCardFaces.produced_mana) {
             $card.Color = -join $scryCardFaces.produced_mana
           }
         }
@@ -159,7 +159,7 @@ foreach ($card in $cubeData) {
           foreach ($scryCardFaces in $ScryCard.card_faces) {
             if ($scryCardFaces.name -eq $card.name) {
               $card.manacost = $scryCardFaces.mana_cost
-              if ($card.'Color Category' -eq "Lands" -and $card.tags -eq "z_Fixing Roster_z" -and $scryCardFaces.produced_mana) {
+              if ($card.tags -eq "z_Fixing Roster_z" -and $scryCardFaces.produced_mana) {
                 $card.Color = -join $scryCardFaces.produced_mana
               }
             }
@@ -184,5 +184,5 @@ foreach ($card in $cubeData) {
   $cleanName = Remove-Diacritics -inputString $name
   $card.name = $cleanName
 }
-$cubeData | Select-Object name, Type, Color, "Color Category", manacost, maybeboard, tags |
+$cubeData | Select-Object name, Type, Color, manacost, maybeboard, tags |
       Export-Csv -Path ".\$cube_code.csv" -NoTypeInformation
