@@ -4144,3 +4144,8 @@
 "Glen Elendra Guardian","Creature - Faerie Wizard","U","{2}{U}","true",""
 "Glamer Gifter","Creature - Faerie Wizard","U","{1}{U}","true",""
 "Bitterbloom Bearer","Creature - Faerie Rogue","B","{B}{B}","true",""
+"Starfall Invocation","Sorcery","W","{3}{W}{W}","true",""
+"Perch Protection","Instant","W","{4}{W}{W}","true",""
+"Crumb and Get It","Instant","W","{W}","true",""
+"Jolly Gerbils","Creature - Hamster Citizen","W","{1}{W}","true",""
+"Parting Gust","Instant","W","{W}{W}","true",""
