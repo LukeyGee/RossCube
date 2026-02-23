@@ -3,10 +3,16 @@ function Remove-Diacritics{
     return [Text.Encoding]::ASCII.GetString([Text.Encoding]::GetEncoding("Cyrillic").GetBytes($inputString))
 }
 
+# HTTP headers required by Scryfall API
+$headers = @{
+    "User-Agent" = "RossCube/1.0"
+    "Accept"     = "application/json"
+}
+
 # Fetch Scryfall oracle cards
 $bulkUrl = "https://api.scryfall.com/bulk-data"
-$oracleData = (Invoke-RestMethod -Uri $bulkUrl).data | Where-Object { $_.type -eq "oracle_cards" }
-$scryfallCards = Invoke-RestMethod -Uri $oracleData.download_uri
+$oracleData = (Invoke-RestMethod -Uri $bulkUrl -Headers $headers).data | Where-Object { $_.type -eq "oracle_cards" }
+$scryfallCards = Invoke-RestMethod -Uri $oracleData.download_uri -Headers $headers
 
 # Build a hashtable of Scryfall cards for fast lookup
 $scryHash = @{}
@@ -23,7 +29,7 @@ $cubes = @("trs", "krstart1", "infjumpstartcube", "ajsc", "jumpstartdecks", "jum
 
 foreach ($cube_code in $cubes) {
   $cubeUrl = "https://cubecobra.com/cube/download/csv/" + "$cube_code"
-  $csvText = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest -MaximumRetryCount 5 -RetryIntervalSec 10 $cubeUrl).RawContentStream.ToArray())
+  $csvText = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest -MaximumRetryCount 5 -RetryIntervalSec 10 -Headers $headers $cubeUrl).RawContentStream.ToArray())
   $cubeData = $csvText | ConvertFrom-Csv | Select-Object *, @{Name='manacost'; Expression={""}}
   foreach ($card in $cubeData) {
     if ($scryHash.ContainsKey($card.name)) {
@@ -77,7 +83,7 @@ foreach ($cube_code in $cubes) {
 $cubes = @("j25-tight", "j22-tight", "jmp2020tight")
 foreach ($cube_code in $cubes) {
   $cubeUrl = "https://cubecobra.com/cube/download/csv/" + "$cube_code" + '?primary=Tags&secondary=Unsorted&tertiary=Unsorted&quaternary=Mana%20Value&showother=false&filter=-tags%3AToken%20-t%3Atoken'
-  $csvText = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest -MaximumRetryCount 5 -RetryIntervalSec 10 $cubeUrl).RawContentStream.ToArray())
+  $csvText = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest -MaximumRetryCount 5 -RetryIntervalSec 10 -Headers $headers $cubeUrl).RawContentStream.ToArray())
   $cubeData = $csvText | ConvertFrom-Csv | Select-Object *, @{Name='manacost'; Expression={""}}
   foreach ($card in $cubeData) {
     if ($scryHash.ContainsKey($card.name)) {
@@ -130,7 +136,7 @@ foreach ($cube_code in $cubes) {
 # We need to make sure some of the lands have colors associated to them
 $cube_code = "kvatchstart"
 $cubeUrl = "https://cubecobra.com/cube/download/csv/" + "$cube_code"
-$csvText = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest -MaximumRetryCount 5 -RetryIntervalSec 10 $cubeUrl).RawContentStream.ToArray())
+$csvText = [Text.Encoding]::UTF8.GetString((Invoke-WebRequest -MaximumRetryCount 5 -RetryIntervalSec 10 -Headers $headers $cubeUrl).RawContentStream.ToArray())
 $cubeData = $csvText | ConvertFrom-Csv | Select-Object *, @{Name='manacost'; Expression={""}}
 foreach ($card in $cubeData) {
   if ($scryHash.ContainsKey($card.name)) {
