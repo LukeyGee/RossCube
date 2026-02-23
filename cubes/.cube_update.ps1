@@ -3,10 +3,16 @@ function Remove-Diacritics{
     return [Text.Encoding]::ASCII.GetString([Text.Encoding]::GetEncoding("Cyrillic").GetBytes($inputString))
 }
 
+# HTTP headers required by Scryfall API
+$headers = @{
+    "User-Agent" = "RossCube/1.0"
+    "Accept"     = "application/json"
+}
+
 # Fetch Scryfall oracle cards
 $bulkUrl = "https://api.scryfall.com/bulk-data"
-$oracleData = (Invoke-RestMethod -Uri $bulkUrl).data | Where-Object { $_.type -eq "oracle_cards" }
-$scryfallCards = Invoke-RestMethod -Uri $oracleData.download_uri
+$oracleData = (Invoke-RestMethod -Uri $bulkUrl -Headers $headers).data | Where-Object { $_.type -eq "oracle_cards" }
+$scryfallCards = Invoke-RestMethod -Uri $oracleData.download_uri -Headers $headers
 
 # Build a hashtable of Scryfall cards for fast lookup
 $scryHash = @{}
