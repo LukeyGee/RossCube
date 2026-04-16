@@ -391,7 +391,7 @@
 "Ecstatic Electromancer","Creature - Goblin Wizard","R","{1}{U/R}{U/R}","false","R – Fire"
 "Refute","Instant","U","{1}{U}{U}","false","U – Flashy"
 "Familiar's Ruse","Instant","U","{U}{U}","false","U – Wizards"
-"The Underworld Cookbook","Artifact","","{1}","false","G – Tasty"
+"The Underworld Cookbook","Artifact - Book","","{1}","false","G – Tasty"
 "Zephyr Boots","Artifact - Equipment","","{1}","false","U – Mechanic"
 "Thought Monitor","Artifact Creature - Construct","U","{6}{U}","false","U – Mechanic"
 "Monoist Circuit-Feeder","Artifact Creature - Nautilus","B","{4}{B}{B}","false","B – Reanimate"
