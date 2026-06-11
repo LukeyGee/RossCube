@@ -1018,7 +1018,7 @@
 "Zombie","Token Creature - Zombie","B","","false","Boneyard;Token"
 "Unicorns","Creature","","","false","Token"
 "Unicorns","Creature","","","false","Token"
-"Blink","Card","","{2}{U}{B}","false","Blink;Token"
+"Blink","Card","","","false","Blink;Token"
 "Boneyard","Card","","","false","Boneyard;Token"
 "Cats","Card","","","false","Cats;Token"
 "Constellation","Card","","","false","Constellation;Token"
