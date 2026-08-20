@@ -12,13 +12,35 @@ $headers = @{
 # Fetch Scryfall oracle cards
 $bulkUrl = "https://api.scryfall.com/bulk-data"
 $oracleData = (Invoke-RestMethod -Uri $bulkUrl -Headers $headers).data | Where-Object { $_.type -eq "oracle_cards" }
-$scryfallCards = Invoke-RestMethod -Uri $oracleData.download_uri -Headers $headers
+if (-not $oracleData) {
+    throw "No 'oracle_cards' entry found in the Scryfall bulk-data list at $bulkUrl"
+}
+if (-not $oracleData.jsonl_download_uri) {
+    throw "The Scryfall 'oracle_cards' bulk-data entry has no jsonl_download_uri"
+}
+
+# Scryfall only publishes the bulk files as gzipped JSONL, so download the
+# archive and decompress it a line at a time rather than holding it all in memory.
+$oracleGz = Join-Path ([System.IO.Path]::GetTempPath()) "scryfall-oracle-cards.jsonl.gz"
+Invoke-WebRequest -MaximumRetryCount 5 -RetryIntervalSec 10 -Uri $oracleData.jsonl_download_uri -Headers $headers -OutFile $oracleGz
 
 # Build a hashtable of Scryfall cards for fast lookup
 $scryHash = @{}
-foreach ($card in $scryfallCards) {
-    $scryHash[$card.name] = $card
-}
+$fileStream = [System.IO.File]::OpenRead($oracleGz)
+try {
+    $gzipStream = [System.IO.Compression.GZipStream]::new($fileStream, [System.IO.Compression.CompressionMode]::Decompress)
+    try {
+        $reader = [System.IO.StreamReader]::new($gzipStream, [System.Text.Encoding]::UTF8)
+        try {
+            while ($null -ne ($line = $reader.ReadLine())) {
+                if ([string]::IsNullOrWhiteSpace($line)) { continue }
+                $card = ConvertFrom-Json -InputObject $line
+                $scryHash[$card.name] = $card
+            }
+        } finally { $reader.Dispose() }
+    } finally { $gzipStream.Dispose() }
+} finally { $fileStream.Dispose() }
+Remove-Item $oracleGz -Force
 $scryHashKeys = $scryHash.keys
 
 Set-Location -Path ".\cubes"
